@@ -13,7 +13,7 @@ const skills = [
   },
   {
     category: "기타",
-    items: ["AI 활용 (Claude, Cursor)", "Agile/Scrum", "앱 스토어 운영"],
+    items: ["AI 활용 (Claude, Cursor)"],
   },
 ];
 
@@ -37,10 +37,10 @@ export default function Home() {
             </div>
           </div>
           <p className="mt-4 leading-relaxed text-muted">
-            실무 9년 이상의 소프트웨어 엔지니어. SI/SE에서 대규모 시스템
-            개발로 기반을 다지고, 스타트업에서 풀스택 역량을 키웠으며, 현재는
-            수익형 앱을 기획부터 운영까지 1인 개발하고 있습니다. AI를 활용한
-            생산성 극대화를 추구합니다.
+            현재는 수익형 앱을 기획부터 운영까지 1인 개발하고 있습니다.
+            AI를 활용한 생산성 극대화를 추구합니다.
+            <br />
+            프리랜서 풀스택 엔지니어로 중/장기 업무위탁도 가능합니다.
           </p>
           <div className="mt-4 flex flex-wrap gap-4 text-sm text-muted">
             <span className="flex items-center gap-1">
@@ -57,7 +57,7 @@ export default function Home() {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              email@example.com
+              gwsoochoi@gmail.com
             </span>
             <span className="flex items-center gap-1">
               <svg
@@ -95,7 +95,7 @@ export default function Home() {
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              서울 / 도쿄
+              도쿄 / 시부야
             </span>
           </div>
         </header>
@@ -191,15 +191,14 @@ export default function Home() {
                 3
               </span>
               <h3 className="text-lg font-semibold text-foreground">
-                수익형 앱 개발{" "}
-                <span className="font-normal text-muted">— 현재 진행 중</span>
+                수익형 모바일/웹앱 개발
               </h3>
             </div>
 
             <div className="ml-3.5 border-l-2 border-accent/30 pl-7">
               <ul className="mb-5 space-y-1.5">
                 {[
-                  "개인 프로젝트를 UI/UX 디자인 외 모든 영역 총괄",
+                  "개인 프로젝트를 진행중이며 UI/UX 디자인 외 모든 영역 총괄",
                   "AI(Claude, Cursor 등)를 활용한 생산성 극대화 추구",
                 ].map((item) => (
                   <li
@@ -216,18 +215,15 @@ export default function Home() {
               <div className="mb-4 rounded-lg border border-border p-4">
                 <div className="flex flex-col justify-between sm:flex-row sm:items-center">
                   <h4 className="font-semibold text-foreground">
-                    프로젝트 1: LGBTQ 커뮤니티 앱
-                    <span className="ml-2 text-sm font-normal text-muted">
-                      v1.0 ~ v2.0
-                    </span>
+                    v1.0 ~ v2.0: LGBTQ 커뮤니티 앱
                   </h4>
                 </div>
                 <ul className="mt-3 space-y-1.5">
                   {[
                     "2024년 1월 개발 시작",
+                    "2024년 7월 앱스토어, 구글 플레이 스토어 런칭",
                     "유저 수 700명 돌파",
                     "Flutter (iOS/Android) + Rails API + GCP",
-                    "수익화: 광고 + 프리미엄 기능 (준비 중)",
                   ].map((item) => (
                     <li
                       key={item}
@@ -239,7 +235,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {["Flutter", "Rails", "GCP"].map((t) => (
+                  {["Flutter", "Ruby on Rails", "GCP", "Firebase"].map((t) => (
                     <span
                       key={t}
                       className="rounded border border-border px-2 py-0.5 text-xs text-muted"
@@ -254,7 +250,7 @@ export default function Home() {
               <div className="mb-4 rounded-lg border border-border p-4">
                 <div className="flex flex-col justify-between sm:flex-row sm:items-center">
                   <h4 className="font-semibold text-foreground">
-                    프로젝트 2: v3.0 확장
+                    v3.0: 확장
                     <span className="ml-2 text-sm font-normal text-muted">
                       현재 진행 중
                     </span>
@@ -277,7 +273,43 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {["Flutter", "React", "GCP", "Supabase", "AI"].map((t) => (
+                  {["Flutter", "React", "Ruby on Rails", "GCP", "Supabase", "Firebase", "AI"].map((t) => (
+                    <span
+                      key={t}
+                      className="rounded border border-border px-2 py-0.5 text-xs text-muted"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* 프로젝트 3 */}
+              <div className="mb-4 rounded-lg border border-border p-4">
+                <div className="flex flex-col justify-between sm:flex-row sm:items-center">
+                  <h4 className="font-semibold text-foreground">
+                    v3.1: 본격적 수익화 실시
+                    <span className="ml-2 text-sm font-normal text-muted">
+                      예정
+                    </span>
+                  </h4>
+                </div>
+                <ul className="mt-3 space-y-1.5">
+                  {[
+                    "광고 수익 모델 도입",
+                    "프리미엄 기능 유료화",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start text-sm leading-relaxed text-muted"
+                    >
+                      <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {["Flutter", "React", "Ruby on Rails", "GCP", "Supabase", "Firebase", "AI"].map((t) => (
                     <span
                       key={t}
                       className="rounded border border-border px-2 py-0.5 text-xs text-muted"
@@ -323,24 +355,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* 학력 */}
-        <section className="mb-12">
-          <h2 className="mb-6 text-2xl font-bold text-foreground">학력</h2>
-          <div className="border-l-2 border-accent pl-6">
-            <div className="flex flex-col justify-between sm:flex-row sm:items-center">
-              <div>
-                <h3 className="text-lg font-semibold text-foreground">
-                  컴퓨터공학과 학사
-                </h3>
-                <p className="text-accent">OO대학교</p>
-              </div>
-              <span className="mt-1 text-sm text-muted sm:mt-0">
-                2013.03 - 2017.08
-              </span>
-            </div>
           </div>
         </section>
 
