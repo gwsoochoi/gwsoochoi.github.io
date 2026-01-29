@@ -1,85 +1,19 @@
-const experiences = [
-  {
-    company: "ABC 테크놀로지",
-    role: "시니어 프론트엔드 엔지니어",
-    period: "2022.03 - 현재",
-    description: [
-      "React/Next.js 기반 B2B SaaS 플랫폼 프론트엔드 개발 리드",
-      "디자인 시스템 구축으로 UI 개발 생산성 40% 향상",
-      "CI/CD 파이프라인 구축 및 배포 자동화",
-      "주니어 개발자 멘토링 및 코드 리뷰 프로세스 정립",
-    ],
-  },
-  {
-    company: "XYZ 소프트웨어",
-    role: "프론트엔드 엔지니어",
-    period: "2019.07 - 2022.02",
-    description: [
-      "TypeScript 마이그레이션 주도 (JavaScript → TypeScript)",
-      "웹 성능 최적화로 LCP 3.2초 → 1.1초 개선",
-      "REST API 연동 및 상태 관리 설계 (Redux, React Query)",
-      "사내 어드민 대시보드 신규 개발",
-    ],
-  },
-  {
-    company: "스타트업 DEF",
-    role: "주니어 웹 개발자",
-    period: "2017.09 - 2019.06",
-    description: [
-      "React SPA 기반 이커머스 웹 애플리케이션 개발",
-      "반응형 웹 디자인 구현 및 크로스 브라우저 호환성 확보",
-      "RESTful API 설계 및 Node.js 백엔드 개발 참여",
-    ],
-  },
-];
-
 const skills = [
   {
-    category: "Frontend",
-    items: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "JavaScript",
-      "Tailwind CSS",
-      "HTML/CSS",
-    ],
+    category: "Backend",
+    items: ["Java Spring", "Ruby on Rails", "REST API"],
   },
   {
-    category: "상태 관리 & 데이터",
-    items: ["Redux", "Zustand", "React Query", "GraphQL"],
+    category: "Frontend & Mobile",
+    items: ["Flutter", "React", "Next.js", "TypeScript"],
   },
   {
-    category: "도구 & 인프라",
-    items: ["Git", "GitHub Actions", "Docker", "Webpack", "Vite", "Jest"],
+    category: "Infra & Cloud",
+    items: ["GCP", "Supabase", "Docker", "GitHub Actions"],
   },
   {
     category: "기타",
-    items: ["Figma", "Agile/Scrum", "기술 문서 작성", "코드 리뷰"],
-  },
-];
-
-const projects = [
-  {
-    name: "사내 디자인 시스템",
-    period: "2023",
-    description:
-      "Storybook 기반 컴포넌트 라이브러리 설계 및 구축. 30+ 재사용 가능한 UI 컴포넌트를 개발하여 팀 전체 개발 생산성 향상.",
-    tech: ["React", "TypeScript", "Storybook", "Tailwind CSS"],
-  },
-  {
-    name: "실시간 대시보드",
-    period: "2022",
-    description:
-      "WebSocket 기반 실시간 데이터 모니터링 대시보드. 수천 건의 데이터를 실시간으로 시각화하여 운영 효율성 개선.",
-    tech: ["Next.js", "D3.js", "WebSocket", "React Query"],
-  },
-  {
-    name: "이커머스 플랫폼 리뉴얼",
-    period: "2020",
-    description:
-      "레거시 jQuery 프로젝트를 React SPA로 전면 리뉴얼. 페이지 로딩 속도 60% 개선 및 전환율 25% 증가.",
-    tech: ["React", "Redux", "Node.js", "PostgreSQL"],
+    items: ["AI 활용 (Claude, Cursor)", "Agile/Scrum", "앱 스토어 운영"],
   },
 ];
 
@@ -94,9 +28,10 @@ export default function Home() {
           </h1>
           <p className="mt-2 text-xl text-accent">소프트웨어 엔지니어</p>
           <p className="mt-4 leading-relaxed text-muted">
-            7년차 소프트웨어 엔지니어로 React/Next.js 기반 웹 프론트엔드
-            개발을 전문으로 합니다. 사용자 경험 최적화와 개발 생산성 향상에
-            관심이 많으며, 팀과 함께 성장하는 것을 중요하게 생각합니다.
+            실무 9년 이상의 소프트웨어 엔지니어. SI/SE에서 대규모 시스템
+            개발로 기반을 다지고, 스타트업에서 풀스택 역량을 키웠으며, 현재는
+            수익형 앱을 기획부터 운영까지 1인 개발하고 있습니다. AI를 활용한
+            생산성 극대화를 추구합니다.
           </p>
           <div className="mt-4 flex flex-wrap gap-4 text-sm text-muted">
             <span className="flex items-center gap-1">
@@ -151,44 +86,205 @@ export default function Home() {
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              서울, 대한민국
+              서울 / 도쿄
             </span>
           </div>
         </header>
 
         {/* 경력 */}
         <section className="mb-12">
-          <h2 className="mb-6 text-2xl font-bold text-foreground">경력</h2>
-          <div className="space-y-8">
-            {experiences.map((exp) => (
-              <div
-                key={exp.company}
-                className="border-l-2 border-accent pl-6"
-              >
+          <h2 className="mb-6 text-2xl font-bold text-foreground">
+            경력 <span className="text-lg font-normal text-muted">실무 9년+</span>
+          </h2>
+
+          {/* 1단계: SI/SE */}
+          <div className="mb-8">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
+                1
+              </span>
+              <h3 className="text-lg font-semibold text-foreground">
+                SI/SE <span className="font-normal text-muted">— 6년</span>
+              </h3>
+            </div>
+
+            <div className="ml-3.5 space-y-5 border-l-2 border-accent/30 pl-7">
+              {/* 서울 */}
+              <div>
+                <div className="flex items-center gap-2">
+                  <h4 className="font-medium text-foreground">서울</h4>
+                  <span className="text-sm text-muted">5년</span>
+                </div>
+                <ul className="mt-2 space-y-1.5">
+                  <li className="flex items-start text-sm leading-relaxed text-muted">
+                    <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
+                    금융/공공 대규모 시스템 개발
+                  </li>
+                  <li className="flex items-start text-sm leading-relaxed text-muted">
+                    <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
+                    Java Spring 백엔드 개발
+                  </li>
+                </ul>
+              </div>
+
+              {/* 도쿄 */}
+              <div>
+                <div className="flex items-center gap-2">
+                  <h4 className="font-medium text-foreground">도쿄</h4>
+                  <span className="text-sm text-muted">1년</span>
+                </div>
+                <ul className="mt-2 space-y-1.5">
+                  <li className="flex items-start text-sm leading-relaxed text-muted">
+                    <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
+                    NTT DATA 산하 행정업무 처리 백엔드 시스템 개발
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 2단계: 스타트업 */}
+          <div className="mb-8">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
+                2
+              </span>
+              <h3 className="text-lg font-semibold text-foreground">
+                스타트업{" "}
+                <span className="font-normal text-muted">— 3년 / 도쿄</span>
+              </h3>
+            </div>
+
+            <div className="ml-3.5 border-l-2 border-accent/30 pl-7">
+              <ul className="space-y-1.5">
+                {[
+                  "신규 서비스 런칭부터 운영까지 풀스택 담당",
+                  "Rails API 서버 설계/개발",
+                  "GCP 인프라 운영",
+                  "소규모 팀 애자일 개발",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start text-sm leading-relaxed text-muted"
+                  >
+                    <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* 3단계: 수익형 앱 개발 */}
+          <div>
+            <div className="mb-4 flex items-center gap-3">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
+                3
+              </span>
+              <h3 className="text-lg font-semibold text-foreground">
+                수익형 앱 개발{" "}
+                <span className="font-normal text-muted">— 현재 진행 중</span>
+              </h3>
+            </div>
+
+            <div className="ml-3.5 border-l-2 border-accent/30 pl-7">
+              <ul className="mb-5 space-y-1.5">
+                {[
+                  "개인 프로젝트를 UI/UX 디자인 외 모든 영역 총괄",
+                  "AI(Claude, Cursor 등)를 활용한 생산성 극대화 추구",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start text-sm leading-relaxed text-muted"
+                  >
+                    <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              {/* 프로젝트 1 */}
+              <div className="mb-4 rounded-lg border border-border p-4">
                 <div className="flex flex-col justify-between sm:flex-row sm:items-center">
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground">
-                      {exp.role}
-                    </h3>
-                    <p className="text-accent">{exp.company}</p>
-                  </div>
-                  <span className="mt-1 text-sm text-muted sm:mt-0">
-                    {exp.period}
-                  </span>
+                  <h4 className="font-semibold text-foreground">
+                    프로젝트 1: LGBTQ 커뮤니티 앱
+                    <span className="ml-2 text-sm font-normal text-muted">
+                      v1.0 ~ v2.0
+                    </span>
+                  </h4>
                 </div>
                 <ul className="mt-3 space-y-1.5">
-                  {exp.description.map((desc) => (
+                  {[
+                    "2024년 1월 개발 시작",
+                    "유저 수 700명 돌파",
+                    "Flutter (iOS/Android) + Rails API + GCP",
+                    "수익화: 광고 + 프리미엄 기능 (준비 중)",
+                  ].map((item) => (
                     <li
-                      key={desc}
+                      key={item}
                       className="flex items-start text-sm leading-relaxed text-muted"
                     >
                       <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
-                      {desc}
+                      {item}
                     </li>
                   ))}
                 </ul>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {["Flutter", "Rails", "GCP"].map((t) => (
+                    <span
+                      key={t}
+                      className="rounded border border-border px-2 py-0.5 text-xs text-muted"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
-            ))}
+
+              {/* 프로젝트 2 */}
+              <div className="mb-4 rounded-lg border border-border p-4">
+                <div className="flex flex-col justify-between sm:flex-row sm:items-center">
+                  <h4 className="font-semibold text-foreground">
+                    프로젝트 2: v3.0 확장
+                    <span className="ml-2 text-sm font-normal text-muted">
+                      현재 진행 중
+                    </span>
+                  </h4>
+                </div>
+                <ul className="mt-3 space-y-1.5">
+                  {[
+                    "모바일: 기존 앱 기능 개선",
+                    "Web 버전 신규 추가 (React)",
+                    "GCP + Supabase 결합으로 비용 절감 및 경량화",
+                    "AI 번역 기능 추가로 글로벌 시장 진출 준비",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start text-sm leading-relaxed text-muted"
+                    >
+                      <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {["Flutter", "React", "GCP", "Supabase", "AI"].map((t) => (
+                    <span
+                      key={t}
+                      className="rounded border border-border px-2 py-0.5 text-xs text-muted"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* 담당 범위 */}
+              <p className="text-sm text-muted">
+                <span className="font-medium text-foreground">담당 범위:</span>{" "}
+                기획 → 개발 → 인프라 → 스토어 심사 → 운영 → 마케팅
+              </p>
+            </div>
           </div>
         </section>
 
@@ -213,41 +309,6 @@ export default function Home() {
                       className="rounded-md bg-accent-light px-2.5 py-1 text-sm text-accent"
                     >
                       {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* 프로젝트 */}
-        <section className="mb-12">
-          <h2 className="mb-6 text-2xl font-bold text-foreground">
-            프로젝트
-          </h2>
-          <div className="space-y-6">
-            {projects.map((project) => (
-              <div
-                key={project.name}
-                className="rounded-lg border border-border p-5"
-              >
-                <div className="flex flex-col justify-between sm:flex-row sm:items-center">
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {project.name}
-                  </h3>
-                  <span className="text-sm text-muted">{project.period}</span>
-                </div>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {project.description}
-                </p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded border border-border px-2 py-0.5 text-xs text-muted"
-                    >
-                      {t}
                     </span>
                   ))}
                 </div>
