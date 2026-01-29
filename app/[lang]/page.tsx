@@ -111,6 +111,20 @@ export default async function Home({
                 </h3>
               </div>
 
+              {stage.appInfo && (
+                <a
+                  href={stage.appInfo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mb-4 ml-3.5 flex items-center gap-3 border-l-2 border-accent/30 pl-7 text-accent hover:underline"
+                >
+                  <span className="text-lg font-bold">{stage.appInfo.name}</span>
+                  <span className="text-sm text-muted">
+                    {stage.appInfo.url.replace(/https?:\/\//, "").replace(/\/$/, "")} ↗
+                  </span>
+                </a>
+              )}
+
               <div className="ml-3.5 border-l-2 border-accent/30 pl-7">
                 {/* locations (stage 1) */}
                 {"locations" in stage && stage.locations && (

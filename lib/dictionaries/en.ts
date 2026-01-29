@@ -60,6 +60,7 @@ const en: Dictionary = {
         number: 3,
         title: "Revenue-generating Mobile/Web App Development",
         duration: "",
+        appInfo: { name: "PONGE", url: "https://pon-ge.com/" },
         items: [
           "Running personal projects, overseeing all areas except UI/UX design",
           "Pursuing maximum productivity with AI (Claude, Cursor, etc.)",

@@ -9,6 +9,7 @@ export interface Stage {
   number: number;
   title: string;
   duration: string;
+  appInfo?: { name: string; url: string };
   locations?: { name: string; duration: string; items: string[] }[];
   items?: string[];
   projects?: Project[];
@@ -92,6 +93,7 @@ const ko: Dictionary = {
         number: 3,
         title: "수익형 모바일/웹앱 개발",
         duration: "",
+        appInfo: { name: "PONGE", url: "https://pon-ge.com/" },
         items: [
           "개인 프로젝트를 진행중이며 UI/UX 디자인 외 모든 영역 총괄",
           "AI(Claude, Cursor 등)를 활용한 생산성 극대화 추구",

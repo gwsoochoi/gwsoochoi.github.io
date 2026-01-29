@@ -55,6 +55,7 @@ const ja: Dictionary = {
         number: 3,
         title: "収益型モバイル/Webアプリ開発",
         duration: "",
+        appInfo: { name: "PONGE", url: "https://pon-ge.com/" },
         items: [
           "個人プロジェクトを進行中で、UI/UXデザイン以外の全領域を統括",
           "AI（Claude、Cursorなど）を活用した生産性の最大化を追求",
