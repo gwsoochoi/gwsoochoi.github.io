@@ -77,11 +77,10 @@ const en: Dictionary = {
             tags: ["Flutter", "Ruby on Rails", "GCP", "Firebase"],
           },
           {
-            title: "v3.0: Expansion",
+            title: "v3.0: Renewal as LGBTQ Community & Lifestyle Information App",
             status: "In progress",
             items: [
               "Mobile: Enhancing existing app features",
-              "Web version newly added (React)",
               "Cost reduction and optimization with GCP + Supabase integration",
               "Preparing for global market entry with AI translation features",
             ],
@@ -93,6 +92,7 @@ const en: Dictionary = {
             items: [
               "Introduction of ad revenue model",
               "Premium feature monetization",
+              "Launch of web-based adult content service (React)",
             ],
             tags: ["Flutter", "React", "Ruby on Rails", "GCP", "Supabase", "Firebase", "AI"],
           },

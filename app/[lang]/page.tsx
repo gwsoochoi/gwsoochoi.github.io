@@ -1,4 +1,5 @@
 import { getDictionary, locales, type Lang } from "@/lib/dictionaries";
+import HtmlLang from "./HtmlLang";
 import LangSwitcher from "./LangSwitcher";
 
 export function generateStaticParams() {
@@ -15,6 +16,7 @@ export default async function Home({
 
   return (
     <div className="min-h-screen bg-background">
+      <HtmlLang lang={lang} />
       <div className="mx-auto max-w-3xl px-6 py-16">
         {/* 언어 전환 */}
         <nav className="mb-8 flex justify-end">

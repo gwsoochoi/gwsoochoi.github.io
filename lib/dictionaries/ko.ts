@@ -109,11 +109,10 @@ const ko: Dictionary = {
             tags: ["Flutter", "Ruby on Rails", "GCP", "Firebase"],
           },
           {
-            title: "v3.0: 확장",
+            title: "v3.0: LGBTQ 커뮤니티 & 정보발신 라이프스타일 앱으로 리뉴얼",
             status: "현재 진행 중",
             items: [
               "모바일: 기존 앱 기능 개선",
-              "Web 버전 신규 추가 (React)",
               "GCP + Supabase 결합으로 비용 절감 및 경량화",
               "AI 번역 기능 추가로 글로벌 시장 진출 준비",
             ],
@@ -122,7 +121,11 @@ const ko: Dictionary = {
           {
             title: "v3.1: 본격적 수익화 실시",
             status: "예정",
-            items: ["광고 수익 모델 도입", "프리미엄 기능 유료화"],
+            items: [
+              "광고 수익 모델 도입",
+              "프리미엄 기능 유료화",
+              "Web 어덜트 콘텐츠 서비스 런칭 (React)",
+            ],
             tags: ["Flutter", "React", "Ruby on Rails", "GCP", "Supabase", "Firebase", "AI"],
           },
         ],
