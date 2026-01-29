@@ -111,21 +111,106 @@ export default async function Home({
                 </h3>
               </div>
 
-              {stage.appInfo && (
-                <a
-                  href={stage.appInfo.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mb-4 ml-3.5 flex items-center gap-3 border-l-2 border-accent/30 pl-7 text-accent hover:underline"
-                >
-                  <span className="text-lg font-bold">{stage.appInfo.name}</span>
-                  <span className="text-sm text-muted">
-                    {stage.appInfo.url.replace(/https?:\/\//, "").replace(/\/$/, "")} ↗
-                  </span>
-                </a>
-              )}
-
               <div className="ml-3.5 border-l-2 border-accent/30 pl-7">
+                {/* app info (stage 3) */}
+                {stage.appInfo && stage.appDescription && (
+                  <div className="mb-4">
+                    <p className="font-medium text-foreground">
+                      {stage.appDescription}{" "}
+                      <a
+                        href={stage.appInfo.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent hover:underline"
+                      >
+                        {stage.appInfo.name}
+                      </a>
+                      {" "}
+                      {stage.appInfo.period && (
+                        <span className="font-normal text-muted">({stage.appInfo.period})</span>
+                      )}
+                    </p>
+                  </div>
+                )}
+
+                {/* motivation */}
+                {stage.motivation && (
+                  <div className="mb-4">
+                    {stage.motivation.map((line) => (
+                      <p key={line} className="text-sm font-bold leading-relaxed">
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+                )}
+
+                {/* service overview */}
+                {stage.serviceOverview && (
+                  <div className="mb-4">
+                    <ul className="space-y-1.5">
+                      {stage.serviceOverview.map((item) => (
+                        <li key={item} className="flex items-start text-sm leading-relaxed text-muted">
+                          <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* features table */}
+                {stage.features && (
+                  <div className="mb-4 overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <tbody>
+                        {stage.features.map((f) => (
+                          <tr key={f.name} className="border-b border-border last:border-0">
+                            <td className="py-1.5 pr-4 font-medium text-foreground whitespace-nowrap">
+                              {f.name}
+                            </td>
+                            <td className="py-1.5 text-muted">{f.description}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+
+                {/* tech stack table */}
+                {stage.techStack && (
+                  <div className="mb-4 overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <tbody>
+                        {stage.techStack.map((t) => (
+                          <tr key={t.layer} className="border-b border-border last:border-0">
+                            <td className="py-1.5 pr-4 font-medium text-foreground whitespace-nowrap">
+                              {t.layer}
+                            </td>
+                            <td className="py-1.5 text-muted">{t.tech}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+
+                {/* timeline */}
+                {stage.timeline && (
+                  <div className="mb-4 overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <tbody>
+                        {stage.timeline.map((t) => (
+                          <tr key={t.period} className="border-b border-border last:border-0">
+                            <td className="py-1.5 pr-4 font-medium text-foreground whitespace-nowrap">
+                              {t.period}
+                            </td>
+                            <td className="py-1.5 text-muted">{t.milestone}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
                 {/* company & service (stage 2) */}
                 {stage.company && (
                   <div className="mb-4">

@@ -13,7 +13,13 @@ export interface Stage {
   service?: { description: string; url: string; name: string };
   overview?: string[];
   tags?: string[];
-  appInfo?: { name: string; url: string };
+  appInfo?: { name: string; url: string; period?: string };
+  appDescription?: string;
+  motivation?: string[];
+  serviceOverview?: string[];
+  features?: { name: string; description: string }[];
+  techStack?: { layer: string; tech: string }[];
+  timeline?: { period: string; milestone: string }[];
   locations?: { name: string; duration: string; items: string[] }[];
   items?: string[];
   projects?: Project[];
@@ -108,48 +114,44 @@ const ko: Dictionary = {
         number: 3,
         title: "수익형 모바일/웹앱 개발",
         duration: "",
-        appInfo: { name: "PONGE", url: "https://pon-ge.com/" },
-        items: [
-          "개인 프로젝트를 진행중이며 UI/UX 디자인 외 모든 영역 총괄",
-          "AI(Claude, Cursor 등)를 활용한 생산성 극대화 추구",
+        appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025~" },
+        appDescription: "LGBTQ 라이프스타일 플랫폼",
+        motivation: [
+          "게이 당사자로서 LGBTQ 커뮤니티의 정보 분산 문제를 DX로 해결하고, 기획부터 수익화까지 1인 완결하는 서비스를 목표로 개발 중입니다.",
         ],
-        projects: [
-          {
-            title: "v1.0 ~ v2.0: LGBTQ 커뮤니티 앱",
-            status: "",
-            items: [
-              "2024년 1월 개발 시작",
-              "2024년 7월 앱스토어, 구글 플레이 스토어 런칭",
-              "유저 수 700명 돌파",
-              "Flutter (iOS/Android) + Rails API + GCP",
-            ],
-            tags: ["Flutter", "Ruby on Rails", "GCP", "Firebase"],
-          },
-          {
-            title: "v3.0: LGBTQ 커뮤니티 & 정보발신 라이프스타일 앱으로 리뉴얼",
-            status: "현재 진행 중",
-            items: [
-              "모바일: 기존 앱 기능 개선",
-              "GCP + Supabase 결합으로 비용 절감 및 경량화",
-              "AI 번역 기능 추가로 글로벌 시장 진출 준비",
-            ],
-            tags: ["Flutter", "React", "Ruby on Rails", "GCP", "Supabase", "Firebase", "AI"],
-          },
-          {
-            title: "v3.1: 본격적 수익화 실시",
-            status: "예정",
-            items: [
-              "광고 수익 모델 도입",
-              "프리미엄 기능 유료화",
-              "Web 어덜트 콘텐츠 서비스 런칭 (React)",
-            ],
-            tags: ["Flutter", "React", "Ruby on Rails", "GCP", "Supabase", "Firebase", "AI"],
-          },
+        serviceOverview: [
+          "LGBTQ 친화 장소 정보 + 커뮤니티 + 채팅을 결합한 플랫폼",
+          "모바일 앱 (iOS/Android) + 웹앱 동시 운영",
+          "6개 언어 지원, AI 번역 기능",
+        ],
+        features: [
+          { name: "PonGe", description: "LGBTQ 친화 장소 등록/검색/북마크 (위치 기반)" },
+          { name: "게시판", description: "커뮤니티 게시물, 좋아요, 댓글" },
+          { name: "실시간 채팅", description: "1:1 채팅 (Supabase Realtime)" },
+          { name: "구독/결제", description: "모바일 IAP + Web Stripe 연동" },
+          { name: "관리자", description: "대시보드, 사용자/콘텐츠/신고 관리" },
+        ],
+        techStack: [
+          { layer: "Mobile", tech: "Flutter (iOS/Android)" },
+          { layer: "Web", tech: "React, Zustand, TanStack Query" },
+          { layer: "Backend", tech: "Ruby on Rails 8.0" },
+          { layer: "Infra", tech: "GCP (Cloud Run, Cloud Build, Cloud Tasks)" },
+          { layer: "Database", tech: "Supabase (Auth, DB, Realtime)" },
+          { layer: "Storage", tech: "Cloudflare R2" },
+          { layer: "Push", tech: "Firebase (FCM, Analytics)" },
+          { layer: "결제", tech: "App Store IAP, Google Play IAP, Stripe" },
+        ],
+        timeline: [
+          { period: "2025.01", milestone: "개발 시작" },
+          { period: "2025.07", milestone: "앱스토어/플레이스토어 런칭, 유저 700명 돌파" },
+          { period: "2025.12", milestone: "버전 3.0 모바일 앱 리뉴얼" },
+          { period: "2026.03", milestone: "수익화 시작 (광고, 프리미엄 구독)" },
         ],
         scope: {
           label: "담당 범위:",
-          value: "기획 → 개발 → 인프라 → 스토어 심사 → 운영 → 마케팅",
+          value: "기획 → 개발 → 인프라 → 스토어 심사 → 운영 → 마케팅 (UI/UX 디자인 제외 전 영역)",
         },
+        tags: ["Flutter", "React", "Ruby on Rails", "GCP", "Supabase", "Firebase", "Stripe", "AI"],
       },
     ],
   },
