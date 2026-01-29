@@ -126,6 +126,44 @@ export default async function Home({
               )}
 
               <div className="ml-3.5 border-l-2 border-accent/30 pl-7">
+                {/* company & service (stage 2) */}
+                {stage.company && (
+                  <div className="mb-4">
+                    <p className="font-medium text-foreground">{stage.company}</p>
+                    {stage.service && (
+                      <p className="mt-1 text-sm text-muted">
+                        {stage.service.description.split(stage.service.name)[0]}
+                        <a
+                          href={stage.service.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-accent hover:underline"
+                        >
+                          {stage.service.name}
+                        </a>
+                        {stage.service.description.split(stage.service.name).slice(1).join(stage.service.name)}
+                      </p>
+                    )}
+                  </div>
+                )}
+
+                {/* overview */}
+                {stage.overview && (
+                  <div className="mb-4">
+                    <ul className="space-y-1.5">
+                      {stage.overview.map((item) => (
+                        <li
+                          key={item}
+                          className="flex items-start text-sm leading-relaxed text-muted"
+                        >
+                          <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 {/* locations (stage 1) */}
                 {"locations" in stage && stage.locations && (
                   <div className="space-y-5">
@@ -157,17 +195,31 @@ export default async function Home({
 
                 {/* items (stage 2) */}
                 {"items" in stage && stage.items && !("projects" in stage) && (
-                  <ul className="space-y-1.5">
-                    {stage.items.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start text-sm leading-relaxed text-muted"
-                      >
-                        <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <>
+                    <ul className="space-y-1.5">
+                      {stage.items.map((item) => (
+                        <li
+                          key={item}
+                          className="flex items-start text-sm leading-relaxed text-muted"
+                        >
+                          <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    {stage.tags && (
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {stage.tags.map((t) => (
+                          <span
+                            key={t}
+                            className="rounded border border-border px-2 py-0.5 text-xs text-muted"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </>
                 )}
 
                 {/* items + projects (stage 3) */}

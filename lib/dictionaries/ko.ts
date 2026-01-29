@@ -9,6 +9,10 @@ export interface Stage {
   number: number;
   title: string;
   duration: string;
+  company?: string;
+  service?: { description: string; url: string; name: string };
+  overview?: string[];
+  tags?: string[];
   appInfo?: { name: string; url: string };
   locations?: { name: string; duration: string; items: string[] }[];
   items?: string[];
@@ -80,14 +84,25 @@ const ko: Dictionary = {
         number: 2,
         title: "스타트업",
         duration: "— 3년 / 도쿄",
+        company: "株式会社カブクスタイル (2021~2024)",
+        service: {
+          description: '구독형 여행 플랫폼 HafH (ハフ) 백엔드 개발',
+          url: "https://www.hafh.com/",
+          name: "HafH (ハフ)",
+        },
+        overview: [
+          '월정액 구독으로 코인을 적립하고 호텔/항공권을 예약하는 "적립형 여행" 서비스',
+          "국내외 다수의 숙박시설 연동, 항공권 예약 시스템 통합",
+        ],
         items: [
-          "신규 서비스 런칭부터 운영까지 풀스택 담당",
-          "백엔드 개발 (Rails API 서버 설계/개발)",
-          "Admin 개발",
-          "GCP 인프라 운영",
-          "OnCall 대응",
+          "Rails API 서버 설계/개발",
+          "코인 기반 예약 시스템 개발",
+          "구독 결제 연동",
+          "숙박시설 OTA API 연동",
+          "GCP 인프라 운영, OnCall 대응 (장애 대응 + 고객 문의 대응)",
           "소규모 팀 애자일 개발",
         ],
+        tags: ["Ruby on Rails", "GCP", "API 연동", "결제 시스템"],
       },
       {
         number: 3,
