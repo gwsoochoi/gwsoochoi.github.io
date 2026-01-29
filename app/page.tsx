@@ -23,10 +23,19 @@ export default function Home() {
       <div className="mx-auto max-w-3xl px-6 py-16">
         {/* 프로필 / 소개 */}
         <header className="mb-12">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground">
-            최광수
-          </h1>
-          <p className="mt-2 text-xl text-accent">소프트웨어 엔지니어</p>
+          <div className="flex items-start gap-6">
+            <img
+              src="/profile.jpg"
+              alt="최광수 프로필 사진"
+              className="h-28 w-28 shrink-0 rounded-full object-cover"
+            />
+            <div>
+              <h1 className="text-4xl font-bold tracking-tight text-foreground">
+                최광수
+              </h1>
+              <p className="mt-2 text-xl text-accent">소프트웨어 엔지니어</p>
+            </div>
+          </div>
           <p className="mt-4 leading-relaxed text-muted">
             실무 9년 이상의 소프트웨어 엔지니어. SI/SE에서 대규모 시스템
             개발로 기반을 다지고, 스타트업에서 풀스택 역량을 키웠으며, 현재는
