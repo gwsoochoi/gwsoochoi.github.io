@@ -76,18 +76,6 @@ const en: Dictionary = {
         motivation: [
           "As a gay man, I'm building a service to solve LGBTQ community's information fragmentation through DX, aiming to complete everything from planning to monetization on my own.",
         ],
-        serviceOverview: [
-          "Platform combining LGBTQ-friendly place information + community + chat",
-          "Mobile app (iOS/Android) + Web app simultaneously operated",
-          "6 languages supported, AI translation feature",
-        ],
-        features: [
-          { name: "PonGe", description: "LGBTQ-friendly place registration/search/bookmark (location-based)" },
-          { name: "Board", description: "Community posts, likes, comments" },
-          { name: "Real-time Chat", description: "1:1 chat (Supabase Realtime)" },
-          { name: "Subscription/Payment", description: "Mobile IAP + Web Stripe integration" },
-          { name: "Admin", description: "Dashboard, user/content/report management" },
-        ],
         techStack: [
           { layer: "Mobile", tech: "Flutter (iOS/Android)" },
           { layer: "Web", tech: "React, Zustand, TanStack Query" },
@@ -96,13 +84,65 @@ const en: Dictionary = {
           { layer: "Database", tech: "Supabase (Auth, DB, Realtime)" },
           { layer: "Storage", tech: "Cloudflare R2" },
           { layer: "Push", tech: "Firebase (FCM, Analytics)" },
-          { layer: "Payment", tech: "App Store IAP, Google Play IAP, Stripe" },
+
         ],
         timeline: [
-          { period: "2025.01", milestone: "Development started" },
-          { period: "2025.07", milestone: "App Store / Play Store launch, 700+ users" },
-          { period: "2025.12", milestone: "Version 3.0 mobile app renewal" },
-          { period: "2026.03", milestone: "Monetization started (ads, premium subscription)" },
+          { period: "2025-01", milestone: "Development started" },
+          {
+            period: "2025-07",
+            milestone: "Version 1.0.0 first release, 700+ users",
+            description: [
+              "Designed map/location-based community and group information registration and discovery structure",
+              "Designed and implemented participation management workflow including join requests, approval/rejection",
+              "Designed and implemented group chat feature for real-time group communication",
+              "Improved user engagement and group activation by combining location-based discovery with community interaction",
+            ],
+          },
+          {
+            period: "2025-09",
+            milestone: "Version 2.0.0 release",
+            description: [
+              "Redesigned core user flows (discovery, participation, communication) for a user-friendly structure",
+              "Simplified information architecture and navigation for improved usability",
+              "Improved interface consistency and readability with accessibility standards",
+              "Optimized UI for various device environments",
+              "Reduced user churn and improved service usability through UX enhancements",
+            ],
+          },
+
+          {
+            period: "2026-01",
+            milestone: "Version 3.0.0 release (app renewal & user guide design)",
+            description: [
+              "Designed business onboarding flow: store search → owner application → admin approval",
+              "Designed service/event browsing and user-to-user 1:1 messaging structure",
+              "Established community board policies and UX (categories, comments, image upload limits, AI content filter)",
+              "Designed profile-based interest tag system to enhance user matching and expression",
+              "Designed multilingual support structure for Korean/Japanese/English/Chinese (Simplified & Traditional)/Thai",
+              "Applied AI auto-translation for posts, profiles, and service information",
+              "## Admin WebApp",
+              "Designed and implemented admin dashboard for integrated user/content/data management",
+              "Automated operational functions including user status management, content management, and report handling",
+              "Designed and operated On-call response process based on logging and monitoring",
+            ],
+          },
+          {
+            period: "2026-02",
+            milestone: "Version 3.2.3 release",
+            description: [
+              "Added anonymous posting and commenting",
+              "Added @mention in comments",
+              "Improved auto-translation for posts and profiles",
+              "Nearby items now show distance with tag filtering",
+              "Added \"See more\" for nearby items",
+              "Improved post management in My Page",
+              "Enabled text selection and copy",
+              "Improved location-based sorting accuracy",
+              "Dark mode UI improvements",
+              "Performance improvements and bug fixes",
+            ],
+          },
+
         ],
         scope: {
           label: "Scope:",

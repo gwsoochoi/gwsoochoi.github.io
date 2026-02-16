@@ -183,7 +183,7 @@ export default async function Home({
                       <tbody>
                         {stage.techStack.map((t) => (
                           <tr key={t.layer} className="border-b border-border last:border-0">
-                            <td className="py-1.5 pr-4 font-medium text-foreground whitespace-nowrap">
+                            <td className="py-1.5 pr-4 w-28 font-medium text-foreground whitespace-nowrap">
                               {t.layer}
                             </td>
                             <td className="py-1.5 text-muted">{t.tech}</td>
@@ -199,12 +199,50 @@ export default async function Home({
                   <div className="mb-4 overflow-x-auto">
                     <table className="w-full text-sm">
                       <tbody>
-                        {stage.timeline.map((t) => (
-                          <tr key={t.period} className="border-b border-border last:border-0">
-                            <td className="py-1.5 pr-4 font-medium text-foreground whitespace-nowrap">
+                        {stage.timeline.map((t, i, arr) => (
+                          <tr key={t.period} className={`border-b border-border last:border-0${i > 0 && t.period.slice(0, 4) !== arr[i - 1].period.slice(0, 4) ? " border-t-2 border-t-border" : ""}`}>
+                            <td className="py-1.5 pr-4 w-28 font-medium text-foreground whitespace-nowrap align-top">
                               {t.period}
                             </td>
-                            <td className="py-1.5 text-muted">{t.milestone}</td>
+                            <td className="py-1.5 text-muted">
+                              {t.description ? (
+                                <details>
+                                  <summary className="cursor-pointer list-none flex items-center gap-1 [&::-webkit-details-marker]:hidden">
+                                    <svg className="w-3.5 h-3.5 shrink-0 transition-transform [[open]>summary>&]:rotate-90" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
+                                    </svg>
+                                    <span>{t.milestone}</span>
+                                  </summary>
+                                  <div className="mt-1 text-xs text-muted/80">
+                                    {(() => {
+                                      const groups: { label?: string; items: string[] }[] = [];
+                                      let cur: { label?: string; items: string[] } = { items: [] };
+                                      for (const d of t.description) {
+                                        if (d.startsWith("## ")) {
+                                          if (cur.items.length) groups.push(cur);
+                                          cur = { label: d.slice(3), items: [] };
+                                        } else {
+                                          cur.items.push(d);
+                                        }
+                                      }
+                                      if (cur.items.length || cur.label) groups.push(cur);
+                                      return groups.map((g, gi) => (
+                                        <div key={gi}>
+                                          {g.label && <p className="font-medium mt-2 mb-0.5 text-muted">{g.label}</p>}
+                                          {g.items.length > 0 && (
+                                            <ul className="ml-5 list-disc">
+                                              {g.items.map((item, j) => <li key={j}>{item}</li>)}
+                                            </ul>
+                                          )}
+                                        </div>
+                                      ));
+                                    })()}
+                                  </div>
+                                </details>
+                              ) : (
+                                <div>{t.milestone}</div>
+                              )}
+                            </td>
                           </tr>
                         ))}
                       </tbody>
