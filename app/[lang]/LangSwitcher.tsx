@@ -4,9 +4,9 @@ import { useRouter } from "next/navigation";
 import { type Lang, locales } from "@/lib/dictionaries";
 
 const labels: Record<Lang, string> = {
-  ko: "한국어",
-  ja: "日本語",
-  en: "English",
+  ko: "🇰🇷 한국어",
+  ja: "🇯🇵 日本語",
+  en: "🇺🇸 English",
 };
 
 export default function LangSwitcher({ current }: { current: Lang }) {
