@@ -10,6 +10,7 @@ export interface Stage {
   title: string;
   duration: string;
   company?: string;
+  companyUrl?: string;
   service?: { description: string; url: string; name: string };
   overview?: string[];
   tags?: string[];
@@ -67,10 +68,27 @@ const ko: Dictionary = {
   },
   career: {
     title: "경력",
-    totalYears: "실무 9년+",
+    totalYears: "",
     stages: [
       {
         number: 1,
+        title: "대학교 학사",
+        duration: "— 4년",
+        company: "멀티미디어학과 컴퓨터프로그래밍",
+        companyUrl: "https://mm.nsu.ac.kr/?m1=page%25&menu_id=744%25",
+        service: {
+          description: "남서울대학교",
+          url: "https://nsu.ac.kr/?m1=home",
+          name: "남서울대학교",
+        },
+      },
+      {
+        number: 2,
+        title: "병역",
+        duration: "— 2년",
+      },
+      {
+        number: 3,
         title: "SI/SE",
         duration: "— 6년",
         locations: [
@@ -87,7 +105,7 @@ const ko: Dictionary = {
         ],
       },
       {
-        number: 2,
+        number: 4,
         title: "스타트업",
         duration: "— 3년 / 도쿄",
         company: "株式会社カブクスタイル (2021~2024)",
@@ -111,7 +129,7 @@ const ko: Dictionary = {
         tags: ["Ruby on Rails", "GCP", "API 연동", "결제 시스템"],
       },
       {
-        number: 3,
+        number: 5,
         title: "수익형 모바일/웹앱 개발",
         duration: "",
         appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025~" },
@@ -217,7 +235,7 @@ const ko: Dictionary = {
     ],
   },
   footer: {
-    copyright: "최광수. All rights reserved.",
+    copyright: "Gwangsoo Choi. All rights reserved.",
   },
 };
 

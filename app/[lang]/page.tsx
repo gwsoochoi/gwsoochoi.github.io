@@ -2,6 +2,7 @@ import { getDictionary, locales, type Lang } from "@/lib/dictionaries";
 import HtmlLang from "./HtmlLang";
 import LangSwitcher from "./LangSwitcher";
 
+
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
@@ -96,7 +97,7 @@ export default async function Home({
           </h2>
 
           {dict.career.stages.map((stage) => (
-            <div key={stage.number} className={stage.number < 3 ? "mb-8" : ""}>
+            <div key={stage.number} className={stage.number < 5 ? "mb-8" : ""}>
               <div className="mb-4 flex items-center gap-3">
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
                   {stage.number}
@@ -252,7 +253,11 @@ export default async function Home({
                 {/* company & service (stage 2) */}
                 {stage.company && (
                   <div className="mb-4">
-                    <p className="font-medium text-foreground">{stage.company}</p>
+                    <p className="font-medium text-foreground">
+                      {stage.companyUrl ? (
+                        <a href={stage.companyUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">{stage.company}</a>
+                      ) : stage.company}
+                    </p>
                     {stage.service && (
                       <p className="mt-1 text-sm text-muted">
                         {stage.service.description.split(stage.service.name)[0]}

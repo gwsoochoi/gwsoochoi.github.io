@@ -19,10 +19,27 @@ const ja: Dictionary = {
   },
   career: {
     title: "経歴",
-    totalYears: "実務9年以上",
+    totalYears: "",
     stages: [
       {
         number: 1,
+        title: "大学 学士",
+        duration: "— 4年",
+        company: "マルチメディア学科 コンピュータプログラミング",
+        companyUrl: "https://mm.nsu.ac.kr/?m1=page%25&menu_id=744%25",
+        service: {
+          description: "南ソウル大学校",
+          url: "https://nsu.ac.kr/?m1=home",
+          name: "南ソウル大学校",
+        },
+      },
+      {
+        number: 2,
+        title: "兵役",
+        duration: "— 2年",
+      },
+      {
+        number: 3,
         title: "SI/SE",
         duration: "— 6年",
         locations: [
@@ -39,7 +56,7 @@ const ja: Dictionary = {
         ],
       },
       {
-        number: 2,
+        number: 4,
         title: "スタートアップ",
         duration: "— 3年 / 東京",
         company: "株式会社カブクスタイル (2021~2024)",
@@ -63,7 +80,7 @@ const ja: Dictionary = {
         tags: ["Ruby on Rails", "GCP", "API連携", "決済システム"],
       },
       {
-        number: 3,
+        number: 5,
         title: "収益型モバイル/Webアプリ開発",
         duration: "",
         appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025~" },
@@ -169,7 +186,7 @@ const ja: Dictionary = {
     ],
   },
   footer: {
-    copyright: "チェ・グァンス. All rights reserved.",
+    copyright: "Gwangsoo Choi. All rights reserved.",
   },
 };
 

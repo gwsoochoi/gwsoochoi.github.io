@@ -19,10 +19,27 @@ const en: Dictionary = {
   },
   career: {
     title: "Career",
-    totalYears: "9+ years of experience",
+    totalYears: "",
     stages: [
       {
         number: 1,
+        title: "University (Bachelor's)",
+        duration: "— 4 years",
+        company: "Dept. of Multimedia — Computer Programming",
+        companyUrl: "https://mm.nsu.ac.kr/?m1=page%25&menu_id=744%25",
+        service: {
+          description: "Namseoul University",
+          url: "https://nsu.ac.kr/?m1=home",
+          name: "Namseoul University",
+        },
+      },
+      {
+        number: 2,
+        title: "Military Service",
+        duration: "— 2 years",
+      },
+      {
+        number: 3,
         title: "SI/SE",
         duration: "— 6 years",
         locations: [
@@ -44,7 +61,7 @@ const en: Dictionary = {
         ],
       },
       {
-        number: 2,
+        number: 4,
         title: "Startup",
         duration: "— 3 years / Tokyo",
         company: "KabuKuStyle Inc. (2021~2024)",
@@ -68,7 +85,7 @@ const en: Dictionary = {
         tags: ["Ruby on Rails", "GCP", "API Integration", "Payment System"],
       },
       {
-        number: 3,
+        number: 5,
         title: "Revenue-Generating Mobile/Web App Development",
         duration: "",
         appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025~" },
