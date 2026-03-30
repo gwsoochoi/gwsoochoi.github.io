@@ -16,14 +16,14 @@
   --color-accent-light: var(--accent-light);
   --color-border: var(--border);
   --color-muted: var(--muted);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Pretendard JP Variable", "Pretendard Variable", -apple-system,
+    BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), "Pretendard", -apple-system,
+  font-family: "Pretendard JP Variable", "Pretendard Variable", -apple-system,
     BlinkMacSystemFont, system-ui, sans-serif;
 }
 
