@@ -10,9 +10,9 @@ const en: Dictionary = {
     role: "Software Engineer",
     imageAlt: "Gwangsoo Choi profile photo",
     bio: [
-      "Korean developer based in Tokyo.",
-      "Currently developing revenue-generating apps independently, from planning to operations.",
-      "Pursuing maximum productivity through AI utilization.",
+      "Tokyo-based software engineer with 15 years of experience.",
+      "From financial/public SI to a subscription travel startup, now independently building and operating a mobile app end-to-end.",
+      "Leveraging AI to expand beyond development into infrastructure, design, and marketing — working toward building a one-person unicorn.",
     ],
     bioSub: "Also available for mid-to-long term freelance full-stack engineering contracts.",
     location: "Tokyo / Shibuya",
@@ -23,75 +23,49 @@ const en: Dictionary = {
     stages: [
       {
         number: 1,
-        title: "University (Bachelor's)",
-        duration: "— 4 years",
-        company: "Dept. of Multimedia — Computer Programming",
-        companyUrl: "https://mm.nsu.ac.kr/?m1=page%25&menu_id=744%25",
-        service: {
-          description: "Namseoul University",
-          url: "https://nsu.ac.kr/?m1=home",
-          name: "Namseoul University",
+        title: "AI Fitness App Development",
+        duration: "",
+        appInfo: { name: "HealthCrub", url: "", period: "2026.04~" },
+        appDescription: "AI-Powered Progressive Body Transformation Solution",
+        motivation: [
+          "A service that combines daily weight training logs with AI to deliver personalized, progressive body transformation programs.",
+          "Leveraging know-how and optimized methodologies from PONGE, this is a fully AI-assisted solo product — from planning and design to development.",
+        ],
+        techStack: [
+          { layer: "Mobile", tech: "Flutter (iOS/Android)" },
+          { layer: "Backend", tech: "Ruby on Rails 8.1, FastAPI" },
+          { layer: "Infra", tech: "GCP (Cloud Run), Docker, Terraform" },
+          { layer: "Database", tech: "Supabase (Auth, DB)" },
+          { layer: "Storage", tech: "Cloudflare R2" },
+          { layer: "Push", tech: "Firebase (FCM)" },
+        ],
+        timeline: [
+          {
+            period: "2026-04",
+            milestone: "Version 1.0.0 Google Play / App Store simultaneous launch planned",
+            description: [
+              "Daily weight training log and history management",
+              "AI-based personalized workout program recommendations",
+              "Progressive overload tracking and growth visualization",
+            ],
+          },
+          { period: "2026-04", milestone: "Development started" },
+        ],
+        scope: {
+          label: "Scope:",
+          value: "Planning → Design → Development → Infrastructure → Store review → Operations (fully AI-assisted solo development)",
         },
+        tags: ["Flutter", "Ruby on Rails", "FastAPI", "GCP", "Supabase", "Firebase", "AI"],
       },
       {
         number: 2,
-        title: "Military Service",
-        duration: "— 2 years",
-      },
-      {
-        number: 3,
-        title: "SI/SE",
-        duration: "— 6 years",
-        locations: [
-          {
-            name: "Seoul",
-            duration: "5 years",
-            items: [
-              "Large-scale financial and public sector system development",
-              "Java Spring backend development",
-            ],
-          },
-          {
-            name: "Tokyo",
-            duration: "1 year",
-            items: [
-              "Backend system development for government operations under NTT DATA",
-            ],
-          },
-        ],
-      },
-      {
-        number: 4,
-        title: "Startup",
-        duration: "— 3 years / Tokyo",
-        company: "KabuKuStyle Inc. (2021~2024)",
-        service: {
-          description: "Subscription travel platform HafH — Backend development",
-          url: "https://www.hafh.com/",
-          name: "HafH",
-        },
-        overview: [
-          "A subscription-based travel service where users earn coins monthly to book hotels and flights",
-          "Integration with numerous domestic and international accommodations, and flight booking systems",
-        ],
-        items: [
-          "Rails API server design and development",
-          "Coin-based booking system development",
-          "Subscription payment integration",
-          "Accommodation OTA API integration",
-          "GCP infrastructure operations, on-call response (incident + customer support)",
-          "Agile development in a small team",
-        ],
-        tags: ["Ruby on Rails", "GCP", "API Integration", "Payment System"],
-      },
-      {
-        number: 5,
-        title: "Revenue-Generating Mobile/Web App Development",
+        title: "LGBTQ Lifestyle Platform Development",
         duration: "",
         appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025~" },
-        appDescription: "LGBTQ Lifestyle Platform",
+        appDescription: "Location-Based Community · Events · Business Connection Platform",
         motivation: [
-          "As a gay man, I'm building a service to solve LGBTQ community's information fragmentation through DX, aiming to complete everything from planning to monetization on my own.",
+          "Solving LGBTQ community's information fragmentation through DX — independently operating the full service from planning to monetization.",
+          "Solo-developing and operating an iOS/Android app and Admin WebApp with 6-language support, AI auto-translation, and real-time map-based social features.",
         ],
         techStack: [
           { layer: "Mobile", tech: "Flutter (iOS/Android)" },
@@ -104,68 +78,136 @@ const en: Dictionary = {
 
         ],
         timeline: [
-          { period: "2025-01", milestone: "Development started" },
           {
-            period: "2025-07",
-            milestone: "Version 1.0.0 first release, 700+ users",
+            period: "2026-03",
+            milestone: "Version 3.4.0 ~ 3.5.0 release",
             description: [
-              "Designed map/location-based community and group information registration and discovery structure",
-              "Designed and implemented participation management workflow including join requests, approval/rejection",
-              "Designed and implemented group chat feature for real-time group communication",
-              "Improved user engagement and group activation by combining location-based discovery with community interaction",
-            ],
-          },
-          {
-            period: "2025-09",
-            milestone: "Version 2.0.0 release",
-            description: [
-              "Redesigned core user flows (discovery, participation, communication) for a user-friendly structure",
-              "Simplified information architecture and navigation for improved usability",
-              "Improved interface consistency and readability with accessibility standards",
-              "Optimized UI for various device environments",
-              "Reduced user churn and improved service usability through UX enhancements",
-            ],
-          },
-
-          {
-            period: "2026-01",
-            milestone: "Version 3.0.0 release (app renewal & user guide design)",
-            description: [
-              "Designed business onboarding flow: store search → owner application → admin approval",
-              "Designed service/event browsing and user-to-user 1:1 messaging structure",
-              "Established community board policies and UX (categories, comments, image upload limits, AI content filter)",
-              "Designed profile-based interest tag system to enhance user matching and expression",
-              "Designed multilingual support structure for Korean/Japanese/English/Chinese (Simplified & Traditional)/Thai",
-              "Applied AI auto-translation for posts, profiles, and service information",
-              "## Admin WebApp",
-              "Designed and implemented admin dashboard for integrated user/content/data management",
-              "Automated operational functions including user status management, content management, and report handling",
-              "Designed and operated On-call response process based on logging and monitoring",
+              "## v3.5.0",
+              "Launched Workout Check-in feature — rank system to boost user retention",
+              "Built banner CMS enabling self-serve promotions without a marketing team",
+              "Platform-specific native UX optimization and common component consolidation",
+              "## v3.4.0",
+              "Shouting — real-time map messaging to improve nearby user discovery rate",
+              "Event linking and clustering to increase content consumption",
+              "Inquiry chat + push notifications to automate customer support",
             ],
           },
           {
             period: "2026-02",
             milestone: "Version 3.2.3 release",
             description: [
-              "Added anonymous posting and commenting",
-              "Added @mention in comments",
-              "Improved auto-translation for posts and profiles",
-              "Nearby items now show distance with tag filtering",
-              "Added \"See more\" for nearby items",
-              "Improved post management in My Page",
-              "Enabled text selection and copy",
-              "Improved location-based sorting accuracy",
-              "Dark mode UI improvements",
-              "Performance improvements and bug fixes",
+              "Enhanced community core features: anonymous posting, mentions, and AI auto-translation",
+              "Improved content discovery conversion with distance display and tag filtering",
+              "Dark mode and accessibility improvements for diverse usage environments",
             ],
           },
-
+          {
+            period: "2026-01",
+            milestone: "Version 3.0.0 release (app renewal)",
+            description: [
+              "Designed business onboarding flow (store registration → approval) for B2B revenue model",
+              "6-language multilingual support + AI auto-translation for global user accessibility",
+              "Community board, interest tags, and 1:1 messaging to complete user engagement structure",
+              "## Admin WebApp",
+              "Built admin dashboard for integrated user, content, and report management",
+              "Designed and operated On-call response process based on logging and monitoring",
+            ],
+          },
+          {
+            period: "2025-09",
+            milestone: "Version 2.0.0 release",
+            description: [
+              "Full UX flow redesign to reduce user churn rate",
+              "Simplified information architecture and multi-device UI optimization",
+            ],
+          },
+          {
+            period: "2025-07",
+            milestone: "Version 1.0.0 first release, 700+ users",
+            description: [
+              "Designed and built core features: location-based discovery, group participation, and group chat",
+              "Simultaneous iOS/Android launch, acquired 700+ users shortly after release",
+            ],
+          },
+          { period: "2025-01", milestone: "Development started" },
         ],
         scope: {
           label: "Scope:",
           value: "Planning → Development → Infrastructure → Store review → Operations → Marketing (all areas except UI/UX design)",
         },
         tags: ["Flutter", "React", "Ruby on Rails", "GCP", "Supabase", "Firebase", "Stripe", "AI"],
+      },
+      {
+        number: 3,
+        title: "Startup",
+        duration: "— 3 years / Tokyo",
+        company: "KabuKuStyle Inc. (2021~2024)",
+        service: {
+          description: "Subscription travel platform HafH — Backend development",
+          url: "https://www.hafh.com/",
+          name: "HafH",
+        },
+        overview: [
+          "A subscription-based travel service where users earn coins monthly to book hotels and flights",
+          "Integrated operations with numerous domestic/international accommodations and flight booking systems",
+        ],
+        items: [
+          "Designed and implemented coin-based booking and payment system (Stripe subscription integration)",
+          "Integrated multiple OTA (accommodation) APIs for real-time inventory and pricing sync",
+          "Designed and developed Rails API server, operated GCP-based infrastructure",
+          "On-call incident response and customer escalation handling",
+          "End-to-end involvement from feature planning to deployment in a small agile team",
+        ],
+        tags: ["Ruby on Rails", "GCP", "API Integration", "Payment System"],
+      },
+      {
+        number: 4,
+        title: "SE (Tokyo)",
+        duration: "— 1 year",
+        company: "Government operations backend development under NTT DATA (Japanese work environment)",
+      },
+      {
+        number: 5,
+        title: "Japanese Language School",
+        duration: "— 2018.06 ~ 2019.06",
+        company: "Japanese Language School (Tokyo)",
+        service: {
+          description: "Japan International University Japanese Language School",
+          url: "https://www.jpschool.ac.jp/",
+          name: "日本国際大学付属日本語学校",
+        },
+      },
+      {
+        number: 6,
+        title: "SI/SE (Seoul)",
+        duration: "— 5 years (first job from 2013.06)",
+        items: [
+          "Large-scale financial and public sector system development (Java Spring)",
+          "High-volume transaction processing and reliability-focused backend development",
+        ],
+      },
+      {
+        number: 7,
+        title: "LG Electronics (Part-time)",
+        duration: "— 2009.02 ~ 2010.02 (during university leave)",
+        company: "Web Storage NAS Dev Team — Tester",
+      },
+      {
+        number: 8,
+        title: "Military Service",
+        duration: "— 2008.01 ~ 2010.01",
+      },
+      {
+        number: 9,
+        title: "University (Bachelor's)",
+        duration: "— 2006.03 ~ 2013.02 (incl. leave)",
+        company: "Dept. of Multimedia — Computer Programming",
+        companyUrl: "https://mm.nsu.ac.kr/?m1=page%25&menu_id=744%25",
+        service: {
+          description: "Namseoul University",
+          url: "https://nsu.ac.kr/?m1=home",
+          name: "Namseoul University",
+        },
       },
     ],
   },
@@ -174,19 +216,47 @@ const en: Dictionary = {
     groups: [
       {
         category: "Backend",
-        items: ["Java Spring", "Ruby on Rails", "REST API"],
+        items: ["Java Spring", "Ruby on Rails", "FastAPI", "Python"],
+      },
+      {
+        category: "Database",
+        items: ["PostgreSQL", "PostGIS", "Oracle", "MySQL"],
       },
       {
         category: "Frontend & Mobile",
-        items: ["Flutter", "React", "Next.js", "TypeScript"],
+        items: ["Flutter", "React", "Next.js", "TypeScript", "Vite"],
       },
       {
-        category: "Infra & Cloud",
-        items: ["GCP", "Supabase", "Docker", "GitHub Actions"],
+        category: "Google Cloud Platform",
+        items: ["Cloud Run", "Cloud Build", "Cloud Tasks"],
       },
       {
-        category: "Others",
-        items: ["AI Utilization (Claude, Cursor)"],
+        category: "Cloudflare",
+        items: ["Domains", "CDN (R2)", "Turnstile"],
+      },
+      {
+        category: "DevOps",
+        items: ["Docker", "GitHub Actions", "Terraform"],
+      },
+      {
+        category: "Supabase",
+        items: ["Database", "Realtime", "Authentication", "Google/Apple OAuth"],
+      },
+      {
+        category: "Firebase",
+        items: ["FCM", "Firestore", "Authentication", "Analytics", "Google/Apple/Kakao/Line OAuth"],
+      },
+      {
+        category: "Payment",
+        items: ["Stripe", "In-App Purchase (iOS/Android)"],
+      },
+      {
+        category: "Monitoring",
+        items: ["Sentry"],
+      },
+      {
+        category: "AI",
+        items: ["Claude", "Codex", "Gemini", "Cursor"],
       },
     ],
   },

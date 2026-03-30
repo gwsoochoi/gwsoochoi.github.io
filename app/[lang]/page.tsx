@@ -96,8 +96,8 @@ export default async function Home({
             </span>
           </h2>
 
-          {dict.career.stages.map((stage) => (
-            <div key={stage.number} className={stage.number < 5 ? "mb-8" : ""}>
+          {dict.career.stages.map((stage, idx) => (
+            <div key={stage.number} className={idx < dict.career.stages.length - 1 ? "mb-8" : ""}>
               <div className="mb-4 flex items-center gap-3">
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
                   {stage.number}
@@ -201,7 +201,7 @@ export default async function Home({
                     <table className="w-full text-sm">
                       <tbody>
                         {stage.timeline.map((t, i, arr) => (
-                          <tr key={t.period} className={`border-b border-border last:border-0${i > 0 && t.period.slice(0, 4) !== arr[i - 1].period.slice(0, 4) ? " border-t-2 border-t-border" : ""}`}>
+                          <tr key={`${t.period}-${i}`} className={`border-b border-border last:border-0${i > 0 && t.period.slice(0, 4) !== arr[i - 1].period.slice(0, 4) ? " border-t-2 border-t-border" : ""}`}>
                             <td className="py-1.5 pr-4 w-28 font-medium text-foreground whitespace-nowrap align-top">
                               {t.period}
                             </td>
