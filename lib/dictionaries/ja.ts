@@ -33,7 +33,7 @@ const ja: Dictionary = {
           "ウェイトトレーニング中心のデイリー運動日誌とAIを組み合わせ、パーソナライズされた段階的ボディメイクソリューションを提供するサービスです。",
           "PONGEで培ったノウハウと最適化された方法論をベースに、企画・デザイン・開発までAIを活用した完全な一人開発プロダクトとして進行中です。",
         ],
-        tags: ["Flutter", "Ruby on Rails", "FastAPI", "GCP Cloud Run", "Docker", "Terraform", "Supabase Auth/DB", "Cloudflare R2", "Firebase FCM"],
+        tags: ["Flutter", "Ruby on Rails", "FastAPI", "GCP Cloud Run", "Docker", "Terraform", "Supabase Auth/DB", "Cloudflare R2", "Firebase FCM", "Git", "GitHub", "RSpec"],
         timeline: [
           {
             period: "2026-04",
@@ -61,7 +61,7 @@ const ja: Dictionary = {
           "LGBTQコミュニティの情報分散問題をDXで解決し、企画から収益化まで一人で完結するサービスを運営中です。",
           "6言語多言語対応、AI自動翻訳、リアルタイム地図ベースのソーシャル機能を備えたiOS/AndroidアプリとAdmin WebAppを一人で開発・運営しています。",
         ],
-        tags: ["Flutter", "React", "Ruby on Rails", "GCP Cloud Run/Build/Tasks", "Supabase Auth/DB/Realtime", "Cloudflare R2/Turnstile", "Firebase FCM/Analytics", "Stripe", "Sentry"],
+        tags: ["Flutter", "React", "Ruby on Rails", "GCP Cloud Run/Build/Tasks", "Supabase Auth/DB/Realtime", "Cloudflare R2/Turnstile", "Firebase FCM/Analytics", "Stripe", "Sentry", "Git", "GitHub", "RSpec"],
         timeline: [
           {
             period: "2026-03",
@@ -142,7 +142,7 @@ const ja: Dictionary = {
           "On-call障害対応及びカスタマーエスカレーション処理",
           "少人数アジャイルチームで機能企画からデプロイまで全工程に参加",
         ],
-        tags: ["React", "Ruby on Rails", "MySQL", "etc."],
+        tags: ["React", "Ruby on Rails", "MySQL", "Git", "GitHub", "RSpec", "etc."],
       },
       {
         number: 4,
@@ -202,7 +202,8 @@ const ja: Dictionary = {
       { label: "Backend", tags: ["Java Spring", "Ruby on Rails", "FastAPI", "Python"] },
       { label: "Frontend & Mobile", tags: ["Flutter", "React", "Next.js", "TypeScript", "Vite"] },
       { label: "Database", tags: ["PostgreSQL", "PostGIS", "Oracle", "MySQL"] },
-      { label: "Cloud & Infra", tags: ["GCP Cloud Run/Build/Tasks", "Docker", "GitHub Actions", "Terraform"] },
+      { label: "Cloud & Infra", tags: ["GCP Cloud Run/Build/Tasks", "Docker", "Terraform"] },
+      { label: "CI/CD", tags: ["GitHub Actions", "Git", "GitHub"] },
       { label: "BaaS", tags: ["Supabase Auth/DB/Realtime", "Cloudflare R2/Turnstile", "Firebase FCM/Firestore/Analytics"] },
       { label: "Auth & Payment", tags: ["Google/Apple/Kakao/Line OAuth", "Stripe", "In-App Purchase"] },
       { label: "Monitoring", tags: ["Sentry"] },

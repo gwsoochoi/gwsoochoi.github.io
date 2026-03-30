@@ -33,7 +33,7 @@ const en: Dictionary = {
           "A service that combines daily weight training logs with AI to deliver personalized, progressive body transformation programs.",
           "Leveraging know-how and optimized methodologies from PONGE, this is a fully AI-assisted solo product — from planning and design to development.",
         ],
-        tags: ["Flutter", "Ruby on Rails", "FastAPI", "GCP Cloud Run", "Docker", "Terraform", "Supabase Auth/DB", "Cloudflare R2", "Firebase FCM"],
+        tags: ["Flutter", "Ruby on Rails", "FastAPI", "GCP Cloud Run", "Docker", "Terraform", "Supabase Auth/DB", "Cloudflare R2", "Firebase FCM", "Git", "GitHub", "RSpec"],
         timeline: [
           {
             period: "2026-04",
@@ -61,7 +61,7 @@ const en: Dictionary = {
           "Solving LGBTQ community's information fragmentation through DX — independently operating the full service from planning to monetization.",
           "Solo-developing and operating an iOS/Android app and Admin WebApp with 6-language support, AI auto-translation, and real-time map-based social features.",
         ],
-        tags: ["Flutter", "React", "Ruby on Rails", "GCP Cloud Run/Build/Tasks", "Supabase Auth/DB/Realtime", "Cloudflare R2/Turnstile", "Firebase FCM/Analytics", "Stripe", "Sentry"],
+        tags: ["Flutter", "React", "Ruby on Rails", "GCP Cloud Run/Build/Tasks", "Supabase Auth/DB/Realtime", "Cloudflare R2/Turnstile", "Firebase FCM/Analytics", "Stripe", "Sentry", "Git", "GitHub", "RSpec"],
         timeline: [
           {
             period: "2026-03",
@@ -142,7 +142,7 @@ const en: Dictionary = {
           "On-call incident response and customer escalation handling",
           "End-to-end involvement from feature planning to deployment in a small agile team",
         ],
-        tags: ["React", "Ruby on Rails", "MySQL", "etc."],
+        tags: ["React", "Ruby on Rails", "MySQL", "Git", "GitHub", "RSpec", "etc."],
       },
       {
         number: 4,
@@ -202,7 +202,8 @@ const en: Dictionary = {
       { label: "Backend", tags: ["Java Spring", "Ruby on Rails", "FastAPI", "Python"] },
       { label: "Frontend & Mobile", tags: ["Flutter", "React", "Next.js", "TypeScript", "Vite"] },
       { label: "Database", tags: ["PostgreSQL", "PostGIS", "Oracle", "MySQL"] },
-      { label: "Cloud & Infra", tags: ["GCP Cloud Run/Build/Tasks", "Docker", "GitHub Actions", "Terraform"] },
+      { label: "Cloud & Infra", tags: ["GCP Cloud Run/Build/Tasks", "Docker", "Terraform"] },
+      { label: "CI/CD", tags: ["GitHub Actions", "Git", "GitHub"] },
       { label: "BaaS", tags: ["Supabase Auth/DB/Realtime", "Cloudflare R2/Turnstile", "Firebase FCM/Firestore/Analytics"] },
       { label: "Auth & Payment", tags: ["Google/Apple/Kakao/Line OAuth", "Stripe", "In-App Purchase"] },
       { label: "Monitoring", tags: ["Sentry"] },
