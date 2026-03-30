@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "최광수 | 이력서",
-  description: "최광수의 이력서 - 소프트웨어 엔지니어",
+  description: "최광수의 이력서 - 프로덕트 빌더 ・ 소프트웨어 엔지니어",
 };
 
 export default function RootLayout({

@@ -49,17 +49,20 @@ export interface Dictionary {
   footer: { copyright: string };
 }
 
+// 경력 연차 자동 계산: 첫 직장 2013.06 기준, 일본어학교 1년 제외
+const careerYears = new Date().getFullYear() - 2013 - 1;
+
 const ko: Dictionary = {
   meta: {
     title: "최광수 | 이력서",
-    description: "최광수의 이력서 - 소프트웨어 엔지니어",
+    description: "최광수의 이력서 - 프로덕트 빌더 ・ 소프트웨어 엔지니어",
   },
   profile: {
     name: "최광수",
-    role: "소프트웨어 엔지니어",
+    role: "프로덕트 빌더 ・ 소프트웨어 엔지니어",
     imageAlt: "최광수 프로필 사진",
     bio: [
-      "도쿄 기반 15년차 소프트웨어 엔지니어입니다.",
+      `도쿄 기반 ${careerYears}년차 프로덕트 빌더 ・ 소프트웨어 엔지니어입니다.`,
       "금융·공공 SI부터 구독형 여행 플랫폼 스타트업, 현재는 모바일 앱을 1인 기획·개발·운영하고 있습니다.",
       "AI를 적극 활용하여 개발·인프라·배포는 물론 기획·디자인·마케팅까지 역량을 확장하며, 1인 유니콘 기업을 목표로 도전하고 있습니다.",
     ],

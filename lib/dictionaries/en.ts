@@ -1,16 +1,18 @@
 import type { Dictionary } from "./ko";
 
+const careerYears = new Date().getFullYear() - 2013 - 1;
+
 const en: Dictionary = {
   meta: {
     title: "Gwangsoo Choi | Resume",
-    description: "Resume of Gwangsoo Choi - Software Engineer",
+    description: "Resume of Gwangsoo Choi - Product Builder ・ Software Engineer",
   },
   profile: {
     name: "Gwangsoo Choi",
-    role: "Software Engineer",
+    role: "Product Builder ・ Software Engineer",
     imageAlt: "Gwangsoo Choi profile photo",
     bio: [
-      "Tokyo-based software engineer with 15 years of experience.",
+      `Tokyo-based software engineer with ${careerYears} years of experience.`,
       "From financial/public SI to a subscription travel startup, now independently building and operating a mobile app end-to-end.",
       "Leveraging AI to expand beyond development into infrastructure, design, and marketing — working toward building a one-person unicorn.",
     ],
