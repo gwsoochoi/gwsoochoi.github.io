@@ -204,6 +204,14 @@ const en: Dictionary = {
       },
     ],
   },
+  languages: {
+    title: "Languages",
+    items: [
+      { name: "Korean", level: "Native" },
+      { name: "Japanese", level: "Business · Daily (residing since 2018.06, JLPT N2)" },
+      { name: "English", level: "Daily" },
+    ],
+  },
   skills: {
     title: "Tech Stack",
     groups: [

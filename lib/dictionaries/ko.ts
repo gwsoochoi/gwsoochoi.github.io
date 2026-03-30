@@ -42,6 +42,10 @@ export interface Dictionary {
     totalYears: string;
     stages: Stage[];
   };
+  languages: {
+    title: string;
+    items: { name: string; level: string }[];
+  };
   skills: {
     title: string;
     groups: { category: string; items: string[] }[];
@@ -252,6 +256,14 @@ const ko: Dictionary = {
         company: "남서울대학교 멀티미디어학과 컴퓨터프로그래밍",
         companyUrl: "https://nsu.ac.kr/?m1=home",
       },
+    ],
+  },
+  languages: {
+    title: "언어",
+    items: [
+      { name: "한국어", level: "모국어" },
+      { name: "일본어", level: "비즈니스 · 일상 (2018.06~ 재류 중, JLPT N2)" },
+      { name: "영어", level: "일상" },
     ],
   },
   skills: {

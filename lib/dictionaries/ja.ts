@@ -204,6 +204,14 @@ const ja: Dictionary = {
       },
     ],
   },
+  languages: {
+    title: "言語",
+    items: [
+      { name: "韓国語", level: "母国語" },
+      { name: "日本語", level: "ビジネス・日常（2018.06〜 在留中、JLPT N2）" },
+      { name: "英語", level: "日常" },
+    ],
+  },
   skills: {
     title: "技術スタック",
     groups: [
