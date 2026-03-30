@@ -341,7 +341,7 @@ export default async function Home({
                     {stage.tags.map((t) => (
                       <span
                         key={t}
-                        className="rounded border border-border px-2 py-0.5 text-xs text-muted"
+                        className="rounded-md bg-gray-100 px-2.5 py-1 text-sm text-gray-500"
                       >
                         {t}
                       </span>
@@ -394,7 +394,7 @@ export default async function Home({
                           {project.tags.map((t) => (
                             <span
                               key={t}
-                              className="rounded border border-border px-2 py-0.5 text-xs text-muted"
+                              className="rounded-md bg-gray-100 px-2.5 py-1 text-sm text-gray-500"
                             >
                               {t}
                             </span>
@@ -444,21 +444,18 @@ export default async function Home({
             {dict.skills.title}
           </h2>
           <div className="grid gap-3">
-            {dict.skills.groups.map((group) => (
-              <div
-                key={group.category}
-                className="flex items-baseline gap-3 rounded-lg border border-border px-4 py-3"
-              >
-                <h3 className="shrink-0 text-sm font-semibold uppercase tracking-wider text-accent w-40">
-                  {group.category}
-                </h3>
+            {dict.skills.sections.map((section) => (
+              <div key={section.label} className="flex items-baseline gap-3">
+                <span className="shrink-0 text-sm font-semibold text-muted w-40">
+                  {section.label}
+                </span>
                 <div className="flex flex-wrap gap-2">
-                  {group.items.map((item) => (
+                  {section.tags.map((tag) => (
                     <span
-                      key={item}
-                      className="rounded-md bg-accent-light px-2.5 py-1 text-sm text-accent"
+                      key={tag}
+                      className="rounded-md bg-gray-100 px-2.5 py-1 text-sm text-gray-500"
                     >
-                      {item}
+                      {tag}
                     </span>
                   ))}
                 </div>

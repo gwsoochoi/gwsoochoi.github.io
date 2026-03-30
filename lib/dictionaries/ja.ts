@@ -33,14 +33,7 @@ const ja: Dictionary = {
           "ウェイトトレーニング中心のデイリー運動日誌とAIを組み合わせ、パーソナライズされた段階的ボディメイクソリューションを提供するサービスです。",
           "PONGEで培ったノウハウと最適化された方法論をベースに、企画・デザイン・開発までAIを活用した完全な一人開発プロダクトとして進行中です。",
         ],
-        techStack: [
-          { layer: "Mobile", tech: "Flutter (iOS/Android)" },
-          { layer: "Backend", tech: "Ruby on Rails 8.1, FastAPI" },
-          { layer: "Infra", tech: "GCP (Cloud Run), Docker, Terraform" },
-          { layer: "Database", tech: "Supabase (Auth, DB)" },
-          { layer: "Storage", tech: "Cloudflare R2" },
-          { layer: "Push", tech: "Firebase (FCM)" },
-        ],
+        tags: ["Flutter", "Ruby on Rails", "FastAPI", "GCP Cloud Run", "Docker", "Terraform", "Supabase Auth/DB", "Cloudflare R2", "Firebase FCM"],
         timeline: [
           {
             period: "2026-04",
@@ -68,16 +61,7 @@ const ja: Dictionary = {
           "LGBTQコミュニティの情報分散問題をDXで解決し、企画から収益化まで一人で完結するサービスを運営中です。",
           "6言語多言語対応、AI自動翻訳、リアルタイム地図ベースのソーシャル機能を備えたiOS/AndroidアプリとAdmin WebAppを一人で開発・運営しています。",
         ],
-        techStack: [
-          { layer: "Mobile", tech: "Flutter (iOS/Android)" },
-          { layer: "Web", tech: "React, Zustand, TanStack Query" },
-          { layer: "Backend", tech: "Ruby on Rails 8.0" },
-          { layer: "Infra", tech: "GCP (Cloud Run, Cloud Build, Cloud Tasks)" },
-          { layer: "Database", tech: "Supabase (Auth, DB, Realtime)" },
-          { layer: "Storage", tech: "Cloudflare R2" },
-          { layer: "Push", tech: "Firebase (FCM, Analytics)" },
-
-        ],
+        tags: ["Flutter", "React", "Ruby on Rails", "GCP Cloud Run/Build/Tasks", "Supabase Auth/DB/Realtime", "Cloudflare R2/Turnstile", "Firebase FCM/Analytics", "Stripe", "Sentry"],
         timeline: [
           {
             period: "2026-03",
@@ -214,51 +198,15 @@ const ja: Dictionary = {
   },
   skills: {
     title: "技術スタック",
-    groups: [
-      {
-        category: "Backend",
-        items: ["Java Spring", "Ruby on Rails", "FastAPI", "Python"],
-      },
-      {
-        category: "Database",
-        items: ["PostgreSQL", "PostGIS", "Oracle", "MySQL"],
-      },
-      {
-        category: "Frontend & Mobile",
-        items: ["Flutter", "React", "Next.js", "TypeScript", "Vite"],
-      },
-      {
-        category: "Google Cloud Platform",
-        items: ["Cloud Run", "Cloud Build", "Cloud Tasks"],
-      },
-      {
-        category: "Cloudflare",
-        items: ["Domains", "CDN (R2)", "Turnstile"],
-      },
-      {
-        category: "DevOps",
-        items: ["Docker", "GitHub Actions", "Terraform"],
-      },
-      {
-        category: "Supabase",
-        items: ["Database", "Realtime", "Authentication", "Google/Apple OAuth"],
-      },
-      {
-        category: "Firebase",
-        items: ["FCM", "Firestore", "Authentication", "Analytics", "Google/Apple/Kakao/Line OAuth"],
-      },
-      {
-        category: "Payment",
-        items: ["Stripe", "In-App Purchase (iOS/Android)"],
-      },
-      {
-        category: "Monitoring",
-        items: ["Sentry"],
-      },
-      {
-        category: "AI",
-        items: ["Claude", "Codex", "Gemini", "Cursor"],
-      },
+    sections: [
+      { label: "Backend", tags: ["Java Spring", "Ruby on Rails", "FastAPI", "Python"] },
+      { label: "Frontend & Mobile", tags: ["Flutter", "React", "Next.js", "TypeScript", "Vite"] },
+      { label: "Database", tags: ["PostgreSQL", "PostGIS", "Oracle", "MySQL"] },
+      { label: "Cloud & Infra", tags: ["GCP Cloud Run/Build/Tasks", "Docker", "GitHub Actions", "Terraform"] },
+      { label: "BaaS", tags: ["Supabase Auth/DB/Realtime", "Cloudflare R2/Turnstile", "Firebase FCM/Firestore/Analytics"] },
+      { label: "Auth & Payment", tags: ["Google/Apple/Kakao/Line OAuth", "Stripe", "In-App Purchase"] },
+      { label: "Monitoring", tags: ["Sentry"] },
+      { label: "AI", tags: ["Claude", "Codex", "Gemini", "Cursor"] },
     ],
   },
   footer: {
