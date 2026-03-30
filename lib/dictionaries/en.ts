@@ -57,7 +57,6 @@ const en: Dictionary = {
           label: "Scope:",
           value: "Planning → Design → Development → Infrastructure → Store review → Operations (fully AI-assisted solo development)",
         },
-        tags: ["Flutter", "Ruby on Rails", "FastAPI", "GCP", "Supabase", "Firebase", "AI"],
       },
       {
         number: 2,
@@ -137,7 +136,6 @@ const en: Dictionary = {
           label: "Scope:",
           value: "Planning → Development → Infrastructure → Store review → Operations → Marketing (all areas except UI/UX design)",
         },
-        tags: ["Flutter", "React", "Ruby on Rails", "GCP", "Supabase", "Firebase", "Stripe", "AI"],
       },
       {
         number: 3,
@@ -160,24 +158,21 @@ const en: Dictionary = {
           "On-call incident response and customer escalation handling",
           "End-to-end involvement from feature planning to deployment in a small agile team",
         ],
-        tags: ["Ruby on Rails", "GCP", "API Integration", "Payment System"],
+        tags: ["React", "Ruby on Rails", "MySQL", "etc."],
       },
       {
         number: 4,
         title: "SE (Tokyo)",
         duration: "— 1 year",
         company: "Government operations backend development under NTT DATA (Japanese work environment)",
+        tags: ["JSP", "Java Spring", "Oracle", "etc."],
       },
       {
         number: 5,
         title: "Japanese Language School",
         duration: "— 2018.06 ~ 2019.06",
-        company: "Japanese Language School (Tokyo)",
-        service: {
-          description: "Japan International University Japanese Language School",
-          url: "https://www.jpschool.ac.jp/",
-          name: "日本国際大学付属日本語学校",
-        },
+        company: "Japan International University Japanese Language School (Tokyo)",
+        companyUrl: "https://www.jpschool.ac.jp/",
       },
       {
         number: 6,
@@ -187,6 +182,7 @@ const en: Dictionary = {
           "Large-scale financial and public sector system development (Java Spring)",
           "High-volume transaction processing and reliability-focused backend development",
         ],
+        tags: ["JSP", "Java Spring", "Oracle", "etc."],
       },
       {
         number: 7,
@@ -203,13 +199,8 @@ const en: Dictionary = {
         number: 9,
         title: "University (Bachelor's)",
         duration: "— 2006.03 ~ 2013.02 (incl. leave)",
-        company: "Dept. of Multimedia — Computer Programming",
-        companyUrl: "https://mm.nsu.ac.kr/?m1=page%25&menu_id=744%25",
-        service: {
-          description: "Namseoul University",
-          url: "https://nsu.ac.kr/?m1=home",
-          name: "Namseoul University",
-        },
+        company: "Namseoul University — Dept. of Multimedia, Computer Programming",
+        companyUrl: "https://nsu.ac.kr/?m1=home",
       },
     ],
   },

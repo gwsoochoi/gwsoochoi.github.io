@@ -107,7 +107,6 @@ const ko: Dictionary = {
           label: "담당 범위:",
           value: "기획 → 디자인 → 개발 → 인프라 → 스토어 심사 → 운영 (AI 활용 완전 1인 개발)",
         },
-        tags: ["Flutter", "Ruby on Rails", "FastAPI", "GCP", "Supabase", "Firebase", "AI"],
       },
       {
         number: 2,
@@ -187,7 +186,6 @@ const ko: Dictionary = {
           label: "담당 범위:",
           value: "기획 → 개발 → 인프라 → 스토어 심사 → 운영 → 마케팅 (UI/UX 디자인 제외 전 영역)",
         },
-        tags: ["Flutter", "React", "Ruby on Rails", "GCP", "Supabase", "Firebase", "Stripe", "AI"],
       },
       {
         number: 3,
@@ -210,24 +208,21 @@ const ko: Dictionary = {
           "On-call 장애 대응 및 고객 에스컬레이션 처리",
           "소규모 팀 애자일 환경에서 기능 기획부터 배포까지 전 과정 참여",
         ],
-        tags: ["Ruby on Rails", "GCP", "API 연동", "결제 시스템"],
+        tags: ["React", "Ruby on Rails", "MySQL", "etc."],
       },
       {
         number: 4,
         title: "SE (도쿄)",
         duration: "— 1년",
         company: "NTT DATA 산하 행정 시스템 백엔드 개발 (일본어 업무 환경)",
+        tags: ["JSP", "Java Spring", "Oracle", "etc."],
       },
       {
         number: 5,
         title: "일본어학교",
         duration: "— 2018.06 ~ 2019.06",
         company: "일본국제대학부속일본어학교 (도쿄)",
-        service: {
-          description: "일본국제대학부속일본어학교",
-          url: "https://www.jpschool.ac.jp/",
-          name: "일본국제대학부속일본어학교",
-        },
+        companyUrl: "https://www.jpschool.ac.jp/",
       },
       {
         number: 6,
@@ -237,6 +232,7 @@ const ko: Dictionary = {
           "금융·공공 분야 대규모 시스템 구축 (Java Spring)",
           "대용량 트랜잭션 처리 및 안정성 중심 백엔드 개발",
         ],
+        tags: ["JSP", "Java Spring", "Oracle", "etc."],
       },
       {
         number: 7,
@@ -253,13 +249,8 @@ const ko: Dictionary = {
         number: 9,
         title: "대학교 학사",
         duration: "— 2006.03 ~ 2013.02 (휴학 포함)",
-        company: "멀티미디어학과 컴퓨터프로그래밍",
-        companyUrl: "https://mm.nsu.ac.kr/?m1=page%25&menu_id=744%25",
-        service: {
-          description: "남서울대학교",
-          url: "https://nsu.ac.kr/?m1=home",
-          name: "남서울대학교",
-        },
+        company: "남서울대학교 멀티미디어학과 컴퓨터프로그래밍",
+        companyUrl: "https://nsu.ac.kr/?m1=home",
       },
     ],
   },

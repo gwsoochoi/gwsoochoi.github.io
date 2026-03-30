@@ -323,7 +323,6 @@ export default async function Home({
 
                 {/* items (stage 2) */}
                 {"items" in stage && stage.items && !("projects" in stage) && (
-                  <>
                     <ul className="space-y-1.5">
                       {stage.items.map((item) => (
                         <li
@@ -335,19 +334,19 @@ export default async function Home({
                         </li>
                       ))}
                     </ul>
-                    {stage.tags && (
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {stage.tags.map((t) => (
-                          <span
-                            key={t}
-                            className="rounded border border-border px-2 py-0.5 text-xs text-muted"
-                          >
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </>
+                )}
+
+                {stage.tags && (
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {stage.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="rounded border border-border px-2 py-0.5 text-xs text-muted"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 )}
 
                 {/* items + projects (stage 3) */}

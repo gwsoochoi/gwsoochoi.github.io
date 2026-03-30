@@ -57,7 +57,6 @@ const ja: Dictionary = {
           label: "担当範囲：",
           value: "企画 → デザイン → 開発 → インフラ → ストア審査 → 運営（AI活用の完全一人開発）",
         },
-        tags: ["Flutter", "Ruby on Rails", "FastAPI", "GCP", "Supabase", "Firebase", "AI"],
       },
       {
         number: 2,
@@ -137,7 +136,6 @@ const ja: Dictionary = {
           label: "担当範囲：",
           value: "企画 → 開発 → インフラ → ストア審査 → 運営 → マーケティング（UI/UXデザイン以外の全領域）",
         },
-        tags: ["Flutter", "React", "Ruby on Rails", "GCP", "Supabase", "Firebase", "Stripe", "AI"],
       },
       {
         number: 3,
@@ -160,24 +158,21 @@ const ja: Dictionary = {
           "On-call障害対応及びカスタマーエスカレーション処理",
           "少人数アジャイルチームで機能企画からデプロイまで全工程に参加",
         ],
-        tags: ["Ruby on Rails", "GCP", "API連携", "決済システム"],
+        tags: ["React", "Ruby on Rails", "MySQL", "etc."],
       },
       {
         number: 4,
         title: "SE（東京）",
         duration: "— 1年",
         company: "NTT DATA傘下の行政システムバックエンド開発（日本語業務環境）",
+        tags: ["JSP", "Java Spring", "Oracle", "etc."],
       },
       {
         number: 5,
         title: "日本語学校",
         duration: "— 2018.06 ~ 2019.06",
         company: "日本国際大学付属日本語学校（東京）",
-        service: {
-          description: "日本国際大学付属日本語学校",
-          url: "https://www.jpschool.ac.jp/",
-          name: "日本国際大学付属日本語学校",
-        },
+        companyUrl: "https://www.jpschool.ac.jp/",
       },
       {
         number: 6,
@@ -187,6 +182,7 @@ const ja: Dictionary = {
           "金融・公共分野の大規模システム構築（Java Spring）",
           "大量トランザクション処理及び安定性重視のバックエンド開発",
         ],
+        tags: ["JSP", "Java Spring", "Oracle", "etc."],
       },
       {
         number: 7,
@@ -203,13 +199,8 @@ const ja: Dictionary = {
         number: 9,
         title: "大学 学士",
         duration: "— 2006.03 ~ 2013.02（休学含む）",
-        company: "マルチメディア学科 コンピュータプログラミング",
-        companyUrl: "https://mm.nsu.ac.kr/?m1=page%25&menu_id=744%25",
-        service: {
-          description: "南ソウル大学校",
-          url: "https://nsu.ac.kr/?m1=home",
-          name: "南ソウル大学校",
-        },
+        company: "南ソウル大学校 マルチメディア学科 コンピュータプログラミング",
+        companyUrl: "https://nsu.ac.kr/?m1=home",
       },
     ],
   },
