@@ -46,6 +46,11 @@ export interface Dictionary {
     title: string;
     items: { name: string; level: string }[];
   };
+  philosophy: {
+    title: string;
+    subtitle: string;
+    items: string[];
+  };
   skills: {
     title: string;
     sections: { label: string; tags: string[] }[];
@@ -67,8 +72,9 @@ const ko: Dictionary = {
     imageAlt: "최광수 프로필 사진",
     bio: [
       `도쿄 기반 ${careerYears}년차 프로덕트 빌더 ・ 소프트웨어 엔지니어입니다.`,
-      "금융·공공 SI부터 구독형 여행 플랫폼 스타트업, 현재는 모바일 앱을 1인 기획·개발·운영하고 있습니다.",
-      "AI를 적극 활용하여 개발·인프라·배포는 물론 기획·디자인·마케팅까지 역량을 확장하며, 1인 유니콘 기업을 목표로 도전하고 있습니다.",
+      "금융·공공 SI부터 구독형 여행 플랫폼 스타트업을 거쳐, 지금은 모바일 앱을 혼자 기획·개발·운영하고 있습니다.",
+      "AI를 적극 활용해 개발뿐 아니라 기획·디자인·마케팅까지 직접 하며, 1인 유니콘 기업을 목표로 도전 중입니다.",
+      "Firebase Analytics로 가입·이탈 흐름을 추적하고, Admin 대시보드에서 DAU·콘텐츠 지표를 확인하며, Sentry로 에러를 모니터링해 숫자 기반으로 판단합니다.",
     ],
     bioSub: "프리랜서 풀스택 엔지니어로 중/장기 업무위탁도 가능합니다.",
     location: "도쿄 / 시부야",
@@ -82,10 +88,10 @@ const ko: Dictionary = {
         title: "AI 피트니스 앱 개발",
         duration: "",
         appInfo: { name: "HealthCrub", url: "", period: "2026.04~" },
-        appDescription: "AI 기반 점진적 몸만들기 솔루션",
+        appDescription: "AI 기반 점진적 몸만들기 앱",
         motivation: [
-          "웨이트 트레이닝 중심의 데일리 운동일지와 AI를 결합하여, 개인 맞춤형 점진적 몸만들기 솔루션을 제공하는 서비스입니다.",
-          "PONGE에서 습득한 노하우와 최적화된 방법론을 바탕으로, 기획·디자인·개발까지 AI를 활용한 완전한 1인 개발 프로덕트로 진행 중입니다.",
+          "매일의 웨이트 트레이닝 기록과 AI를 결합해, 나에게 맞는 운동 프로그램을 제안하는 서비스입니다.",
+          "PONGE를 만들며 쌓은 경험을 살려, 기획부터 디자인·개발까지 AI와 함께 혼자 만들고 있습니다.",
         ],
         tags: ["Flutter", "Ruby on Rails", "FastAPI", "GCP Cloud Run", "Docker", "Terraform", "Supabase Auth/DB", "Cloudflare R2", "Firebase FCM", "Git", "GitHub", "RSpec"],
         timeline: [
@@ -112,8 +118,8 @@ const ko: Dictionary = {
         appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025~" },
         appDescription: "위치 기반 커뮤니티 · 이벤트 · 비즈니스 연결 플랫폼",
         motivation: [
-          "LGBTQ 커뮤니티의 정보 분산 문제를 DX로 해결하고, 기획부터 수익화까지 1인 완결하는 서비스를 운영 중입니다.",
-          "6개 언어 다국어 지원, AI 자동 번역, 실시간 지도 기반 소셜 기능을 갖춘 iOS/Android 앱과 Admin WebApp을 1인 개발·운영하고 있습니다.",
+          "LGBTQ 커뮤니티에 흩어진 정보를 하나로 모으고, 기획부터 수익화까지 혼자 운영하는 서비스입니다.",
+          "6개 언어 지원, AI 자동 번역, 실시간 지도 기반 소셜 기능을 갖춘 iOS/Android 앱과 Admin WebApp을 혼자 만들어 운영하고 있습니다.",
         ],
         tags: ["Flutter", "React", "Ruby on Rails", "GCP Cloud Run/Build/Tasks", "Supabase Auth/DB/Realtime", "Cloudflare R2/Turnstile", "Firebase FCM/Analytics", "Stripe", "Sentry", "Git", "GitHub", "RSpec"],
         timeline: [
@@ -122,13 +128,13 @@ const ko: Dictionary = {
             milestone: "3.4.0 ~ 3.5.0 버전 출시",
             description: [
               "## v3.5.0",
-              "운동 인증(오운완) 기능 출시 — 랭크 시스템으로 유저 리텐션 강화",
-              "홈 배너 CMS 구축으로 마케팅팀 없이 프로모션 자체 운영 가능",
-              "iOS/Android 플랫폼별 네이티브 UX 최적화 및 공통 컴포넌트 체계화",
+              "운동 인증(오운완) 기능 출시 — 랭크 시스템으로 재방문 유도",
+              "홈 배너 CMS를 만들어 마케팅팀 없이 프로모션 직접 운영",
+              "iOS/Android 각 플랫폼에 맞는 UX 최적화 및 공통 컴포넌트 정리",
               "## v3.4.0",
               "샤우팅(Shouting) — 지도 기반 실시간 메시지로 주변 유저 발견율 향상",
-              "이벤트 연결·클러스터링 도입으로 콘텐츠 소비량 증가",
-              "문의 채팅 + 푸시알림으로 고객 응대 자동화",
+              "이벤트 연결·클러스터링으로 콘텐츠 탐색 편의 개선",
+              "문의 채팅 + 푸시알림으로 고객 응대 흐름 자동화",
             ],
           },
           {
@@ -136,36 +142,36 @@ const ko: Dictionary = {
             milestone: "3.2.3 버전 출시",
             description: [
               "익명 게시·멘션·자동 번역 등 커뮤니티 핵심 기능 강화",
-              "위치 기반 거리 표시 및 태그 필터로 콘텐츠 탐색 전환율 개선",
-              "다크모드·접근성 개선으로 다양한 사용 환경 대응",
+              "거리 표시·태그 필터로 원하는 콘텐츠를 더 빨리 찾도록 개선",
+              "다크모드·접근성 대응으로 다양한 사용 환경 지원",
             ],
           },
           {
             period: "2026-01",
             milestone: "3.0.0 버전 출시 (앱 리뉴얼)",
             description: [
-              "비즈니스 온보딩 플로우(가게 등록 → 승인) 설계로 B2B 수익 모델 기반 구축",
-              "6개 언어 다국어 지원 + AI 자동 번역으로 글로벌 사용자 접근성 확보",
+              "가게 등록 → 승인 흐름을 설계해 B2B 수익 모델 기반 마련",
+              "6개 언어 + AI 자동 번역으로 해외 사용자도 바로 쓸 수 있게 구성",
               "커뮤니티 게시판·관심사 태그·1:1 메시징으로 사용자 참여 구조 완성",
               "## Admin WebApp",
-              "관리자 대시보드 구축으로 사용자·콘텐츠·신고 통합 운영 체계 확립",
-              "로그·모니터링 기반 On-call 프로세스 설계 및 운영",
+              "관리자 대시보드를 만들어 사용자·콘텐츠·신고를 한곳에서 관리",
+              "로그·모니터링 기반 On-call 대응 체계 구축",
             ],
           },
           {
             period: "2025-09",
             milestone: "2.0.0 버전 출시",
             description: [
-              "핵심 UX 플로우 전면 재설계로 사용자 이탈률 감소",
-              "정보 구조 단순화 및 멀티 디바이스 UI 최적화",
+              "UX 흐름을 처음부터 다시 설계해 이탈률 개선",
+              "정보 구조를 단순화하고 여러 디바이스에 맞게 UI 조정",
             ],
           },
           {
             period: "2025-07",
             milestone: "1.0.0 첫 출시, 유저 700명 돌파",
             description: [
-              "위치 기반 커뮤니티 탐색·모임 참여·그룹 채팅 핵심 기능 설계 및 구현",
-              "iOS/Android 동시 출시, 출시 직후 유저 700명 확보",
+              "위치 기반 커뮤니티 탐색·모임 참여·그룹 채팅 등 핵심 기능 구현",
+              "iOS/Android 동시 출시, 출시 직후 유저 700명 달성",
             ],
           },
           { period: "2025-01", milestone: "개발 시작" },
@@ -186,15 +192,15 @@ const ko: Dictionary = {
           name: "HafH (ハフ)",
         },
         overview: [
-          '월정액 구독으로 코인을 적립하고 호텔/항공권을 예약하는 여행 서비스',
-          "국내외 다수의 숙박시설·항공권 예약 시스템 통합 운영",
+          '월정액 구독으로 코인을 모아 호텔·항공권을 예약하는 여행 서비스',
+          "국내외 숙박시설·항공권 예약 시스템을 하나로 통합 운영",
         ],
         items: [
           "코인 기반 예약·결제 시스템 설계 및 구현 (Stripe 구독 연동)",
-          "복수 OTA(숙박시설) API 통합으로 재고·가격 실시간 동기화",
-          "Rails API 서버 설계·개발 및 GCP 기반 인프라 운영",
+          "여러 OTA(숙박시설) API를 연결해 재고·가격을 실시간 동기화",
+          "Rails API 서버 설계·개발, GCP 인프라 운영",
           "On-call 장애 대응 및 고객 에스컬레이션 처리",
-          "소규모 팀 애자일 환경에서 기능 기획부터 배포까지 전 과정 참여",
+          "소규모 애자일 팀에서 기획부터 배포까지 전 과정 참여",
         ],
         tags: ["React", "Ruby on Rails", "MySQL", "Git", "GitHub", "RSpec", "etc."],
       },
@@ -248,6 +254,18 @@ const ko: Dictionary = {
       { name: "한국어", level: "모국어" },
       { name: "일본어", level: "비즈니스 · 일상 (2018.06~ 재류 중, JLPT N2)" },
       { name: "영어", level: "일상" },
+    ],
+  },
+  philosophy: {
+    title: "개발 성향",
+    subtitle: "스타트업에서 쌓은 실전 경험을 바탕으로 나만의 개발 원칙을 만들었고, 제로(0)부터 설계·구현·인프라·배포까지 혼자 완결해 서비스를 출시하고 있습니다.",
+    items: [
+      "Clean Architecture로 계층(Controller → Service → Repository)을 나누고, 각 역할을 명확히 분리합니다.",
+      "비즈니스 로직은 Service Object + Result 패턴으로 감싸고, 검증은 Form Object, 복잡한 조회는 Query Object로 분리합니다.",
+      "공통 기능(번역, 위치 등)은 Concern으로 묶어 중복 없이 재사용합니다.",
+      "Flutter에서는 Riverpod + Freezed로 상태를 불변으로 관리하고, 기능별로 data/domain/presentation 계층을 나눕니다.",
+      "RSpec으로 단위·결합·시스템 테스트를 작성하고, RuboCop Omakase 스타일로 코드 일관성을 유지합니다.",
+      "AI를 적극 활용해 개발 속도와 코드 품질을 높이고, 버그를 줄이는 데 집중합니다.",
     ],
   },
   skills: {

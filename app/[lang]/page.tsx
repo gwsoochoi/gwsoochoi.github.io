@@ -438,6 +438,27 @@ export default async function Home({
           </div>
         </section>
 
+        {/* 개발 성향 */}
+        <section className="mb-12">
+          <h2 className="mb-2 text-2xl font-bold text-foreground">
+            {dict.philosophy.title}
+          </h2>
+          <p className="mb-6 text-sm leading-relaxed text-muted">
+            {dict.philosophy.subtitle}
+          </p>
+          <ul className="space-y-1.5">
+            {dict.philosophy.items.map((item) => (
+              <li
+                key={item}
+                className="flex items-start text-sm leading-relaxed text-muted"
+              >
+                <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </section>
+
         {/* 기술 스택 */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-bold text-foreground">
