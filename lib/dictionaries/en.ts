@@ -1,6 +1,7 @@
 import type { Dictionary } from "./ko";
 
 const careerYears = new Date().getFullYear() - 2013 - 1;
+const tokyoYears = new Date().getFullYear() - 2018;
 
 const en: Dictionary = {
   meta: {
@@ -12,7 +13,7 @@ const en: Dictionary = {
     role: "Product Builder ・ Software Engineer",
     imageAlt: "Gwangsoo Choi profile photo",
     bio: [
-      `Tokyo-based software engineer with ${careerYears} years of experience.`,
+      `Tokyo resident (${tokyoYears} years) — product builder & software engineer with ${careerYears} years of development experience.`,
       "From financial/public SI to a subscription travel startup — now building and running a mobile app solo, end to end.",
       "I use AI heavily to go beyond coding into planning, design, and marketing, aiming to build a one-person unicorn.",
       "I track signups and churn with Firebase Analytics, monitor DAU and content metrics on an Admin dashboard, and catch errors with Sentry — decisions are based on numbers.",
@@ -28,6 +29,7 @@ const en: Dictionary = {
         number: 1,
         title: "AI Fitness App Development",
         duration: "",
+        company: "株式会社GREATEARTH",
         appInfo: { name: "HealthCrub", url: "", period: "2026.04~" },
         appDescription: "AI-powered progressive fitness app",
         motivation: [
@@ -56,7 +58,8 @@ const en: Dictionary = {
         number: 2,
         title: "LGBTQ Lifestyle Platform Development",
         duration: "",
-        appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025~" },
+        company: "株式会社GREATEARTH",
+        appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025.01~" },
         appDescription: "Location-Based Community · Events · Business Connection Platform",
         motivation: [
           "Bringing scattered LGBTQ community info into one place — running the full service solo, from planning to monetization.",
@@ -124,9 +127,28 @@ const en: Dictionary = {
       },
       {
         number: 3,
+        title: "SMBC Furusato Tax Site Renewal",
+        duration: "— (Freelance・2024.06 ~ 2024.09)",
+        items: [
+          "Backend development for user registration, login, and profile management",
+        ],
+        tags: ["Java Spring", "PostgreSQL", "Git", "GitLab"],
+      },
+      {
+        number: 4,
+        title: "Minerva Investment Info Platform",
+        duration: "— (Freelance・2023.01 ~ 2023.12)",
+        items: [
+          "Led as PL in a 3-person team — designed and built the full backend, DB, and REST API",
+          "Executed data integration and migration from external platforms",
+        ],
+        tags: ["Ruby on Rails", "MySQL", "React", "AWS Lightsail", "Git", "GitHub", "RSpec"],
+      },
+      {
+        number: 5,
         title: "Startup",
-        duration: "— 3 years / Tokyo",
-        company: "KabuKuStyle Inc. (2021~2024)",
+        duration: "— (Freelance・2021.01~) / Tokyo",
+        company: "KabuKuStyle Inc.",
         service: {
           description: "Subscription travel platform HafH — Backend development",
           url: "https://www.hafh.com/",
@@ -146,21 +168,21 @@ const en: Dictionary = {
         tags: ["React", "Ruby on Rails", "MySQL", "Git", "GitHub", "RSpec", "etc."],
       },
       {
-        number: 4,
+        number: 6,
         title: "SE (Tokyo)",
         duration: "— 1 year",
         company: "Government operations backend development under NTT DATA (Japanese work environment)",
         tags: ["JSP", "Java Spring", "Oracle", "etc."],
       },
       {
-        number: 5,
+        number: 7,
         title: "Japanese Language School",
         duration: "— 2018.06 ~ 2019.06",
         company: "Japan International University Japanese Language School (Tokyo)",
         companyUrl: "https://www.jpschool.ac.jp/",
       },
       {
-        number: 6,
+        number: 8,
         title: "SI/SE (Seoul)",
         duration: "— 5 years (first job from 2013.06)",
         items: [
@@ -170,18 +192,18 @@ const en: Dictionary = {
         tags: ["JSP", "Java Spring", "Oracle", "etc."],
       },
       {
-        number: 7,
+        number: 9,
         title: "LG Electronics (Part-time)",
         duration: "— 2009.02 ~ 2010.02 (during university leave)",
         company: "Web Storage NAS Dev Team — Tester",
       },
       {
-        number: 8,
+        number: 10,
         title: "Military Service",
         duration: "— 2008.01 ~ 2010.01",
       },
       {
-        number: 9,
+        number: 11,
         title: "University (Bachelor's)",
         duration: "— 2006.03 ~ 2013.02 (incl. leave)",
         company: "Namseoul University — Dept. of Multimedia, Computer Programming",
@@ -199,15 +221,8 @@ const en: Dictionary = {
   },
   philosophy: {
     title: "Development Philosophy",
-    subtitle: "I shaped my own development principles through real startup work, then built and shipped production services solo — from zero to architecture, implementation, infra, and deployment.",
-    items: [
-      "Split layers with Clean Architecture (Controller → Service → Repository) so each part has a clear job.",
-      "Business logic goes into Service Objects with the Result pattern; validation in Form Objects, complex queries in Query Objects.",
-      "Shared behavior (translation, location, etc.) lives in Concerns — written once, reused everywhere.",
-      "In Flutter, state is immutable via Riverpod + Freezed, and each feature is split into data / domain / presentation layers.",
-      "Tests are written with RSpec (unit, integration, system) and code style stays consistent with RuboCop Omakase.",
-      "I lean on AI to move faster, keep code quality high, and catch bugs early.",
-    ],
+    subtitle: "I shaped my own development principles through real startup work, then built and shipped production services solo — from zero to architecture, implementation, infra, and deployment. In team settings, I value close and open communication with teammates, approaching project goals together. Since 2025, building on clean architecture methodology, I've actively used the AI agent Claude Code in personal projects — not just for development, but also for code management, reviews, architecture, and infrastructure — achieving growth and experience that wouldn't have been possible alone. This know-how now enables me to build high-quality services in the shortest time possible.",
+    items: [],
   },
   skills: {
     title: "Tech Stack",

@@ -109,27 +109,35 @@ export default async function Home({
                       {stage.duration}
                     </span>
                   )}
+                  {stage.appInfo?.period && (
+                    <span className="font-normal text-muted">
+                      ({stage.appInfo.period})
+                    </span>
+                  )}
                 </h3>
               </div>
 
               <div className="ml-3.5 border-l-2 border-accent/30 pl-7">
-                {/* app info (stage 3) */}
+                {/* company + app info */}
                 {stage.appInfo && stage.appDescription && (
                   <div className="mb-4">
-                    <p className="font-medium text-foreground">
+                    {stage.company && (
+                      <p className="font-medium text-foreground">
+                        {stage.companyUrl ? (
+                          <a href={stage.companyUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">{stage.company}</a>
+                        ) : stage.company}
+                      </p>
+                    )}
+                    <p className="mt-1 text-sm text-muted">
                       {stage.appDescription}{" "}
                       <a
                         href={stage.appInfo.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-accent hover:underline"
+                        className="font-medium text-accent hover:underline"
                       >
                         {stage.appInfo.name}
                       </a>
-                      {" "}
-                      {stage.appInfo.period && (
-                        <span className="font-normal text-muted">({stage.appInfo.period})</span>
-                      )}
                     </p>
                   </div>
                 )}
@@ -250,8 +258,8 @@ export default async function Home({
                     </table>
                   </div>
                 )}
-                {/* company & service (stage 2) */}
-                {stage.company && (
+                {/* company & service */}
+                {stage.company && !stage.appInfo && (
                   <div className="mb-4">
                     <p className="font-medium text-foreground">
                       {stage.companyUrl ? (

@@ -60,6 +60,7 @@ export interface Dictionary {
 
 // 경력 연차 자동 계산: 첫 직장 2013.06 기준, 일본어학교 1년 제외
 const careerYears = new Date().getFullYear() - 2013 - 1;
+const tokyoYears = new Date().getFullYear() - 2018;
 
 const ko: Dictionary = {
   meta: {
@@ -71,7 +72,7 @@ const ko: Dictionary = {
     role: "프로덕트 빌더 ・ 소프트웨어 엔지니어",
     imageAlt: "최광수 프로필 사진",
     bio: [
-      `도쿄 기반 ${careerYears}년차 프로덕트 빌더 ・ 소프트웨어 엔지니어입니다.`,
+      `도쿄 재류중(${tokyoYears}년차)인 개발 ${careerYears}년차 프로덕트 빌더 ・ 소프트웨어 엔지니어입니다.`,
       "금융·공공 SI부터 구독형 여행 플랫폼 스타트업을 거쳐, 지금은 모바일 앱을 혼자 기획·개발·운영하고 있습니다.",
       "AI를 적극 활용해 개발뿐 아니라 기획·디자인·마케팅까지 직접 하며, 1인 유니콘 기업을 목표로 도전 중입니다.",
       "Firebase Analytics로 가입·이탈 흐름을 추적하고, Admin 대시보드에서 DAU·콘텐츠 지표를 확인하며, Sentry로 에러를 모니터링해 숫자 기반으로 판단합니다.",
@@ -87,6 +88,7 @@ const ko: Dictionary = {
         number: 1,
         title: "AI 피트니스 앱 개발",
         duration: "",
+        company: "株式会社GREATEARTH",
         appInfo: { name: "HealthCrub", url: "", period: "2026.04~" },
         appDescription: "AI 기반 점진적 몸만들기 앱",
         motivation: [
@@ -115,7 +117,8 @@ const ko: Dictionary = {
         number: 2,
         title: "LGBTQ 라이프스타일 플랫폼 개발",
         duration: "",
-        appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025~" },
+        company: "株式会社GREATEARTH",
+        appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025.01~" },
         appDescription: "위치 기반 커뮤니티 · 이벤트 · 비즈니스 연결 플랫폼",
         motivation: [
           "LGBTQ 커뮤니티에 흩어진 정보를 하나로 모으고, 기획부터 수익화까지 혼자 운영하는 서비스입니다.",
@@ -183,9 +186,28 @@ const ko: Dictionary = {
       },
       {
         number: 3,
+        title: "미쓰이스미토모은행 후루사토납세 사이트 리뉴얼",
+        duration: "— (프리랜서・2024.06 ~ 2024.09)",
+        items: [
+          "회원가입 및 로그인, 유저정보 수정 백엔드 개발",
+        ],
+        tags: ["Java Spring", "PostgreSQL", "Git", "GitLab"],
+      },
+      {
+        number: 4,
+        title: "Minerva 투자정보 제공 플랫폼 개발",
+        duration: "— (프리랜서・2023.01 ~ 2023.12)",
+        items: [
+          "3인 체제에서 PL로서 플랫폼 전반 백엔드, DB, REST API 설계 및 개발",
+          "외부 플랫폼 데이터 통합 마이그레이션 진행",
+        ],
+        tags: ["Ruby on Rails", "MySQL", "React", "AWS Lightsail", "Git", "GitHub", "RSpec"],
+      },
+      {
+        number: 5,
         title: "스타트업",
-        duration: "— 3년 / 도쿄",
-        company: "株式会社カブクスタイル (2021~2024)",
+        duration: "— (프리랜서・2021.01~) / 도쿄",
+        company: "株式会社カブクスタイル",
         service: {
           description: '구독형 여행 플랫폼 HafH (ハフ) 백엔드 개발',
           url: "https://www.hafh.com/",
@@ -205,21 +227,21 @@ const ko: Dictionary = {
         tags: ["React", "Ruby on Rails", "MySQL", "Git", "GitHub", "RSpec", "etc."],
       },
       {
-        number: 4,
+        number: 6,
         title: "SE (도쿄)",
         duration: "— 1년",
         company: "NTT DATA 산하 행정 시스템 백엔드 개발 (일본어 업무 환경)",
         tags: ["JSP", "Java Spring", "Oracle", "etc."],
       },
       {
-        number: 5,
+        number: 7,
         title: "일본어학교",
         duration: "— 2018.06 ~ 2019.06",
         company: "일본국제대학부속일본어학교 (도쿄)",
         companyUrl: "https://www.jpschool.ac.jp/",
       },
       {
-        number: 6,
+        number: 8,
         title: "SI/SE (서울)",
         duration: "— 5년 (첫 직장 2013.06~)",
         items: [
@@ -229,18 +251,18 @@ const ko: Dictionary = {
         tags: ["JSP", "Java Spring", "Oracle", "etc."],
       },
       {
-        number: 7,
+        number: 9,
         title: "LG Electronics 아르바이트",
         duration: "— 2009.02 ~ 2010.02 (대학 휴학 중)",
         company: "웹스토리지 NAS 개발팀 — 테스터",
       },
       {
-        number: 8,
+        number: 10,
         title: "병역",
         duration: "— 2008.01 ~ 2010.01",
       },
       {
-        number: 9,
+        number: 11,
         title: "대학교 학사",
         duration: "— 2006.03 ~ 2013.02 (휴학 포함)",
         company: "남서울대학교 멀티미디어학과 컴퓨터프로그래밍",
@@ -258,15 +280,8 @@ const ko: Dictionary = {
   },
   philosophy: {
     title: "개발 성향",
-    subtitle: "스타트업에서 쌓은 실전 경험을 바탕으로 나만의 개발 원칙을 만들었고, 제로(0)부터 설계·구현·인프라·배포까지 혼자 완결해 서비스를 출시하고 있습니다.",
-    items: [
-      "Clean Architecture로 계층(Controller → Service → Repository)을 나누고, 각 역할을 명확히 분리합니다.",
-      "비즈니스 로직은 Service Object + Result 패턴으로 감싸고, 검증은 Form Object, 복잡한 조회는 Query Object로 분리합니다.",
-      "공통 기능(번역, 위치 등)은 Concern으로 묶어 중복 없이 재사용합니다.",
-      "Flutter에서는 Riverpod + Freezed로 상태를 불변으로 관리하고, 기능별로 data/domain/presentation 계층을 나눕니다.",
-      "RSpec으로 단위·결합·시스템 테스트를 작성하고, RuboCop Omakase 스타일로 코드 일관성을 유지합니다.",
-      "AI를 적극 활용해 개발 속도와 코드 품질을 높이고, 버그를 줄이는 데 집중합니다.",
-    ],
+    subtitle: "스타트업에서 쌓은 실전 경험을 바탕으로 나만의 개발 원칙을 만들었고, 제로(0)부터 설계·구현·인프라·배포까지 혼자 완결해 서비스를 출시하고 있습니다. 팀 단위 개발에서는 팀원과의 원활하고 긴밀한 커뮤니케이션을 중요시하며, 프로젝트의 목표에 함께 접근하는 것을 지향합니다. 2025년부터 시작한 개인 프로젝트에서는 기본 클린 아키텍처 방법론에 기반하여 AI 에이전트 Claude Code를 적극 활용하여 개발뿐만 아니라 코드 관리, 리뷰, 설계 및 인프라 파트에서도 혼자서는 할 수 없었던 발전과 경험을 이루었으며, 이 경험과 노하우를 바탕으로 최단시간에 고퀄리티의 서비스를 구축할 수 있게 되었습니다.",
+    items: [],
   },
   skills: {
     title: "기술 스택",

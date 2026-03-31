@@ -1,6 +1,7 @@
 import type { Dictionary } from "./ko";
 
 const careerYears = new Date().getFullYear() - 2013 - 1;
+const tokyoYears = new Date().getFullYear() - 2018;
 
 const ja: Dictionary = {
   meta: {
@@ -12,7 +13,7 @@ const ja: Dictionary = {
     role: "プロダクトビルダー ・ ソフトウェアエンジニア",
     imageAlt: "チェ・グァンス プロフィール写真",
     bio: [
-      `東京在住、経験${careerYears}年のプロダクトビルダー ・ ソフトウェアエンジニアです。`,
+      `東京在住(${tokyoYears}年目)、開発経験${careerYears}年のプロダクトビルダー ・ ソフトウェアエンジニアです。`,
       "金融・公共SIからサブスク型旅行スタートアップを経て、今はモバイルアプリを一人で企画・開発・運営しています。",
       "AIを積極的に使い、開発だけでなく企画・デザイン・マーケティングまで自分でやりながら、一人ユニコーン企業を目指しています。",
       "Firebase Analyticsで登録・離脱の流れを追い、AdminダッシュボードでDAU・コンテンツ指標を確認し、Sentryでエラーを監視しながら、数字をもとに判断しています。",
@@ -28,6 +29,7 @@ const ja: Dictionary = {
         number: 1,
         title: "AIフィットネスアプリ開発",
         duration: "",
+        company: "株式会社GREATEARTH",
         appInfo: { name: "HealthCrub", url: "", period: "2026.04~" },
         appDescription: "AIを活用した段階的ボディメイクアプリ",
         motivation: [
@@ -56,7 +58,8 @@ const ja: Dictionary = {
         number: 2,
         title: "LGBTQライフスタイルプラットフォーム開発",
         duration: "",
-        appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025~" },
+        company: "株式会社GREATEARTH",
+        appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025.01~" },
         appDescription: "位置情報ベースのコミュニティ・イベント・ビジネス接続プラットフォーム",
         motivation: [
           "LGBTQコミュニティに散らばった情報を一つにまとめ、企画から収益化まで一人で回しているサービスです。",
@@ -124,9 +127,28 @@ const ja: Dictionary = {
       },
       {
         number: 3,
+        title: "三井住友銀行ふるさと納税サイトリニューアル",
+        duration: "— (フリーランス・2024.06 ~ 2024.09)",
+        items: [
+          "会員登録・ログイン、ユーザー情報修正のバックエンド開発",
+        ],
+        tags: ["Java Spring", "PostgreSQL", "Git", "GitLab"],
+      },
+      {
+        number: 4,
+        title: "Minerva投資情報提供プラットフォーム開発",
+        duration: "— (フリーランス・2023.01 ~ 2023.12)",
+        items: [
+          "3名体制でPLとしてプラットフォーム全般のバックエンド、DB、REST API設計・開発",
+          "外部プラットフォームデータの統合マイグレーション実施",
+        ],
+        tags: ["Ruby on Rails", "MySQL", "React", "AWS Lightsail", "Git", "GitHub", "RSpec"],
+      },
+      {
+        number: 5,
         title: "スタートアップ",
-        duration: "— 3年 / 東京",
-        company: "株式会社カブクスタイル (2021~2024)",
+        duration: "— (フリーランス・2021.01~) / 東京",
+        company: "株式会社カブクスタイル",
         service: {
           description: "サブスク型旅行プラットフォーム HafH (ハフ) バックエンド開発",
           url: "https://www.hafh.com/",
@@ -146,21 +168,21 @@ const ja: Dictionary = {
         tags: ["React", "Ruby on Rails", "MySQL", "Git", "GitHub", "RSpec", "etc."],
       },
       {
-        number: 4,
+        number: 6,
         title: "SE（東京）",
         duration: "— 1年",
         company: "NTT DATA傘下の行政システムバックエンド開発（日本語業務環境）",
         tags: ["JSP", "Java Spring", "Oracle", "etc."],
       },
       {
-        number: 5,
+        number: 7,
         title: "日本語学校",
         duration: "— 2018.06 ~ 2019.06",
         company: "日本国際大学付属日本語学校（東京）",
         companyUrl: "https://www.jpschool.ac.jp/",
       },
       {
-        number: 6,
+        number: 8,
         title: "SI/SE（ソウル）",
         duration: "— 5年（初職 2013.06〜）",
         items: [
@@ -170,18 +192,18 @@ const ja: Dictionary = {
         tags: ["JSP", "Java Spring", "Oracle", "etc."],
       },
       {
-        number: 7,
+        number: 9,
         title: "LG Electronics アルバイト",
         duration: "— 2009.02 ~ 2010.02（大学休学中）",
         company: "WebストレージNAS開発チーム — テスター",
       },
       {
-        number: 8,
+        number: 10,
         title: "兵役",
         duration: "— 2008.01 ~ 2010.01",
       },
       {
-        number: 9,
+        number: 11,
         title: "大学 学士",
         duration: "— 2006.03 ~ 2013.02（休学含む）",
         company: "南ソウル大学校 マルチメディア学科 コンピュータプログラミング",
@@ -199,15 +221,8 @@ const ja: Dictionary = {
   },
   philosophy: {
     title: "開発スタイル",
-    subtitle: "スタートアップでの実務経験をもとに自分なりの開発原則を作り、ゼロから設計・実装・インフラ・デプロイまで一人で完結してサービスをリリースしています。",
-    items: [
-      "Clean Architectureでレイヤー（Controller → Service → Repository）を分け、それぞれの役割を明確にしています。",
-      "ビジネスロジックはService Object + Resultパターンで包み、バリデーションはForm Object、複雑な検索はQuery Objectに分離しています。",
-      "共通機能（翻訳、位置情報など）はConcernにまとめ、重複なく再利用しています。",
-      "FlutterではRiverpod + Freezedで状態を不変管理し、機能ごとにdata/domain/presentationレイヤーを分けています。",
-      "RSpecで単体・結合・システムテストを書き、RuboCop Omakaseスタイルでコードの一貫性を保っています。",
-      "AIを積極的に使い、開発スピードとコード品質を上げながら、バグを減らすことに集中しています。",
-    ],
+    subtitle: "スタートアップでの実務経験をもとに自分なりの開発原則を作り、ゼロから設計・実装・インフラ・デプロイまで一人で完結してサービスをリリースしています。チーム開発ではメンバーとの円滑で密なコミュニケーションを重視し、プロジェクトの目標に一緒に向かうことを大切にしています。2025年から始めた個人プロジェクトではクリーンアーキテクチャの方法論をベースに、AIエージェントClaude Codeを積極的に活用し、開発だけでなくコード管理、レビュー、設計、インフラの各パートで一人では得られなかった成長と経験を実現。この経験とノウハウをもとに、最短時間で高品質なサービスを構築できるようになりました。",
+    items: [],
   },
   skills: {
     title: "技術スタック",
