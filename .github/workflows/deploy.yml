@@ -33,6 +33,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Remove dev-only pages
+        run: |
+          for locale in ko ja en; do
+            rm -rf "./out/${locale}/posts"
+          done
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -6,10 +6,10 @@ import Link from "next/link";
 import LangSwitcher from "./LangSwitcher";
 
 const navItems = [
-  { key: "about" as const, href: "" },
-  { key: "resume" as const, href: "/resume" },
-  // { key: "posts" as const, href: "/posts" },
-];
+  { key: "about" as const, href: "", devOnly: false },
+  { key: "resume" as const, href: "/resume", devOnly: false },
+  { key: "posts" as const, href: "/posts", devOnly: true },
+].filter((item) => !item.devOnly || process.env.NODE_ENV === "development");
 
 export default function Header() {
   const t = useTranslations("nav");
