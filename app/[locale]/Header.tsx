@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import LangSwitcher from "./LangSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const navItems = [
   { key: "about" as const, href: "", devOnly: false },
@@ -43,6 +44,7 @@ export default function Header() {
               );
             })}
           </nav>
+          <ThemeSwitcher />
           <LangSwitcher />
         </div>
       </div>

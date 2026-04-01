@@ -64,13 +64,13 @@ const components: Components = {
       return <code className={className}>{children}</code>;
     }
     return (
-      <code className="rounded-md bg-gray-100 px-1.5 py-0.5 text-sm text-gray-500">
+      <code className="rounded-md bg-tag-bg px-1.5 py-0.5 text-sm text-tag-text">
         {children}
       </code>
     );
   },
   pre: ({ children }) => (
-    <pre className="mb-4 overflow-x-auto rounded-lg border border-border bg-gray-50 p-4 text-sm leading-relaxed">
+    <pre className="mb-4 overflow-x-auto rounded-lg border border-border bg-code-bg p-4 text-sm leading-relaxed">
       {children}
     </pre>
   ),

@@ -280,7 +280,7 @@ export default async function ResumePage({
                   {stage.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-md bg-gray-100 px-2.5 py-1 text-sm text-gray-500"
+                      className="rounded-md bg-tag-bg px-2.5 py-1 text-sm text-tag-text"
                     >
                       {tag}
                     </span>
@@ -333,7 +333,7 @@ export default async function ResumePage({
                         {project.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="rounded-md bg-gray-100 px-2.5 py-1 text-sm text-gray-500"
+                            className="rounded-md bg-tag-bg px-2.5 py-1 text-sm text-tag-text"
                           >
                             {tag}
                           </span>

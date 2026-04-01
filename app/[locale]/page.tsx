@@ -108,7 +108,7 @@ export default async function AboutPage({
               </span>
               <div className="flex flex-wrap gap-2">
                 {section.tags.map((tag) => (
-                  <span key={tag} className="rounded-md bg-gray-100 px-2.5 py-1 text-sm text-gray-500">
+                  <span key={tag} className="rounded-md bg-tag-bg px-2.5 py-1 text-sm text-tag-text">
                     {tag}
                   </span>
                 ))}
