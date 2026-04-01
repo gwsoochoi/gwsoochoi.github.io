@@ -19,7 +19,7 @@ export default async function AboutPage({
   const careerYears = new Date().getFullYear() - 2013 - 1;
   const tokyoYears = new Date().getFullYear() - 2018;
   const languageItems = getLanguageItems(locale);
-  const skillsSections = getSkillsSections(locale);
+  const skillsSections = getSkillsSections();
 
   const bio = [
     t("profile.bio0", { tokyoYears, careerYears }),
