@@ -16,7 +16,7 @@ function detectLang(): string {
   if (supportedLangs.includes(short as (typeof supportedLangs)[number])) {
     return short;
   }
-  return "ko";
+  return "ja";
 }
 
 export default function RootPage() {

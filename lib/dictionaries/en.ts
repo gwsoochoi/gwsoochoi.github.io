@@ -5,21 +5,34 @@ const tokyoYears = new Date().getFullYear() - 2018;
 
 const en: Dictionary = {
   meta: {
-    title: "Gwangsoo Choi | Resume",
-    description: "Resume of Gwangsoo Choi - Product Builder ・ Software Engineer",
+    title: "Gwangsoo Choi | Product Builder ・ Software Engineer",
+    description: "Portfolio of Gwangsoo Choi - Product Builder ・ Software Engineer",
   },
+  nav: { about: "About", resume: "Resume", posts: "Posts" },
   profile: {
     name: "Gwangsoo Choi",
     role: "Product Builder ・ Software Engineer",
     imageAlt: "Gwangsoo Choi profile photo",
     bio: [
-      `Tokyo resident (${tokyoYears} years) — product builder & software engineer with ${careerYears} years of development experience.`,
+      `Tokyo resident (${tokyoYears} years) — Korean product builder & software engineer with ${careerYears} years of development experience.`,
       "From financial/public SI to a subscription travel startup — now building and running a mobile app solo, end to end.",
       "I use AI heavily to go beyond coding into planning, design, and marketing, aiming to build a one-person unicorn.",
       "I track signups and churn with Firebase Analytics, monitor DAU and content metrics on an Admin dashboard, and catch errors with Sentry — decisions are based on numbers.",
     ],
     bioSub: "Also available for mid-to-long term freelance full-stack engineering contracts.",
     location: "Tokyo / Shibuya",
+  },
+  about: {
+    greeting: "Hi",
+    description: [
+      "A product builder in Tokyo — planning, developing, and running mobile apps solo, end to end.",
+      "I use AI heavily to go beyond coding into planning, design, and marketing, aiming to build a one-person unicorn.",
+      "Also available for mid-to-long term freelance full-stack engineering contracts.",
+    ],
+  },
+  posts: {
+    title: "Posts",
+    empty: "No posts yet.",
   },
   career: {
     title: "Career",

@@ -29,6 +29,7 @@ export interface Stage {
 
 export interface Dictionary {
   meta: { title: string; description: string };
+  nav: { about: string; resume: string; posts: string };
   profile: {
     name: string;
     role: string;
@@ -36,6 +37,14 @@ export interface Dictionary {
     bio: string[];
     bioSub: string;
     location: string;
+  };
+  about: {
+    greeting: string;
+    description: string[];
+  };
+  posts: {
+    title: string;
+    empty: string;
   };
   career: {
     title: string;
@@ -64,21 +73,34 @@ const tokyoYears = new Date().getFullYear() - 2018;
 
 const ko: Dictionary = {
   meta: {
-    title: "최광수 | 이력서",
-    description: "최광수의 이력서 - 프로덕트 빌더 ・ 소프트웨어 엔지니어",
+    title: "최광수 | 프로덕트 빌더 ・ 소프트웨어 엔지니어",
+    description: "최광수의 포트폴리오 - 프로덕트 빌더 ・ 소프트웨어 엔지니어",
   },
+  nav: { about: "About", resume: "이력서", posts: "포스트" },
   profile: {
     name: "최광수",
     role: "프로덕트 빌더 ・ 소프트웨어 엔지니어",
     imageAlt: "최광수 프로필 사진",
     bio: [
-      `도쿄 재류중(${tokyoYears}년차)인 개발 ${careerYears}년차 프로덕트 빌더 ・ 소프트웨어 엔지니어입니다.`,
+      `도쿄 재류중(${tokyoYears}년차)인 개발 ${careerYears}년차 한국인 프로덕트 빌더 ・ 소프트웨어 엔지니어입니다.`,
       "금융·공공 SI부터 구독형 여행 플랫폼 스타트업을 거쳐, 지금은 모바일 앱을 혼자 기획·개발·운영하고 있습니다.",
       "AI를 적극 활용해 개발뿐 아니라 기획·디자인·마케팅까지 직접 하며, 1인 유니콘 기업을 목표로 도전 중입니다.",
       "Firebase Analytics로 가입·이탈 흐름을 추적하고, Admin 대시보드에서 DAU·콘텐츠 지표를 확인하며, Sentry로 에러를 모니터링해 숫자 기반으로 판단합니다.",
     ],
     bioSub: "프리랜서 풀스택 엔지니어로 중/장기 업무위탁도 가능합니다.",
     location: "도쿄 / 시부야",
+  },
+  about: {
+    greeting: "안녕하세요",
+    description: [
+      "도쿄에서 모바일 앱을 혼자 기획·개발·운영하는 프로덕트 빌더입니다.",
+      "AI를 적극 활용해 기획부터 마케팅까지 직접 하며, 1인 유니콘 기업을 목표로 도전하고 있습니다.",
+      "프리랜서 풀스택 엔지니어로 중/장기 업무위탁도 가능합니다.",
+    ],
+  },
+  posts: {
+    title: "포스트",
+    empty: "아직 작성된 포스트가 없습니다.",
   },
   career: {
     title: "경력",
