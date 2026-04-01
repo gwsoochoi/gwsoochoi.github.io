@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "title": "Gwangsoo Choi | Product Builder ・ Software Engineer",
+    "description": "Portfolio of Gwangsoo Choi - Product Builder ・ Software Engineer"
+  },
+  "nav": {
+    "about": "About",
+    "resume": "Resume",
+    "posts": "Posts"
+  },
+  "profile": {
+    "name": "Gwangsoo Choi",
+    "role": "Product Builder ・ Software Engineer",
+    "imageAlt": "Gwangsoo Choi profile photo",
+    "bio0": "Tokyo resident ({tokyoYears} years) — Korean product builder & software engineer with {careerYears} years of development experience.",
+    "bio1": "From financial/public SI to a subscription travel startup — now building and running a mobile app solo, end to end.",
+    "bio2": "I use AI heavily to go beyond coding into planning, design, and marketing, aiming to build a one-person unicorn.",
+    "bio3": "I track signups and churn with Firebase Analytics, monitor DAU and content metrics on an Admin dashboard, and catch errors with Sentry — decisions are based on numbers.",
+    "bioSub": "Also available for mid-to-long term freelance full-stack engineering contracts.",
+    "location": "Tokyo / Shibuya"
+  },
+  "about": {
+    "greeting": "Hello"
+  },
+  "posts": {
+    "title": "Posts",
+    "empty": "No posts yet."
+  },
+  "career": {
+    "title": "Career",
+    "totalYears": ""
+  },
+  "languages": {
+    "title": "Languages"
+  },
+  "philosophy": {
+    "title": "Development Philosophy",
+    "subtitle": "I shaped my own development principles through real startup work, then built and shipped production services solo — from zero to architecture, implementation, infra, and deployment. In team settings, I value close and open communication with teammates, approaching project goals together. Since 2025, building on clean architecture methodology, I've actively used the AI agent Claude Code in personal projects — not just for development, but also for code management, reviews, architecture, and infrastructure — achieving growth and experience that wouldn't have been possible alone. This know-how now enables me to build high-quality services in the shortest time possible."
+  },
+  "skills": {
+    "title": "Tech Stack"
+  },
+  "footer": {
+    "copyright": "Gwangsoo Choi. All rights reserved."
+  }
+}

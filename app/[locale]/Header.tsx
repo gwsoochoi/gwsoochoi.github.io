@@ -1,22 +1,19 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { type Lang } from "@/lib/dictionaries";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 import LangSwitcher from "./LangSwitcher";
-
-interface HeaderProps {
-  lang: Lang;
-  nav: { about: string; resume: string; posts: string };
-}
 
 const navItems = [
   { key: "about" as const, href: "" },
   { key: "resume" as const, href: "/resume" },
-  { key: "posts" as const, href: "/posts" },
+  // { key: "posts" as const, href: "/posts" },
 ];
 
-export default function Header({ lang, nav }: HeaderProps) {
+export default function Header() {
+  const t = useTranslations("nav");
+  const locale = useLocale();
   const pathname = usePathname();
 
   return (
@@ -25,10 +22,10 @@ export default function Header({ lang, nav }: HeaderProps) {
         <div className="flex items-center gap-6">
           <nav className="flex items-center gap-1">
             {navItems.map(({ key, href }) => {
-              const fullHref = `/${lang}${href}`;
+              const fullHref = `/${locale}${href}`;
               const isActive =
                 href === ""
-                  ? pathname === `/${lang}` || pathname === `/${lang}/`
+                  ? pathname === `/${locale}` || pathname === `/${locale}/`
                   : pathname.startsWith(fullHref);
 
               return (
@@ -41,12 +38,12 @@ export default function Header({ lang, nav }: HeaderProps) {
                       : "text-muted hover:text-foreground"
                   }`}
                 >
-                  {nav[key]}
+                  {t(key)}
                 </Link>
               );
             })}
           </nav>
-          <LangSwitcher current={lang} />
+          <LangSwitcher />
         </div>
       </div>
     </header>

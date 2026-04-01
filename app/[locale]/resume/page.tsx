@@ -1,30 +1,34 @@
-import { getDictionary, locales, type Lang } from "@/lib/dictionaries";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
+import { getCareerStages } from "@/lib/content/career";
 
 export function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function ResumePage({
   params,
 }: {
-  params: Promise<{ lang: string }>;
+  params: Promise<{ locale: string }>;
 }) {
-  const lang = (await params).lang as Lang;
-  const dict = getDictionary(lang);
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations();
+  const stages = getCareerStages(locale);
 
   return (
     <div className="mx-auto max-w-3xl px-6 pt-6 pb-16">
       {/* 경력 */}
       <section className="mb-12">
         <h2 className="mb-6 text-2xl font-bold text-foreground">
-          {dict.career.title}{" "}
+          {t("career.title")}{" "}
           <span className="text-lg font-normal text-muted">
-            {dict.career.totalYears}
+            {t("career.totalYears")}
           </span>
         </h2>
 
-        {dict.career.stages.map((stage, idx) => (
-          <div key={stage.number} className={idx < dict.career.stages.length - 1 ? "mb-8" : ""}>
+        {stages.map((stage, idx) => (
+          <div key={stage.number} className={idx < stages.length - 1 ? "mb-8" : ""}>
             <div className="mb-4 flex items-center gap-3">
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">
                 {stage.number}
@@ -117,12 +121,12 @@ export default async function ResumePage({
                 <div className="mb-4 overflow-x-auto">
                   <table className="w-full text-sm">
                     <tbody>
-                      {stage.techStack.map((t) => (
-                        <tr key={t.layer} className="border-b border-border last:border-0">
+                      {stage.techStack.map((ts) => (
+                        <tr key={ts.layer} className="border-b border-border last:border-0">
                           <td className="py-1.5 pr-4 w-28 font-medium text-foreground whitespace-nowrap">
-                            {t.layer}
+                            {ts.layer}
                           </td>
-                          <td className="py-1.5 text-muted">{t.tech}</td>
+                          <td className="py-1.5 text-muted">{ts.tech}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -135,25 +139,25 @@ export default async function ResumePage({
                 <div className="mb-4 overflow-x-auto">
                   <table className="w-full text-sm">
                     <tbody>
-                      {stage.timeline.map((t, i, arr) => (
-                        <tr key={`${t.period}-${i}`} className={`border-b border-border last:border-0${i > 0 && t.period.slice(0, 4) !== arr[i - 1].period.slice(0, 4) ? " border-t-2 border-t-border" : ""}`}>
+                      {stage.timeline.map((tl, i, arr) => (
+                        <tr key={`${tl.period}-${i}`} className={`border-b border-border last:border-0${i > 0 && tl.period.slice(0, 4) !== arr[i - 1].period.slice(0, 4) ? " border-t-2 border-t-border" : ""}`}>
                           <td className="py-1.5 pr-4 w-28 font-medium text-foreground whitespace-nowrap align-top">
-                            {t.period}
+                            {tl.period}
                           </td>
                           <td className="py-1.5 text-muted">
-                            {t.description ? (
+                            {tl.description ? (
                               <details>
                                 <summary className="cursor-pointer list-none flex items-center gap-1 [&::-webkit-details-marker]:hidden">
                                   <svg className="w-3.5 h-3.5 shrink-0 transition-transform [[open]>summary>&]:rotate-90" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
                                   </svg>
-                                  <span>{t.milestone}</span>
+                                  <span>{tl.milestone}</span>
                                 </summary>
                                 <div className="mt-1 text-xs text-muted/80">
                                   {(() => {
                                     const groups: { label?: string; items: string[] }[] = [];
                                     let cur: { label?: string; items: string[] } = { items: [] };
-                                    for (const d of t.description) {
+                                    for (const d of tl.description) {
                                       if (d.startsWith("## ")) {
                                         if (cur.items.length) groups.push(cur);
                                         cur = { label: d.slice(3), items: [] };
@@ -176,7 +180,7 @@ export default async function ResumePage({
                                 </div>
                               </details>
                             ) : (
-                              <div>{t.milestone}</div>
+                              <div>{tl.milestone}</div>
                             )}
                           </td>
                         </tr>
@@ -227,7 +231,7 @@ export default async function ResumePage({
                 </div>
               )}
 
-              {/* locations (stage 1) */}
+              {/* locations */}
               {"locations" in stage && stage.locations && (
                 <div className="space-y-5">
                   {stage.locations.map((loc) => (
@@ -256,7 +260,7 @@ export default async function ResumePage({
                 </div>
               )}
 
-              {/* items (stage 2) */}
+              {/* items */}
               {"items" in stage && stage.items && !("projects" in stage) && (
                   <ul className="space-y-1.5">
                     {stage.items.map((item) => (
@@ -273,18 +277,18 @@ export default async function ResumePage({
 
               {stage.tags && (
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {stage.tags.map((t) => (
+                  {stage.tags.map((tag) => (
                     <span
-                      key={t}
+                      key={tag}
                       className="rounded-md bg-gray-100 px-2.5 py-1 text-sm text-gray-500"
                     >
-                      {t}
+                      {tag}
                     </span>
                   ))}
                 </div>
               )}
 
-              {/* items + projects (stage 3) */}
+              {/* items + projects */}
               {"projects" in stage && stage.items && (
                 <>
                   <ul className="mb-5 space-y-1.5">
@@ -326,12 +330,12 @@ export default async function ResumePage({
                         ))}
                       </ul>
                       <div className="mt-3 flex flex-wrap gap-2">
-                        {project.tags.map((t) => (
+                        {project.tags.map((tag) => (
                           <span
-                            key={t}
+                            key={tag}
                             className="rounded-md bg-gray-100 px-2.5 py-1 text-sm text-gray-500"
                           >
-                            {t}
+                            {tag}
                           </span>
                         ))}
                       </div>
@@ -352,8 +356,6 @@ export default async function ResumePage({
           </div>
         ))}
       </section>
-
-
     </div>
   );
 }
