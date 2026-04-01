@@ -1,0 +1,16 @@
+echo "🔍 pre-push: lock file 동기화 검증..."
+npm ci --dry-run 2>&1 | head -5
+if [ $? -ne 0 ]; then
+  echo "❌ package-lock.json이 package.json과 동기화되지 않았습니다."
+  echo "   rm -f package-lock.json && npm install 실행 후 다시 시도하세요."
+  exit 1
+fi
+
+echo "🔨 pre-push: 빌드 검증..."
+npx next build
+if [ $? -ne 0 ]; then
+  echo "❌ 빌드 실패. 에러를 수정한 후 다시 시도하세요."
+  exit 1
+fi
+
+echo "✅ pre-push: 검증 통과"
