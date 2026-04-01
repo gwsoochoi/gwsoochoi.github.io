@@ -1,8 +1,14 @@
-echo "🔍 pre-push: lock file 동기화 검증..."
-npm ci --dry-run 2>&1 | head -5
-if [ $? -ne 0 ]; then
+echo "🔍 pre-push: lock file 동기화 검증 (clean install)..."
+rm -rf /tmp/pre-push-check && mkdir -p /tmp/pre-push-check
+cp package.json package-lock.json /tmp/pre-push-check/
+cd /tmp/pre-push-check
+npm ci --ignore-scripts 2>&1
+STATUS=$?
+cd - > /dev/null
+rm -rf /tmp/pre-push-check
+if [ $STATUS -ne 0 ]; then
   echo "❌ package-lock.json이 package.json과 동기화되지 않았습니다."
-  echo "   rm -f package-lock.json && npm install 실행 후 다시 시도하세요."
+  echo "   rm -rf node_modules package-lock.json && npm install 실행 후 다시 시도하세요."
   exit 1
 fi
 
