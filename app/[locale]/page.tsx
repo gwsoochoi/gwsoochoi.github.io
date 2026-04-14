@@ -87,9 +87,17 @@ export default async function AboutPage({
             </h1>
             <p className="mt-0.5 text-sm font-medium text-accent">{t("profile.role")}</p>
             <div className="mt-1.5 space-y-0">
-              {[t("background.education"), t("background.language_school"), t("background.military")].map((item) => (
-                <p key={item} className="text-[11px] leading-relaxed text-muted">{item}</p>
-              ))}
+              <p className="text-[11px] leading-relaxed text-muted">
+                <a href={t("background.educationUrl")} target="_blank" rel="noopener noreferrer" className="hover:text-accent hover:underline transition-colors">
+                  {t("background.education")}
+                </a>
+              </p>
+              <p className="text-[11px] leading-relaxed text-muted">
+                <a href={t("background.languageSchoolUrl")} target="_blank" rel="noopener noreferrer" className="hover:text-accent hover:underline transition-colors">
+                  {t("background.language_school")}
+                </a>
+              </p>
+              <p className="text-[11px] leading-relaxed text-muted">{t("background.military")}</p>
             </div>
             <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-0">
               {languageItems.map((item) => (
@@ -110,7 +118,7 @@ export default async function AboutPage({
           {hashtags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-sm font-medium text-accent"
+              className="rounded-md bg-muted/10 px-2 py-[2.9px] text-[13.2px] text-muted"
             >
               #{tag}
             </span>
@@ -168,7 +176,7 @@ export default async function AboutPage({
                 <p className="mt-1 text-sm leading-relaxed text-muted">{s.desc}</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {s.metrics.map((m) => (
-                    <span key={m} className="rounded-full border border-accent/30 bg-background px-3 py-0.5 text-xs font-medium text-accent">
+                    <span key={m} className="rounded-md bg-muted/10 px-2 py-[2.9px] text-[13.2px] text-muted">
                       {m}
                     </span>
                   ))}
