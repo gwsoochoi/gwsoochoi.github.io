@@ -3,13 +3,14 @@ import type { Stage } from "./types";
 // 언어에 관계없이 동일한 공통 필드
 interface SharedStage {
   number: number;
+  employmentType?: "freelance" | "fulltime";
   tags?: string[];
   appInfo?: { name: string; url: string; period?: string };
   companyUrl?: string;
 }
 
 const shared: SharedStage[] = [
-  { number: 1, tags: ["Ruby on Rails", "Flutter", "React", "Supabase Auth/DB/Realtime", "GCP Cloud Run/Build/Tasks", "Cloudflare R2/Turnstile", "Firebase FCM/Analytics", "Stripe", "Sentry", "Git", "GitHub", "RSpec"], appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025.01~" }, companyUrl: "https://greatearth.studio.site/" },
+  { number: 1, employmentType: "freelance", tags: ["Ruby on Rails", "Flutter", "React", "Supabase Auth/DB/Realtime", "GCP Cloud Run/Build/Tasks", "Cloudflare R2/Turnstile", "Firebase FCM/Analytics", "Stripe", "Sentry", "Git", "GitHub", "RSpec"], appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025.01~" }, companyUrl: "https://greatearth.studio.site/" },
   { number: 2 },
   { number: 3 },
   { number: 4, companyUrl: "https://www.lgsciencepark.com/KR/" },
@@ -50,22 +51,22 @@ const texts: Record<string, LocaleText[]> = {
       scope: { label: "담당 범위:", value: "기획 → UI/UX 디자인 → 개발 → 인프라 → 스토어 심사 → 운영 → 마케팅 (전 영역)" },
     },
     {
-      title: "스타트업", duration: "— 프리랜서 (2021.01 ~ 2024.12) / 도쿄",
+      title: "스타트업", duration: "— 약 4년 / 도쿄(2021.01 ~ 2024.12)",
       locations: [
-        { name: "株式会社カブクスタイル", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", items: ["구독형 여행 플랫폼 HafH 백엔드 개발", "유저 플랜(코인 기반 예약·결제) 시스템 설계·보수·구현 (Stripe 구독 연동)", "Admin 기능 설계·보수·구현", "여러 OTA(숙박시설) API를 연결해 재고·가격을 실시간 동기화", "Rails API 서버 설계·개발, GCP 인프라 운영", "On-call 장애 대응 및 고객 에스컬레이션 처리", "소규모 애자일 팀에서 기획부터 배포까지 전 과정 참여"], tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"] },
-        { name: "PPB International", url: "https://www.linkedin.com/company/ppb-international", duration: "2023.01 ~ 2023.12", items: ["Minerva 투자정보 제공 플랫폼 개발", "3인 체제에서 PL로서 플랫폼 전반 백엔드, DB, REST API 설계 및 개발", "외부 플랫폼 데이터 통합 마이그레이션 진행"], tags: ["Ruby on Rails", "React", "MySQL", "AWS Lightsail", "Git", "GitHub", "RSpec"] },
+        { name: "株式会社カブクスタイル", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", employmentType: "fulltime-to-freelance", items: ["구독형 여행 플랫폼 HafH 백엔드 개발", "유저 플랜(코인 기반 예약·결제) 시스템 설계·보수·구현 (Stripe 구독 연동)", "Admin 기능 설계·보수·구현", "여러 OTA(숙박시설) API를 연결해 재고·가격을 실시간 동기화", "Rails API 서버 설계·개발, GCP 인프라 운영", "On-call 장애 대응 및 고객 에스컬레이션 처리", "소규모 애자일 팀에서 기획부터 배포까지 전 과정 참여"], tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"] },
+        { name: "PPB International", url: "https://www.linkedin.com/company/ppb-international", duration: "2023.01 ~ 2023.12", employmentType: "freelance", items: ["Minerva 투자정보 제공 플랫폼 개발", "3인 체제에서 PL로서 플랫폼 전반 백엔드, DB, REST API 설계 및 개발", "외부 플랫폼 데이터 통합 마이그레이션 진행"], tags: ["Ruby on Rails", "React", "MySQL", "AWS Lightsail", "Git", "GitHub", "RSpec"] },
       ],
     },
     {
-      title: "SI/SE", duration: "— 약 7년 (2013.06 ~ 2024.09)",
+      title: "SI/SE", duration: "— 약 7년(2013.06 ~ 2024.09)",
       locations: [
-        { name: "株式会社リブゲート (도쿄)", url: "https://lib-gate.co.jp/", duration: "2024.06 ~ 2024.09", items: ["미쓰이스미토모은행 후루사토납세 사이트 리뉴얼", "회원가입 및 로그인, 유저정보 수정 백엔드 개발"], tags: ["Java Spring", "PostgreSQL", "Git", "GitLab"] },
-        { name: "株式会社アクロスロード (도쿄)", url: "https://www.wantedly.com/companies/axrossroad", duration: "2019.07 ~ 2020.12", items: ["NTT DATA 산하 행정 시스템 백엔드 개발"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
-        { name: "주식회사 자이로소프트 (서울)", url: "https://www.gyrosoft.co.kr/main", duration: "2015.06 ~ 2018.05", items: ["우리WON뱅킹 — 우리은행 모바일 뱅킹 앱 (계좌 조회·이체·금융상품 가입)", "포스텍 공간관리 — 포항공과대학교 캠퍼스 시설·공간 예약 관리 시스템"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
-        { name: "주식회사 라이트브레인 (서울)", url: "https://rightbrain.co.kr/", duration: "2013.06 ~ 2015.05", items: ["아모레퍼시픽몰 — 아모레퍼시픽 공식 뷰티 쇼핑몰 앱 (전 브랜드 통합 커머스)", "해피포인트 — SPC 그룹 통합 멤버십 앱 (전국 6,000여 매장 포인트 적립·사용)"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
+        { name: "株式会社リブゲート (도쿄)", url: "https://lib-gate.co.jp/", duration: "2024.06 ~ 2024.09", employmentType: "freelance", items: ["미쓰이스미토모은행 후루사토납세 사이트 리뉴얼 개발 참여", "회원가입 및 로그인, 유저정보 수정 백엔드 개발 참여"], tags: ["Java Spring", "PostgreSQL", "Git", "GitLab"] },
+        { name: "株式会社アクロスロード (도쿄)", url: "https://www.wantedly.com/companies/axrossroad", duration: "2019.07 ~ 2020.12", employmentType: "fulltime", items: ["NTT DATA 산하 행정 시스템 백엔드 개발 참여"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
+        { name: "주식회사 자이로소프트 (서울)", url: "https://www.gyrosoft.co.kr/main", duration: "2015.06 ~ 2018.05", employmentType: "fulltime", items: ["우리WON뱅킹 — 우리은행 모바일 뱅킹 앱 개발 참여 (계좌 조회·이체·금융상품 가입)", "포스텍 공간관리 — 포항공과대학교 캠퍼스 시설·공간 예약 관리 시스템 개발 참여"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
+        { name: "주식회사 라이트브레인 (서울)", url: "https://rightbrain.co.kr/", duration: "2013.06 ~ 2015.05", employmentType: "fulltime", items: ["아모레퍼시픽몰 — 아모레퍼시픽 공식 뷰티 쇼핑몰 앱 개발 참여 (전 브랜드 통합 커머스)", "해피포인트 — SPC 그룹 통합 멤버십 앱 개발 참여 (전국 6,000여 매장 포인트 적립·사용)"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
       ],
     },
-    { title: "LG Electronics 서초R&D캠퍼스", duration: "— 2009.02 ~ 2010.02", company: "웹스토리지 NAS 개발팀 — 테스터" },
+    { title: "LG Electronics 서초R&D캠퍼스", duration: "— 약 1년(2009.02 ~ 2010.02)", company: "웹스토리지 NAS 개발팀 — 테스터" },
   ],
   ja: [
     {
@@ -98,22 +99,22 @@ const texts: Record<string, LocaleText[]> = {
       scope: { label: "担当範囲：", value: "企画 → UI/UXデザイン → 開発 → インフラ → ストア審査 → 運営 → マーケティング（全領域）" },
     },
     {
-      title: "スタートアップ", duration: "— フリーランス（2021.01 ~ 2024.12）/ 東京",
+      title: "スタートアップ", duration: "— 約4年 / 東京（2021.01 ~ 2024.12）",
       locations: [
-        { name: "株式会社カブクスタイル", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", items: ["サブスク型旅行プラットフォーム HafH バックエンド開発", "ユーザープラン（コインベース予約・決済）システムの設計・保守・実装（Stripeサブスク連携）", "Admin機能の設計・保守・実装", "複数のOTA（宿泊施設）APIをつなぎ、在庫・価格をリアルタイム同期", "Rails APIサーバーの設計・開発、GCPインフラの運用", "On-call障害対応とカスタマーエスカレーション処理", "少人数アジャイルチームで企画からデプロイまで全工程に参加"], tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"] },
-        { name: "PPB International", url: "https://www.linkedin.com/company/ppb-international", duration: "2023.01 ~ 2023.12", items: ["Minerva投資情報提供プラットフォーム開発", "3名体制でPLとしてプラットフォーム全般のバックエンド、DB、REST API設計・開発", "外部プラットフォームデータの統合マイグレーション実施"], tags: ["Ruby on Rails", "React", "MySQL", "AWS Lightsail", "Git", "GitHub", "RSpec"] },
+        { name: "株式会社カブクスタイル", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", employmentType: "fulltime-to-freelance", items: ["サブスク型旅行プラットフォーム HafH バックエンド開発", "ユーザープラン（コインベース予約・決済）システムの設計・保守・実装（Stripeサブスク連携）", "Admin機能の設計・保守・実装", "複数のOTA（宿泊施設）APIをつなぎ、在庫・価格をリアルタイム同期", "Rails APIサーバーの設計・開発、GCPインフラの運用", "On-call障害対応とカスタマーエスカレーション処理", "少人数アジャイルチームで企画からデプロイまで全工程に参加"], tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"] },
+        { name: "PPB International", url: "https://www.linkedin.com/company/ppb-international", duration: "2023.01 ~ 2023.12", employmentType: "freelance", items: ["Minerva投資情報提供プラットフォーム開発", "3名体制でPLとしてプラットフォーム全般のバックエンド、DB、REST API設計・開発", "外部プラットフォームデータの統合マイグレーション実施"], tags: ["Ruby on Rails", "React", "MySQL", "AWS Lightsail", "Git", "GitHub", "RSpec"] },
       ],
     },
     {
-      title: "SI/SE", duration: "— 約7年（2013.06 ~ 2024.09）",
+      title: "SI/SE", duration: "— 約7年(2013.06 ~ 2024.09)",
       locations: [
-        { name: "株式会社リブゲート（東京）", url: "https://lib-gate.co.jp/", duration: "2024.06 ~ 2024.09", items: ["三井住友銀行ふるさと納税サイトリニューアル", "会員登録・ログイン、ユーザー情報修正のバックエンド開発"], tags: ["Java Spring", "PostgreSQL", "Git", "GitLab"] },
-        { name: "株式会社アクロスロード（東京）", url: "https://www.wantedly.com/companies/axrossroad", duration: "2019.07 ~ 2020.12", items: ["NTT DATA傘下の行政システムバックエンド開発"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
-        { name: "株式会社ジャイロソフト（ソウル）", url: "https://www.gyrosoft.co.kr/main", duration: "2015.06 ~ 2018.05", items: ["ウリWONバンキング — ウリ銀行モバイルバンキングアプリ（口座照会・振込・金融商品加入）", "POSTECH空間管理 — 浦項工科大学キャンパス施設・空間予約管理システム"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
-        { name: "株式会社ライトブレイン（ソウル）", url: "https://rightbrain.co.kr/", duration: "2013.06 ~ 2015.05", items: ["アモーレパシフィックモール — アモーレパシフィック公式ビューティーショッピングアプリ（全ブランド統合コマース）", "ハッピーポイント — SPCグループ統合メンバーシップアプリ（全国6,000店舗のポイント獲得・利用）"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
+        { name: "株式会社リブゲート（東京）", url: "https://lib-gate.co.jp/", duration: "2024.06 ~ 2024.09", employmentType: "freelance", items: ["三井住友銀行ふるさと納税サイトリニューアル開発に参加", "会員登録・ログイン、ユーザー情報修正のバックエンド開発に参加"], tags: ["Java Spring", "PostgreSQL", "Git", "GitLab"] },
+        { name: "株式会社アクロスロード（東京）", url: "https://www.wantedly.com/companies/axrossroad", duration: "2019.07 ~ 2020.12", employmentType: "fulltime", items: ["NTT DATA傘下の行政システムバックエンド開発に参加"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
+        { name: "株式会社ジャイロソフト（ソウル）", url: "https://www.gyrosoft.co.kr/main", duration: "2015.06 ~ 2018.05", employmentType: "fulltime", items: ["ウリWONバンキング — ウリ銀行モバイルバンキングアプリ開発に参加（口座照会・振込・金融商品加入）", "POSTECH空間管理 — 浦項工科大学キャンパス施設・空間予約管理システム開発に参加"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
+        { name: "株式会社ライトブレイン（ソウル）", url: "https://rightbrain.co.kr/", duration: "2013.06 ~ 2015.05", employmentType: "fulltime", items: ["アモーレパシフィックモール — アモーレパシフィック公式ビューティーショッピングアプリ開発に参加（全ブランド統合コマース）", "ハッピーポイント — SPCグループ統合メンバーシップアプリ開発に参加（全国6,000店舗のポイント獲得・利用）"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
       ],
     },
-    { title: "LG Electronics 瑞草R&Dキャンパス", duration: "— 2009.02 ~ 2010.02", company: "WebストレージNAS開発チーム — テスター" },
+    { title: "LG Electronics 瑞草R&Dキャンパス", duration: "— 約1年(2009.02 ~ 2010.02)", company: "WebストレージNAS開発チーム — テスター" },
   ],
   en: [
     {
@@ -146,22 +147,22 @@ const texts: Record<string, LocaleText[]> = {
       scope: { label: "Scope:", value: "Planning → UI/UX Design → Development → Infrastructure → Store Review → Operations → Marketing (all areas)" },
     },
     {
-      title: "Startup", duration: "— Freelance (2021.01 ~ 2024.12) / Tokyo",
+      title: "Startup", duration: "— ~4 years / Tokyo (2021.01 ~ 2024.12)",
       locations: [
-        { name: "KabuKuStyle Inc.", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", items: ["Subscription travel platform HafH — Backend development", "Designed, maintained, and implemented the user plan system (coin-based booking and payment, Stripe subscription)", "Designed, maintained, and implemented Admin features", "Connected multiple OTA (accommodation) APIs for real-time inventory and pricing sync", "Rails API server design and development, GCP infrastructure operation", "On-call incident response and customer escalation handling", "Involved in the full cycle from planning to deployment in a small agile team"], tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"] },
-        { name: "PPB International", url: "https://www.linkedin.com/company/ppb-international", duration: "2023.01 ~ 2023.12", items: ["Minerva Investment Info Platform development", "Led as PL in a 3-person team — designed and built the full backend, DB, and REST API", "Executed data integration and migration from external platforms"], tags: ["Ruby on Rails", "React", "MySQL", "AWS Lightsail", "Git", "GitHub", "RSpec"] },
+        { name: "KabuKuStyle Inc.", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", employmentType: "fulltime-to-freelance", items: ["Subscription travel platform HafH — Backend development", "Designed, maintained, and implemented the user plan system (coin-based booking and payment, Stripe subscription)", "Designed, maintained, and implemented Admin features", "Connected multiple OTA (accommodation) APIs for real-time inventory and pricing sync", "Rails API server design and development, GCP infrastructure operation", "On-call incident response and customer escalation handling", "Involved in the full cycle from planning to deployment in a small agile team"], tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"] },
+        { name: "PPB International", url: "https://www.linkedin.com/company/ppb-international", duration: "2023.01 ~ 2023.12", employmentType: "freelance", items: ["Minerva Investment Info Platform development", "Led as PL in a 3-person team — designed and built the full backend, DB, and REST API", "Executed data integration and migration from external platforms"], tags: ["Ruby on Rails", "React", "MySQL", "AWS Lightsail", "Git", "GitHub", "RSpec"] },
       ],
     },
     {
-      title: "SI/SE", duration: "— ~7 years (2013.06 ~ 2024.09)",
+      title: "SI/SE", duration: "— ~7 years(2013.06 ~ 2024.09)",
       locations: [
-        { name: "LibGate Inc. (Tokyo)", url: "https://lib-gate.co.jp/", duration: "2024.06 ~ 2024.09", items: ["SMBC Furusato Tax Site Renewal", "Backend development for user registration, login, and profile management"], tags: ["Java Spring", "PostgreSQL", "Git", "GitLab"] },
-        { name: "Axrossroad Inc. (Tokyo)", url: "https://www.wantedly.com/companies/axrossroad", duration: "2019.07 ~ 2020.12", items: ["Government operations backend development under NTT DATA"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
-        { name: "Gyrosoft Inc. (Seoul)", url: "https://www.gyrosoft.co.kr/main", duration: "2015.06 ~ 2018.05", items: ["Woori WON Banking — Woori Bank mobile banking app (account inquiry, transfers, financial products)", "POSTECH Space Management — campus facility and space reservation management system"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
-        { name: "RightBrain Inc. (Seoul)", url: "https://rightbrain.co.kr/", duration: "2013.06 ~ 2015.05", items: ["AMORE MALL — Amorepacific official beauty shopping app (all-brand integrated commerce)", "Happy Point — SPC Group integrated membership app (earn/use points at 6,000+ stores nationwide)"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
+        { name: "LibGate Inc. (Tokyo)", url: "https://lib-gate.co.jp/", duration: "2024.06 ~ 2024.09", employmentType: "freelance", items: ["Participated in SMBC Furusato Tax Site renewal development", "Participated in backend development for user registration, login, and profile management"], tags: ["Java Spring", "PostgreSQL", "Git", "GitLab"] },
+        { name: "Axrossroad Inc. (Tokyo)", url: "https://www.wantedly.com/companies/axrossroad", duration: "2019.07 ~ 2020.12", employmentType: "fulltime", items: ["Participated in government operations backend development under NTT DATA"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
+        { name: "Gyrosoft Inc. (Seoul)", url: "https://www.gyrosoft.co.kr/main", duration: "2015.06 ~ 2018.05", employmentType: "fulltime", items: ["Woori WON Banking — participated in Woori Bank mobile banking app development (account inquiry, transfers, financial products)", "POSTECH Space Management — participated in campus facility and space reservation management system development"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
+        { name: "RightBrain Inc. (Seoul)", url: "https://rightbrain.co.kr/", duration: "2013.06 ~ 2015.05", employmentType: "fulltime", items: ["AMORE MALL — participated in Amorepacific official beauty shopping app development (all-brand integrated commerce)", "Happy Point — participated in SPC Group integrated membership app development (earn/use points at 6,000+ stores nationwide)"], tags: ["Java Spring", "JSP", "HTML", "CSS", "JavaScript", "Oracle"] },
       ],
     },
-    { title: "LG Electronics Seocho R&D Campus", duration: "— 2009.02 ~ 2010.02", company: "Web Storage NAS Dev Team — Tester" },
+    { title: "LG Electronics Seocho R&D Campus", duration: "— ~1 year(2009.02 ~ 2010.02)", company: "Web Storage NAS Dev Team — Tester" },
   ],
 };
 

@@ -7,6 +7,7 @@ export interface Project {
 
 export interface Stage {
   number: number;
+  employmentType?: "freelance" | "fulltime";
   title: string;
   duration: string;
   company?: string;
@@ -21,7 +22,7 @@ export interface Stage {
   features?: { name: string; description: string }[];
   techStack?: { layer: string; tech: string }[];
   timeline?: { period: string; milestone: string; description?: string[] }[];
-  locations?: { name: string; duration: string; items: string[]; url?: string; tags?: string[] }[];
+  locations?: { name: string; duration: string; items: string[]; url?: string; tags?: string[]; employmentType?: "freelance" | "fulltime" | "fulltime-to-freelance" }[];
   items?: string[];
   projects?: Project[];
   scope?: { label: string; value: string };
