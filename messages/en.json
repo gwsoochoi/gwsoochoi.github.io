@@ -24,7 +24,7 @@
     "role": "Product Builder ・ Software Engineer",
     "imageAlt": "Gwangsoo Choi profile photo",
     "bio0": "Tokyo resident ({tokyoYears} years) — Korean product builder & software engineer with {careerYears} years of development experience.",
-    "bio1": "From large-scale system development to fast-paced startup product building — now planning, developing, and operating a mobile app solo.",
+    "bio1": "From participating as a member in large-scale system development teams to fast-paced startup product building — now planning, developing, and operating a mobile app solo.",
     "bio2": "I leverage AI to handle not just engineering but also planning, design, and marketing myself, aiming to build a one-person unicorn.",
     "bio3": "I track signup and churn flows, monitor user behavior metrics, and detect errors in real time — driving product improvement through data-driven decisions.",
     "bio4": "Guided by development principles refined through real-world experience, I handle everything from architecture to deployment on my own. In team settings, close communication comes first. By deeply integrating AI agents into code management, reviews, and design, I achieve quality and velocity that would be hard to reach alone.",
@@ -46,7 +46,7 @@
     "ai_metric1": "Role-based agent separation",
     "ai_metric2": "MCP-integrated design tools",
     "tech_title": "12-Year Full-Stack Engineer",
-    "tech_desc": "I bring both the robustness of large-scale SI systems and the agility of startups. With a broad tech stack spanning backend, frontend, and mobile, I design and implement the architecture best suited to each project's goals.",
+    "tech_desc": "I have experience in both SI system development and startup product building. With a broad tech stack spanning backend, frontend, and mobile, I design and implement the architecture best suited to each project's goals.",
     "tech_metric1": "Rails · Flutter · React · Next.js",
     "tech_metric2": "GCP · Supabase · Docker · Cloudflare"
   },
@@ -73,7 +73,10 @@
     "summary_ai_desc": "Role-based AI agents · MCP design tool integration · Claude Cowork pipeline",
     "summary_stack": "Full-Stack Engineer",
     "summary_stack_desc": "Rails · Flutter · React · GCP — architecture designed for the goal",
-    "now": "Now"
+    "now": "Now",
+    "freelance": "Freelance",
+    "fulltime": "Full-time",
+    "approx_years": "~{years}yr"
   },
   "languages": {
     "title": "Languages"

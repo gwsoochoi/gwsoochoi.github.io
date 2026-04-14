@@ -7,6 +7,15 @@ import ChevronIcon from "../ChevronIcon";
 
 export const generateStaticParams = getLocaleStaticParams;
 
+function calcYearsFromPeriod(period: string): number {
+  const match = period.match(/(\d{4})\.(\d{2})/);
+  if (!match) return 0;
+  const start = new Date(parseInt(match[1]), parseInt(match[2]) - 1);
+  const now = new Date();
+  const months = (now.getFullYear() - start.getFullYear()) * 12 + now.getMonth() - start.getMonth();
+  return Math.floor(months / 12);
+}
+
 export default async function ResumePage({
   params,
 }: {
@@ -48,15 +57,27 @@ export default async function ResumePage({
                           {stage.duration}
                         </span>
                       )}
-                      {stage.appInfo?.period && (
-                        <span className="font-normal text-muted text-sm">
-                          ({stage.appInfo.period})
-                        </span>
-                      )}
+                      {stage.appInfo?.period && (() => {
+                        const years = calcYearsFromPeriod(stage.appInfo!.period!);
+                        return (
+                          <span className="font-normal text-muted text-sm">
+                            {years > 0 && `${t("career.approx_years", { years })} `}({stage.appInfo!.period})
+                          </span>
+                        );
+                      })()}
                     </h3>
                     {isCurrent && (
                       <span className="rounded-full bg-accent px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-background">
                         {t("career.now")}
+                      </span>
+                    )}
+                    {stage.employmentType && (
+                      <span className={`rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wide ${
+                        stage.employmentType === "freelance"
+                          ? "bg-accent/15 text-accent"
+                          : "bg-muted/20 text-muted"
+                      }`}>
+                        {t(`career.${stage.employmentType}`)}
                       </span>
                     )}
                     <ChevronIcon className="ml-auto h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-90" />
@@ -305,6 +326,19 @@ export default async function ResumePage({
                                 <a href={loc.url} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">{loc.name}</a>
                               ) : loc.name}
                             </h4>
+                            {loc.employmentType && (
+                              <span className={`rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wide ${
+                                loc.employmentType === "freelance"
+                                  ? "bg-accent/15 text-accent"
+                                  : loc.employmentType === "fulltime-to-freelance"
+                                  ? "bg-muted/20 text-muted"
+                                  : "bg-muted/20 text-muted"
+                              }`}>
+                                {loc.employmentType === "fulltime-to-freelance"
+                                  ? `${t("career.fulltime")} → ${t("career.freelance")}`
+                                  : t(`career.${loc.employmentType}`)}
+                              </span>
+                            )}
                             <span className="text-sm text-muted">
                               {loc.duration}
                             </span>
