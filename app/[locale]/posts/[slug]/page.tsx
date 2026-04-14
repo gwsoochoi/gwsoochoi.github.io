@@ -35,7 +35,7 @@ export default async function PostPage({
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-md bg-tag-bg px-2.5 py-1 text-sm text-tag-text"
+                  className="rounded-md border border-tag-text bg-tag-bg px-2.5 py-1 text-sm text-tag-text"
                 >
                   {tag}
                 </span>

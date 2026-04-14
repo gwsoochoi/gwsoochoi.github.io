@@ -2,26 +2,14 @@
 @import "highlight.js/styles/github.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a2e;
-  --accent: #2563eb;
-  --accent-light: #eff6ff;
-  --border: #e5e7eb;
-  --muted: #6b7280;
-  --tag-bg: #f3f4f6;
-  --tag-text: #6b7280;
-  --code-bg: #f9fafb;
-}
-
-.dark {
-  --background: #0f0f13;
-  --foreground: #e4e4e7;
-  --accent: #60a5fa;
-  --accent-light: #1e3a5f;
+  --background: #13171D;
+  --foreground: #FFFFFF;
+  --accent: #5eead4;
+  --accent-light: #134e4a;
   --border: #27272a;
   --muted: #a1a1aa;
-  --tag-bg: #27272a;
-  --tag-text: #a1a1aa;
+  --tag-bg: transparent;
+  --tag-text: #5BB298;
   --code-bg: #18181b;
 }
 
@@ -44,11 +32,6 @@ body {
   color: var(--foreground);
   font-family: "Pretendard JP Variable", "Pretendard Variable", -apple-system,
     BlinkMacSystemFont, system-ui, sans-serif;
-}
-
-.dark .hljs {
-  background: var(--code-bg);
-  color: var(--foreground);
 }
 
 @media print {
