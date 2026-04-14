@@ -84,8 +84,10 @@
   "background": {
     "title": "Background",
     "education": "Namseoul University — Dept. of Multimedia, Computer Programming (2006.03 ~ 2013.02, incl. leave)",
+    "educationUrl": "https://www.nsu.ac.kr/",
     "military": "Military Service (2008.01 ~ 2010.01)",
-    "language_school": "Japan International University Japanese Language School · Tokyo (2018.06 ~ 2019.06)"
+    "language_school": "Japan International University Japanese Language School · Tokyo (2018.06 ~ 2019.06)",
+    "languageSchoolUrl": "https://www.jpschool.ac.jp/"
   },
   "philosophy": {
     "title": "Development Philosophy",

@@ -84,8 +84,10 @@
   "background": {
     "title": "バックグラウンド",
     "education": "南ソウル大学校 マルチメディア学科 コンピュータプログラミング（2006.03 ~ 2013.02、休学含む）",
+    "educationUrl": "https://www.nsu.ac.kr/",
     "military": "兵役（2008.01 ~ 2010.01）",
-    "language_school": "日本国際大学付属日本語学校・東京（2018.06 ~ 2019.06）"
+    "language_school": "日本国際大学付属日本語学校・東京（2018.06 ~ 2019.06）",
+    "languageSchoolUrl": "https://www.jpschool.ac.jp/"
   },
   "philosophy": {
     "title": "開発スタイル",

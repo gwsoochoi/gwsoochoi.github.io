@@ -84,8 +84,10 @@
   "background": {
     "title": "배경",
     "education": "남서울대학교 멀티미디어학과 컴퓨터프로그래밍 (2006.03 ~ 2013.02, 휴학 포함)",
+    "educationUrl": "https://www.nsu.ac.kr/",
     "military": "병역 (2008.01 ~ 2010.01)",
-    "language_school": "일본국제대학부속일본어학교 · 도쿄 (2018.06 ~ 2019.06)"
+    "language_school": "일본국제대학부속일본어학교 · 도쿄 (2018.06 ~ 2019.06)",
+    "languageSchoolUrl": "https://www.jpschool.ac.jp/"
   },
   "philosophy": {
     "title": "개발 성향",
