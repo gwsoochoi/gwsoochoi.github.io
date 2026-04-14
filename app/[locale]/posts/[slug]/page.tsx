@@ -3,6 +3,7 @@ import { getAllSlugs, getPost } from "@/lib/posts";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import PostBody from "./PostBody";
+import TechTag from "../../TechTag";
 
 export function generateStaticParams() {
   const slugs = getAllSlugs();
@@ -33,12 +34,7 @@ export default async function PostPage({
           {post.tags.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-md border border-tag-text bg-tag-bg px-2.5 py-1 text-sm text-tag-text"
-                >
-                  {tag}
-                </span>
+                <TechTag key={tag}>{tag}</TechTag>
               ))}
             </div>
           )}

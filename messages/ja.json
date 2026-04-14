@@ -54,16 +54,10 @@
     "title": "主要プロジェクト",
     "ponge_title": "PONGE",
     "ponge_subtitle": "LGBTQ位置情報ベースのライフスタイルプラットフォーム",
-    "ponge_desc": "6ヶ国語対応、AI自動翻訳、リアルタイム地図ベースのソーシャル機能を持つiOS/Androidアプリ + Admin WebApp。企画からマーケティングまで一人運営。",
-    "ponge_stat1": "700+ ユーザー",
-    "ponge_stat2": "6言語",
-    "ponge_stat3": "v3.5.0",
+    "ponge_desc": "LGBTQ+ユーザーがマップで周りの人を見つけてリアルタイムメッセージ・集まりにつながる位置情報ソーシャルアプリ。6言語＋AI自動翻訳、マップ基盤シャウティング、B2B店舗登録、Admin WebAppまで1人で企画・開発・運営。",
     "hafh_title": "HafH",
     "hafh_subtitle": "サブスク型旅行プラットフォーム バックエンド",
-    "hafh_desc": "月額サブスクでコインを貯めてホテル・航空券を予約する旅行サービス。Stripe決済連携、複数OTA APIリアルタイム同期。",
-    "hafh_stat1": "スタートアップ",
-    "hafh_stat2": "Stripe連携",
-    "hafh_stat3": "3年+"
+    "hafh_desc": "ユーザープラン・Admin・On-callシステムの設計・保守・実装。Rails APIバックエンド開発、Stripeサブスク連携、OTA APIリアルタイム同期。"
   },
   "posts": {
     "title": "ポスト",

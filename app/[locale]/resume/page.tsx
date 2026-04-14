@@ -1,11 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { routing } from "@/i18n/routing";
 import { getCareerStages } from "@/lib/content/career";
+import { getLocaleStaticParams } from "@/lib/i18n";
 import TechTag from "../TechTag";
+import BulletList from "../BulletList";
+import ChevronIcon from "../ChevronIcon";
 
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
+export const generateStaticParams = getLocaleStaticParams;
 
 export default async function ResumePage({
   params,
@@ -59,9 +59,7 @@ export default async function ResumePage({
                         {t("career.now")}
                       </span>
                     )}
-                    <svg className="ml-auto h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-90" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                    </svg>
+                    <ChevronIcon className="ml-auto h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-90" />
                   </div>
                 </summary>
 
@@ -154,9 +152,7 @@ export default async function ResumePage({
                             return (
                               <details key={i} className="group">
                                 <summary className="mb-1 flex cursor-pointer list-none items-center gap-1 text-sm font-semibold text-foreground [&::-webkit-details-marker]:hidden">
-                                  <svg className="h-3.5 w-3.5 shrink-0 text-muted transition-transform group-open:rotate-90" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                                  </svg>
+                                  <ChevronIcon className="h-3.5 w-3.5 shrink-0 text-muted transition-transform group-open:rotate-90" />
                                   {g.label}
                                 </summary>
                                 <div className="ml-5">{renderContent(g.content)}</div>
@@ -226,9 +222,7 @@ export default async function ResumePage({
                                 {tl.description ? (
                                   <details>
                                     <summary className="cursor-pointer list-none flex items-center gap-1 [&::-webkit-details-marker]:hidden">
-                                      <svg className="w-3.5 h-3.5 shrink-0 transition-transform [[open]>summary>&]:rotate-90" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                                      </svg>
+                                      <ChevronIcon className="w-3.5 h-3.5 shrink-0 transition-transform [[open]>summary>&]:rotate-90" />
                                       <span>{tl.milestone}</span>
                                     </summary>
                                     <div className="mt-1 text-xs text-muted/80">
@@ -296,17 +290,7 @@ export default async function ResumePage({
                   {/* overview */}
                   {stage.overview && (
                     <div className="mb-4">
-                      <ul className="space-y-1.5">
-                        {stage.overview.map((item) => (
-                          <li
-                            key={item}
-                            className="flex items-start text-sm leading-relaxed text-muted"
-                          >
-                            <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
+                      <BulletList items={stage.overview} />
                     </div>
                   )}
 
@@ -325,17 +309,9 @@ export default async function ResumePage({
                               {loc.duration}
                             </span>
                           </div>
-                          <ul className="mt-2 space-y-1.5">
-                            {loc.items.map((item) => (
-                              <li
-                                key={item}
-                                className="flex items-start text-sm leading-relaxed text-muted"
-                              >
-                                <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
+                          <div className="mt-2">
+                            <BulletList items={loc.items} />
+                          </div>
                           {loc.tags && (
                             <div className="mt-2 flex flex-wrap gap-1.5">
                               {loc.tags.map((tag) => (
@@ -350,17 +326,7 @@ export default async function ResumePage({
 
                   {/* items */}
                   {"items" in stage && stage.items && !("projects" in stage) && (
-                      <ul className="space-y-1.5">
-                        {stage.items.map((item) => (
-                          <li
-                            key={item}
-                            className="flex items-start text-sm leading-relaxed text-muted"
-                          >
-                            <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
+                    <BulletList items={stage.items} />
                   )}
 
                   {stage.tags && (
@@ -374,17 +340,9 @@ export default async function ResumePage({
                   {/* items + projects */}
                   {"projects" in stage && stage.items && (
                     <>
-                      <ul className="mb-5 space-y-1.5">
-                        {stage.items.map((item) => (
-                          <li
-                            key={item}
-                            className="flex items-start text-sm leading-relaxed text-muted"
-                          >
-                            <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
+                      <div className="mb-5">
+                        <BulletList items={stage.items} />
+                      </div>
 
                       {stage.projects?.map((project) => (
                         <div
@@ -401,17 +359,9 @@ export default async function ResumePage({
                               )}
                             </h4>
                           </div>
-                          <ul className="mt-3 space-y-1.5">
-                            {project.items.map((item) => (
-                              <li
-                                key={item}
-                                className="flex items-start text-sm leading-relaxed text-muted"
-                              >
-                                <span className="mr-2 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/40" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
+                          <div className="mt-3">
+                            <BulletList items={project.items} />
+                          </div>
                           <div className="mt-3 flex flex-wrap gap-1.5">
                             {project.tags.map((tag) => (
                               <TechTag key={tag}>{tag}</TechTag>

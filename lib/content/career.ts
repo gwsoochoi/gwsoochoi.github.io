@@ -52,7 +52,7 @@ const texts: Record<string, LocaleText[]> = {
     {
       title: "스타트업", duration: "— 프리랜서 (2021.01 ~ 2024.12) / 도쿄",
       locations: [
-        { name: "株式会社カブクスタイル", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", items: ["구독형 여행 플랫폼 HafH 백엔드 개발", "코인 기반 예약·결제 시스템 설계 및 구현 (Stripe 구독 연동)", "여러 OTA(숙박시설) API를 연결해 재고·가격을 실시간 동기화", "Rails API 서버 설계·개발, GCP 인프라 운영", "On-call 장애 대응 및 고객 에스컬레이션 처리", "소규모 애자일 팀에서 기획부터 배포까지 전 과정 참여"], tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"] },
+        { name: "株式会社カブクスタイル", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", items: ["구독형 여행 플랫폼 HafH 백엔드 개발", "유저 플랜(코인 기반 예약·결제) 시스템 설계·보수·구현 (Stripe 구독 연동)", "Admin 기능 설계·보수·구현", "여러 OTA(숙박시설) API를 연결해 재고·가격을 실시간 동기화", "Rails API 서버 설계·개발, GCP 인프라 운영", "On-call 장애 대응 및 고객 에스컬레이션 처리", "소규모 애자일 팀에서 기획부터 배포까지 전 과정 참여"], tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"] },
         { name: "PPB International", url: "https://www.linkedin.com/company/ppb-international", duration: "2023.01 ~ 2023.12", items: ["Minerva 투자정보 제공 플랫폼 개발", "3인 체제에서 PL로서 플랫폼 전반 백엔드, DB, REST API 설계 및 개발", "외부 플랫폼 데이터 통합 마이그레이션 진행"], tags: ["Ruby on Rails", "React", "MySQL", "AWS Lightsail", "Git", "GitHub", "RSpec"] },
       ],
     },
@@ -100,7 +100,7 @@ const texts: Record<string, LocaleText[]> = {
     {
       title: "スタートアップ", duration: "— フリーランス（2021.01 ~ 2024.12）/ 東京",
       locations: [
-        { name: "株式会社カブクスタイル", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", items: ["サブスク型旅行プラットフォーム HafH バックエンド開発", "コインベースの予約・決済システムの設計と実装（Stripeサブスク連携）", "複数のOTA（宿泊施設）APIをつなぎ、在庫・価格をリアルタイム同期", "Rails APIサーバーの設計・開発、GCPインフラの運用", "On-call障害対応とカスタマーエスカレーション処理", "少人数アジャイルチームで企画からデプロイまで全工程に参加"], tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"] },
+        { name: "株式会社カブクスタイル", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", items: ["サブスク型旅行プラットフォーム HafH バックエンド開発", "ユーザープラン（コインベース予約・決済）システムの設計・保守・実装（Stripeサブスク連携）", "Admin機能の設計・保守・実装", "複数のOTA（宿泊施設）APIをつなぎ、在庫・価格をリアルタイム同期", "Rails APIサーバーの設計・開発、GCPインフラの運用", "On-call障害対応とカスタマーエスカレーション処理", "少人数アジャイルチームで企画からデプロイまで全工程に参加"], tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"] },
         { name: "PPB International", url: "https://www.linkedin.com/company/ppb-international", duration: "2023.01 ~ 2023.12", items: ["Minerva投資情報提供プラットフォーム開発", "3名体制でPLとしてプラットフォーム全般のバックエンド、DB、REST API設計・開発", "外部プラットフォームデータの統合マイグレーション実施"], tags: ["Ruby on Rails", "React", "MySQL", "AWS Lightsail", "Git", "GitHub", "RSpec"] },
       ],
     },
@@ -148,7 +148,7 @@ const texts: Record<string, LocaleText[]> = {
     {
       title: "Startup", duration: "— Freelance (2021.01 ~ 2024.12) / Tokyo",
       locations: [
-        { name: "KabuKuStyle Inc.", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", items: ["Subscription travel platform HafH — Backend development", "Built the coin-based booking and payment system (Stripe subscription integration)", "Connected multiple OTA (accommodation) APIs for real-time inventory and pricing sync", "Designed and developed the Rails API server, ran GCP infrastructure", "On-call incident response and customer escalation handling", "Involved in the full cycle from planning to deployment in a small agile team"], tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"] },
+        { name: "KabuKuStyle Inc.", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", items: ["Subscription travel platform HafH — Backend development", "Designed, maintained, and implemented the user plan system (coin-based booking and payment, Stripe subscription)", "Designed, maintained, and implemented Admin features", "Connected multiple OTA (accommodation) APIs for real-time inventory and pricing sync", "Rails API server design and development, GCP infrastructure operation", "On-call incident response and customer escalation handling", "Involved in the full cycle from planning to deployment in a small agile team"], tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"] },
         { name: "PPB International", url: "https://www.linkedin.com/company/ppb-international", duration: "2023.01 ~ 2023.12", items: ["Minerva Investment Info Platform development", "Led as PL in a 3-person team — designed and built the full backend, DB, and REST API", "Executed data integration and migration from external platforms"], tags: ["Ruby on Rails", "React", "MySQL", "AWS Lightsail", "Git", "GitHub", "RSpec"] },
       ],
     },

@@ -1,13 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { routing } from "@/i18n/routing";
 import { getLanguageItems } from "@/lib/content/languages";
 import { getSkillsSections } from "@/lib/content/skills";
+import { getLocaleStaticParams } from "@/lib/i18n";
 import ContactButton from "./ContactButton";
 import TechTag from "./TechTag";
 
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
+export const generateStaticParams = getLocaleStaticParams;
 
 export default async function AboutPage({
   params,
@@ -55,7 +53,6 @@ export default async function AboutPage({
       title: t("projects.ponge_title"),
       subtitle: t("projects.ponge_subtitle"),
       desc: t("projects.ponge_desc"),
-      stats: [t("projects.ponge_stat1"), t("projects.ponge_stat2"), t("projects.ponge_stat3")],
       tags: ["Flutter", "React", "Ruby on Rails", "GCP", "Supabase"],
       url: "https://pon-ge.com/",
       period: "2025.01~",
@@ -65,7 +62,6 @@ export default async function AboutPage({
       title: t("projects.hafh_title"),
       subtitle: t("projects.hafh_subtitle"),
       desc: t("projects.hafh_desc"),
-      stats: [t("projects.hafh_stat1"), t("projects.hafh_stat2"), t("projects.hafh_stat3")],
       tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe"],
       url: "https://www.hafh.com/",
       period: "2021.01 ~ 2024.12",
@@ -219,15 +215,6 @@ export default async function AboutPage({
               </div>
 
               <p className="mt-3 text-sm leading-relaxed text-muted">{p.desc}</p>
-
-              {/* 프로젝트 수치 */}
-              <div className="mt-3 flex flex-wrap gap-2">
-                {p.stats.map((stat) => (
-                  <span key={stat} className="rounded-md border border-accent/20 bg-accent/5 px-2.5 py-1 text-xs font-medium text-accent">
-                    {stat}
-                  </span>
-                ))}
-              </div>
 
               {/* 기술 태그 */}
               <div className="mt-3 flex flex-wrap gap-1.5">

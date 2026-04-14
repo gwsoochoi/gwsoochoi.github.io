@@ -1,11 +1,10 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { routing } from "@/i18n/routing";
 import { getAllPosts } from "@/lib/posts";
+import { getLocaleStaticParams } from "@/lib/i18n";
 import Link from "next/link";
+import TechTag from "../TechTag";
 
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
+export const generateStaticParams = getLocaleStaticParams;
 
 export default async function PostsPage({
   params,
@@ -41,12 +40,7 @@ export default async function PostsPage({
                   {post.tags.length > 0 && (
                     <div className="flex flex-wrap gap-2">
                       {post.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-md border border-tag-text bg-tag-bg px-2.5 py-1 text-sm text-tag-text"
-                        >
-                          {tag}
-                        </span>
+                        <TechTag key={tag}>{tag}</TechTag>
                       ))}
                     </div>
                   )}

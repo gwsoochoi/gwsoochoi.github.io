@@ -54,16 +54,10 @@
     "title": "Featured Projects",
     "ponge_title": "PONGE",
     "ponge_subtitle": "LGBTQ Location-Based Lifestyle Platform",
-    "ponge_desc": "iOS/Android app + Admin WebApp with 6-language support, AI auto-translation, and real-time map-based social features. Solo operation from planning to marketing.",
-    "ponge_stat1": "700+ users",
-    "ponge_stat2": "6 languages",
-    "ponge_stat3": "v3.5.0",
+    "ponge_desc": "A location-based social app where LGBTQ+ users discover people nearby on the map and connect through real-time messaging and meetups. Built and operated solo — 6 languages + AI translation, map-based Shouting, B2B store registration, and Admin WebApp.",
     "hafh_title": "HafH",
     "hafh_subtitle": "Subscription Travel Platform — Backend",
-    "hafh_desc": "Monthly subscription travel service — users earn coins and book hotels and flights. Stripe integration, real-time multi-OTA API sync.",
-    "hafh_stat1": "Startup",
-    "hafh_stat2": "Stripe",
-    "hafh_stat3": "3+ years"
+    "hafh_desc": "Designed, maintained, and implemented user plan, Admin, and On-call systems. Rails API backend development, Stripe subscription integration, and real-time OTA API sync."
   },
   "posts": {
     "title": "Posts",
