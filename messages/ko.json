@@ -4,9 +4,8 @@
     "description": "최광수의 포트폴리오 - 프로덕트 빌더 ・ 소프트웨어 엔지니어"
   },
   "nav": {
-    "about": "About",
-    "resume": "이력서",
-    "posts": "포스트"
+    "about": "홈",
+    "resume": "이력서"
   },
   "hero": {
     "tagline": "기획부터 배포까지 오너십을 갖고, 팀과의 소통을 바탕으로 함께 추진력을 만들어갑니다",
@@ -60,10 +59,6 @@
     "hafh_title": "HafH",
     "hafh_subtitle": "구독형 여행 플랫폼 백엔드",
     "hafh_desc": "유저 플랜·Admin·On-call 시스템 설계·보수·구현. Rails API 백엔드 개발, Stripe 구독 연동, OTA API 실시간 동기화."
-  },
-  "posts": {
-    "title": "포스트",
-    "empty": "아직 작성된 포스트가 없습니다."
   },
   "career": {
     "title": "{years}년 동안 이런 일들을 해봤어요",

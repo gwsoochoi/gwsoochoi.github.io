@@ -4,9 +4,8 @@
     "description": "チェ・グァンスのポートフォリオ - プロダクトビルダー ・ ソフトウェアエンジニア"
   },
   "nav": {
-    "about": "About",
-    "resume": "履歴書",
-    "posts": "ポスト"
+    "about": "ホーム",
+    "resume": "履歴書"
   },
   "hero": {
     "tagline": "企画からデプロイまでオーナーシップを持ち、チームとのコミュニケーションを大切にしながら共に推進力を生み出します",
@@ -60,10 +59,6 @@
     "hafh_title": "HafH",
     "hafh_subtitle": "サブスク型旅行プラットフォーム バックエンド",
     "hafh_desc": "ユーザープラン・Admin・On-callシステムの設計・保守・実装。Rails APIバックエンド開発、Stripeサブスク連携、OTA APIリアルタイム同期。"
-  },
-  "posts": {
-    "title": "ポスト",
-    "empty": "まだ投稿がありません。"
   },
   "career": {
     "title": "{years}年間こんな仕事をしてきました",

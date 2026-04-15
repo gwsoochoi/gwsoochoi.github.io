@@ -4,9 +4,8 @@
     "description": "Portfolio of Gwangsoo Choi - Product Builder ・ Software Engineer"
   },
   "nav": {
-    "about": "About",
-    "resume": "Resume",
-    "posts": "Posts"
+    "about": "Home",
+    "resume": "Resume"
   },
   "hero": {
     "tagline": "End-to-end ownership from planning to deployment — building momentum together through open team communication",
@@ -60,10 +59,6 @@
     "hafh_title": "HafH",
     "hafh_subtitle": "Subscription Travel Platform — Backend",
     "hafh_desc": "Designed, maintained, and implemented user plan, Admin, and On-call systems. Rails API backend development, Stripe subscription integration, and real-time OTA API sync."
-  },
-  "posts": {
-    "title": "Posts",
-    "empty": "No posts yet."
   },
   "career": {
     "title": "{years} years of experience",
