@@ -9,7 +9,7 @@
     "posts": "Posts"
   },
   "hero": {
-    "tagline": "End-to-end ownership from planning to deployment — a driving force on any team",
+    "tagline": "End-to-end ownership from planning to deployment — building momentum together through open team communication",
     "tag_career": "{careerYears}yrs_dev",
     "tag_tokyo": "Tokyo_{tokyoYears}yrs",
     "tag_fullstack": "FullStack",
@@ -24,12 +24,14 @@
     "role": "Product Builder ・ Software Engineer",
     "imageAlt": "Gwangsoo Choi profile photo",
     "bio0": "Tokyo resident ({tokyoYears} years) — Korean product builder & software engineer with {careerYears} years of development experience.",
-    "bio1": "From large-scale system development teams to fast-paced startup product building — now serving as project owner and leader of a mobile app. In a two-person team with a design/UI/UX member, I drive product direction and lead all technical aspects.",
-    "bio2": "My broad coverage bridges gaps between team roles, enabling high momentum even in small teams. I actively leverage AI across engineering, planning, and design to deliver both quality and speed.",
-    "bio3": "I track signup and churn flows, monitor user behavior metrics, and detect errors in real time — driving product improvement through data-driven decisions.",
-    "bio4": "In team settings, close communication comes first — I value running toward goals together. By combining development principles refined through real-world experience with AI agents for code review, architecture validation, and design, I bring stable momentum and elevated quality to any team.",
+    "bio1": "From large-scale SI teams (SMBC, NTT DATA) to a subscription travel platform startup (HafH, 4 years) — now serving as project owner of PONGE, an LGBTQ+ social platform, leading all areas from planning to operations in a two-person team with a designer.",
+    "bio2": "Integrated Claude Code into requirements, code review, and TDD — sustaining 2–3 feature releases per week as a solo engineer, shipping 6 major versions over 8 months with zero store rejections. Achieved 1,000 users within 6 months of launch through data-driven decisions based on signup/churn metrics and real-time error monitoring.",
+    "bio3": "At HafH, participated in the full cycle from planning to deployment as part of a small agile team — completed a zero-downtime user plan migration and built Admin CS tooling that significantly reduced engineer request volume. I bridge cross-functional gaps by covering broad areas, and value close communication to achieve goals together as a team.",
+    "bio4": "With years of experience spanning SI/SE and startups, I have consistently delivered 0→1 builds and feature-level releases. Backend is my core, but I also have mobile and web development experience, and am expanding into DevOps with AI agents. Leveraging years of On-call experience, I'm building an AI-powered customer support system, and focusing on cost optimization and performance improvement from an architecture and infrastructure perspective.",
     "bioSub": "Also available for mid-to-long term freelance full-stack engineering contracts.",
-    "location": "Tokyo / Shibuya"
+    "location": "Tokyo / Shibuya",
+    "hobby_label": "Hobby",
+    "hobby_value": "Weight Training (2009.01 – Present)"
   },
   "about": {
     "greeting": "Hello",

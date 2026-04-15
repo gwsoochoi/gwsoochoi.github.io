@@ -51,10 +51,9 @@ const texts: Record<string, LocaleText[]> = {
       scope: { label: "담당 범위:", value: "기획 → UI/UX 디자인 → 개발 → 인프라 → 스토어 심사 → 운영 → 마케팅 (전 영역)" },
       insights: {
         achievements: [
-          "출시 6개월 내 누적 회원 약 1,000명·동시접속자 약 100명 달성",
-          "B2B 가게 등록·승인 수익 모델 설계·구현",
-          "배너 CMS 구축으로 마케팅팀 없이 프로모션 직접 운영",
-          "6개 언어 + AI 자동번역으로 해외 유저 온보딩 구조 구축",
+          "2인 팀 체제에서 Claude Code를 요구사항 정리·코드 리뷰·TDD에 통합한 AI 워크플로우를 구축해, 1인 엔지니어가 주당 2~3건의 신규 기능 개발·리팩토링을 유지하며 출시 6개월 만에 등록 유저 1,000명·동시접속 100명 달성",
+          "기존 LGBT 앱의 그리드 UI와 차별화하여, 일반 유저의 24h 자동 만료 위치 공개(Shouting)와 비즈니스 유저(업소)를 지도 위에 동시 표시하는 Map-First 홈 화면을 Flutter + Supabase Realtime + PostGIS로 설계·구현. Shouting 런칭 이후 하루 평균 10명의 신규 유저가 꾸준히 유입",
+          "GitHub Actions CI/CD + TDD 기반 자동화 파이프라인을 구축하고, 첫 출시(v1.0.0)부터 8개월간 6회의 메이저 버전을 스토어 리젝 없이 릴리즈하며 안정적인 iteration 사이클 확립",
         ],
         learnings: [
           "기획·개발·인프라·운영 전 영역의 기술을 리드하며 프로덕트 전 사이클 체득",
@@ -69,18 +68,18 @@ const texts: Record<string, LocaleText[]> = {
       locations: [
         {
           name: "株式会社カブクスタイル", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", employmentType: "fulltime-to-freelance",
-          items: ["구독형 여행 플랫폼 HafH 백엔드 개발", "유저 플랜(코인 기반 예약·결제) 시스템 설계·보수·구현 (Stripe 구독 연동)", "Admin 기능 설계·보수·구현", "여러 OTA(숙박시설) API를 연결해 재고·가격을 실시간 동기화", "Rails API 서버 설계·개발, GCP 인프라 운영", "On-call 장애 대응 및 고객 에스컬레이션 처리", "소규모 애자일 팀에서 기획부터 배포까지 전 과정 참여"],
-          tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"],
+          items: ["구독형 여행 플랫폼 HafH 백엔드 개발", "신규 유저 플랜 추가에 따른 코인 부여·결제 가격 마이그레이션 설계·구현", "플랜별 보너스 코인·할인·VIP 혜택 등 프로모션 로직 설계·구현", "Admin 기능 설계·보수·구현 및 CS 업무 지원 도구 개발", "여러 OTA(숙박시설) API를 연결해 재고·가격을 실시간 동기화", "Rails API 서버 설계·개발, GCP 인프라 운영", "On-call을 통한 유저 문의 해결 및 장애 대응", "소규모 애자일 팀에서 기획부터 배포까지 전 과정 참여"],
+          tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Git", "GitHub", "RSpec"],
           insights: {
             achievements: [
-              "Stripe 구독 연동 결제 시스템 설계·구현 및 안정적 운영 기여",
-              "다수 OTA API 연동으로 재고·가격 실시간 동기화 구현",
-              "Admin 기능 전반 설계·구현으로 운영 효율화 기여",
+              "유저가 활발히 이용 중인 상태에서 플랜 체계 전면 변경(New 스탠다드 도입·코인제 전환) 시, 단계적 롤아웃 + 배치 처리로 기존 유저의 코인 잔액·결제 가격을 무중단 마이그레이션 완수",
+              "초월 0엔 팩·서울 항공권 초대·쓰미타비 할인 등 다양한 캠페인의 보너스 코인·할인율·VIP 조건·선착순 로직을 설계·구현해, 캠페인당 약 1,000명 규모의 신규 유저 획득에 기여",
+              "CS팀이 개발자에게 의뢰해야 했던 유저 조회·코인 조정·예약 상태 확인 등의 기능을 Admin에 구현해, CS→엔지니어 의뢰량을 대폭 감소시키고 개발 공수를 크게 절감",
             ],
             learnings: [
               "소규모 애자일 팀에서 기획~배포 전 공정을 경험하며 End-to-End 개발 흐름 체득",
               "Rails + GCP 스택으로 대규모 구독형 서비스 운영 노하우 습득",
-              "On-call 대응으로 프로덕션 장애 처리와 고객 에스컬레이션 경험 축적",
+              "On-call 대응으로 프로덕션 장애 처리와 유저 문의 해결 경험 축적",
             ],
           },
         },
@@ -206,10 +205,9 @@ const texts: Record<string, LocaleText[]> = {
       scope: { label: "担当範囲：", value: "企画 → UI/UXデザイン → 開発 → インフラ → ストア審査 → 運営 → マーケティング（全領域）" },
       insights: {
         achievements: [
-          "リリース後6ヶ月以内に累計会員数 約1,000人・同時接続者 約100人を達成",
-          "B2B店舗登録・承認フローを設計しビジネス収益モデルを構築",
-          "バナーCMS構築でマーケティングチームなしにプロモーションを自主運営",
-          "6言語＋AI自動翻訳で海外ユーザーのオンボーディング構成を確立",
+          "2人体制でClaude Codeを要件整理・コードレビュー・TDDに統合したAIワークフローを構築し、1人エンジニアが週2〜3件の新機能開発・リファクタリングを維持しながらリリース6ヶ月で登録ユーザー1,000人・同時接続100人を達成",
+          "既存LGBTアプリのグリッドUIと差別化し、一般ユーザーの24h自動消滅位置公開（Shouting）とビジネスユーザー（店舗）をマップ上に同時表示するMap-Firstホーム画面をFlutter + Supabase Realtime + PostGISで設計・実装。Shoutingローンチ後、1日平均10人の新規ユーザーが安定的に流入",
+          "GitHub Actions CI/CD + TDDベースの自動化パイプラインを構築し、初回リリース（v1.0.0）から8ヶ月間で6回のメジャーバージョンをストアリジェクトなしでリリースし安定的なイテレーションサイクルを確立",
         ],
         learnings: [
           "企画・開発・インフラ・運営の全領域で技術をリードし、プロダクトの全サイクルを体得",
@@ -224,18 +222,18 @@ const texts: Record<string, LocaleText[]> = {
       locations: [
         {
           name: "株式会社カブクスタイル", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", employmentType: "fulltime-to-freelance",
-          items: ["サブスク型旅行プラットフォーム HafH バックエンド開発", "ユーザープラン（コインベース予約・決済）システムの設計・保守・実装（Stripeサブスク連携）", "Admin機能の設計・保守・実装", "複数のOTA（宿泊施設）APIをつなぎ、在庫・価格をリアルタイム同期", "Rails APIサーバーの設計・開発、GCPインフラの運用", "On-call障害対応とカスタマーエスカレーション処理", "少人数アジャイルチームで企画からデプロイまで全工程に参加"],
-          tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"],
+          items: ["サブスク型旅行プラットフォーム HafH バックエンド開発", "新規ユーザープラン追加に伴うコイン付与・決済価格マイグレーションの設計・実装", "プラン別ボーナスコイン・割引・VIP特典などプロモーションロジックの設計・実装", "Admin機能の設計・保守・実装およびCS業務支援ツール開発", "複数のOTA（宿泊施設）APIをつなぎ、在庫・価格をリアルタイム同期", "Rails APIサーバーの設計・開発、GCPインフラの運用", "On-callによるユーザー問い合わせ対応および障害対応", "少人数アジャイルチームで企画からデプロイまで全工程に参加"],
+          tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Git", "GitHub", "RSpec"],
           insights: {
             achievements: [
-              "Stripeサブスク連携の決済システムを設計・実装し安定運用を実現",
-              "複数OTA APIを連携し在庫・価格のリアルタイム同期を構築",
-              "Admin機能全般の設計・実装で運用効率化に貢献",
+              "ユーザーがアクティブに利用中の状態でプラン体系を全面変更（Newスタンダード導入・コイン制移行）する際、段階的ロールアウト＋バッチ処理で既存ユーザーのコイン残高・決済価格を無停止マイグレーション完遂",
+              "初月0円パック・ソウル航空券招待・つみたび割引など多様なキャンペーンのボーナスコイン・割引率・VIP条件・先着ロジックを設計・実装し、キャンペーンあたり約1,000人規模の新規ユーザー獲得に貢献",
+              "CSチームが開発者に依頼していたユーザー照会・コイン調整・予約状況確認などの機能をAdminに実装し、CS→エンジニア依頼量を大幅に削減して開発工数を大きく圧縮",
             ],
             learnings: [
               "少人数アジャイルチームで企画からデプロイまで全工程を経験し、End-to-End開発フローを体得",
               "Rails＋GCPスタックで大規模サブスクサービスを運用するノウハウを習得",
-              "On-call対応を通じてプロダクション障害処理とカスタマーエスカレーションの対応力を積む",
+              "On-call対応を通じてプロダクション障害処理とユーザー問い合わせ対応の経験を蓄積",
             ],
           },
         },
@@ -361,10 +359,9 @@ const texts: Record<string, LocaleText[]> = {
       scope: { label: "Scope:", value: "Planning → UI/UX Design → Development → Infrastructure → Store Review → Operations → Marketing (all areas)" },
       insights: {
         achievements: [
-          "Reached ~1,000 registered users and ~100 concurrent users within 6 months of launch",
-          "Designed and implemented B2B store registration and approval revenue model",
-          "Built a banner CMS to run promotions without a marketing team",
-          "Established 6-language + AI auto-translation structure for seamless international onboarding",
+          "Built an AI-powered workflow integrating Claude Code into requirements, code review, and TDD in a 2-person team — enabling a solo engineer to ship 2–3 features/refactors per week and reaching 1,000 users and 100 concurrent users within 6 months of launch",
+          "Differentiated from grid-based LGBT apps by designing a Map-First home screen that displays both users' 24h auto-expiring location broadcasts (Shouting) and business listings on the map, built with Flutter + Supabase Realtime + PostGIS. Averaging 10 new daily users since Shouting launch",
+          "Built a GitHub Actions CI/CD + TDD automation pipeline, releasing 6 major versions over 8 months from v1.0.0 with zero store rejections, establishing a stable iteration cycle",
         ],
         learnings: [
           "Led the technical side across planning, dev, infra, and ops — gaining end-to-end product ownership",
@@ -379,18 +376,18 @@ const texts: Record<string, LocaleText[]> = {
       locations: [
         {
           name: "KabuKuStyle Inc.", url: "https://kabuk.co.jp/", duration: "2021.01 ~ 2024.12", employmentType: "fulltime-to-freelance",
-          items: ["Subscription travel platform HafH — Backend development", "Designed, maintained, and implemented the user plan system (coin-based booking and payment, Stripe subscription)", "Designed, maintained, and implemented Admin features", "Connected multiple OTA (accommodation) APIs for real-time inventory and pricing sync", "Rails API server design and development, GCP infrastructure operation", "On-call incident response and customer escalation handling", "Involved in the full cycle from planning to deployment in a small agile team"],
-          tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Stripe", "Git", "GitHub", "RSpec"],
+          items: ["Subscription travel platform HafH — Backend development", "Designed and implemented coin allocation and pricing migration for new user plan rollouts", "Designed and implemented promotion logic including plan-specific bonus coins, discounts, and VIP benefits", "Designed, maintained, and implemented Admin features and CS support tooling", "Connected multiple OTA (accommodation) APIs for real-time inventory and pricing sync", "Rails API server design and development, GCP infrastructure operation", "Resolved user inquiries via On-call and handled production incidents", "Involved in the full cycle from planning to deployment in a small agile team"],
+          tags: ["Ruby on Rails", "React", "MySQL", "GCP", "Git", "GitHub", "RSpec"],
           insights: {
             achievements: [
-              "Designed and implemented Stripe subscription payment system, contributing to stable production operation",
-              "Achieved real-time inventory and pricing sync by integrating multiple OTA APIs",
-              "Improved operational efficiency through full design and implementation of Admin features",
+              "During a full plan restructuring (New Standard launch, coin system migration) with active users, completed zero-downtime migration of existing user coin balances and pricing via phased rollout + batch processing",
+              "Designed and implemented bonus coin, discount rate, VIP condition, and first-come-first-served logic for campaigns (first-month-free, Seoul flight invite, Tsumitabi discount), contributing to ~1,000 new user acquisitions per campaign",
+              "Built user lookup, coin adjustment, and booking status features in Admin that CS previously had to request from engineers — significantly reducing CS-to-engineer request volume and dev overhead",
             ],
             learnings: [
               "Gained end-to-end development experience from planning to deployment in a small agile team",
               "Acquired know-how for operating large-scale subscription services with Rails + GCP",
-              "Built incident response and customer escalation skills through On-call rotations",
+              "Built production incident response and user inquiry resolution skills through On-call rotations",
             ],
           },
         },

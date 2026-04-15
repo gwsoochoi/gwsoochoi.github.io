@@ -38,6 +38,7 @@ export default async function ResumePage({
         <div className="space-y-4">
           {stages.map((stage, idx) => {
             const isCurrent = idx < 1;
+            const isKeyProject = stage.number <= 2;
 
             // 기간 텍스트 결정
             const periodText = stage.appInfo?.period
@@ -64,6 +65,11 @@ export default async function ResumePage({
                     {isCurrent && (
                       <span className="rounded-full bg-accent px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-background">
                         {t("career.now")}
+                      </span>
+                    )}
+                    {isKeyProject && (
+                      <span className="rounded-full border border-accent/40 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-accent">
+                        {t("career.key_projects")}
                       </span>
                     )}
                     {stage.employmentType && (
