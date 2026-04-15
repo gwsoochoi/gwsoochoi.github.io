@@ -87,19 +87,6 @@ export default async function AboutPage({
             </h1>
             <p className="mt-0.5 text-sm font-medium text-accent">{t("profile.role")}</p>
             <div className="mt-1.5 space-y-0">
-              <p className="text-[11px] leading-relaxed text-muted">
-                <a href={t("background.educationUrl")} target="_blank" rel="noopener noreferrer" className="hover:text-accent hover:underline transition-colors">
-                  {t("background.education")}
-                </a>
-              </p>
-              <p className="text-[11px] leading-relaxed text-muted">
-                <a href={t("background.languageSchoolUrl")} target="_blank" rel="noopener noreferrer" className="hover:text-accent hover:underline transition-colors">
-                  {t("background.language_school")}
-                </a>
-              </p>
-              <p className="text-[11px] leading-relaxed text-muted">{t("background.military")}</p>
-            </div>
-            <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-0">
               {languageItems.map((item) => (
                 <p key={item.name} className="text-[11px] leading-relaxed text-muted">
                   <span className="font-medium text-foreground">{item.name}</span> {item.level}

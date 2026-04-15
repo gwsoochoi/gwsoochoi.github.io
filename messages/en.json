@@ -9,13 +9,13 @@
     "posts": "Posts"
   },
   "hero": {
-    "tagline": "From planning to deployment — I build and ship solo",
+    "tagline": "End-to-end ownership from planning to deployment — a driving force on any team",
     "tag_career": "{careerYears}yrs_dev",
     "tag_tokyo": "Tokyo_{tokyoYears}yrs",
     "tag_fullstack": "FullStack",
     "tag_languages": "Trilingual",
     "tag_ai": "AI_Driven",
-    "tag_solo": "Solo_Dev",
+    "tag_solo": "Self_Starter",
     "cta_resume": "View Resume",
     "cta_contact": "Get in Touch"
   },
@@ -24,10 +24,10 @@
     "role": "Product Builder ・ Software Engineer",
     "imageAlt": "Gwangsoo Choi profile photo",
     "bio0": "Tokyo resident ({tokyoYears} years) — Korean product builder & software engineer with {careerYears} years of development experience.",
-    "bio1": "From participating as a member in large-scale system development teams to fast-paced startup product building — now planning, developing, and operating a mobile app solo.",
-    "bio2": "I leverage AI to handle not just engineering but also planning, design, and marketing myself, aiming to build a one-person unicorn.",
+    "bio1": "From large-scale system development teams to fast-paced startup product building — now serving as project owner and leader of a mobile app. In a two-person team with a design/UI/UX member, I drive product direction and lead all technical aspects.",
+    "bio2": "My broad coverage bridges gaps between team roles, enabling high momentum even in small teams. I actively leverage AI across engineering, planning, and design to deliver both quality and speed.",
     "bio3": "I track signup and churn flows, monitor user behavior metrics, and detect errors in real time — driving product improvement through data-driven decisions.",
-    "bio4": "Guided by development principles refined through real-world experience, I handle everything from architecture to deployment on my own. In team settings, close communication comes first. By deeply integrating AI agents into code management, reviews, and design, I achieve quality and velocity that would be hard to reach alone.",
+    "bio4": "In team settings, close communication comes first — I value running toward goals together. By combining development principles refined through real-world experience with AI agents for code review, architecture validation, and design, I bring stable momentum and elevated quality to any team.",
     "bioSub": "Also available for mid-to-long term freelance full-stack engineering contracts.",
     "location": "Tokyo / Shibuya"
   },
@@ -37,16 +37,16 @@
   },
   "highlights": {
     "title": "Core Strengths",
-    "solo_title": "Full-Stack Product Builder",
-    "solo_desc": "Hands-on experience across the entire service lifecycle — from planning to deployment and operations — with a deep understanding of business structure. I aim for efficient workflows with fast decision-making and no gaps between disciplines.",
+    "solo_title": "End-to-End Ownership",
+    "solo_desc": "Hands-on experience across the entire service lifecycle — from planning to deployment and operations — with a deep understanding of business structure. Broad coverage bridges gaps between team roles, contributing to fast decision-making and efficient workflows.",
     "solo_metric1": "End-to-end ownership",
-    "solo_metric2": "6-language app, solo-operated",
+    "solo_metric2": "Bridges cross-functional gaps",
     "ai_title": "AI-Powered High-Efficiency Engineering",
-    "ai_desc": "I run separate AI agents for planning, marketing, design, and engineering — maximizing domain expertise in each area. Claude Code-based TDD ensures code quality, while design tools like Codex, Nanovanana, Stitch, and Figma are integrated via MCP to automate dev-design collaboration. Recently, I've been leveraging Claude Cowork to build even more specialized and granular agent pipelines for product development.",
-    "ai_metric1": "Role-based agent separation",
-    "ai_metric2": "MCP-integrated design tools",
+    "ai_desc": "I leverage AI agents across planning, design, and engineering to automate code reviews, architecture validation, and dev-design collaboration. This enables output at scale even in small teams — and creates even greater leverage within a larger team.",
+    "ai_metric1": "Quality and speed through AI",
+    "ai_metric2": "Automated code review & design validation",
     "tech_title": "12-Year Full-Stack Engineer",
-    "tech_desc": "I have experience in both SI system development and startup product building. With a broad tech stack spanning backend, frontend, and mobile, I design and implement the architecture best suited to each project's goals.",
+    "tech_desc": "Experienced in both SI system development and startup product building. With a broad tech stack spanning backend, frontend, and mobile, I propose and implement the architecture best suited to each project's goals.",
     "tech_metric1": "Rails · Flutter · React · Next.js",
     "tech_metric2": "GCP · Supabase · Docker · Cloudflare"
   },
@@ -54,7 +54,7 @@
     "title": "Featured Projects",
     "ponge_title": "PONGE",
     "ponge_subtitle": "LGBTQ Location-Based Lifestyle Platform",
-    "ponge_desc": "A location-based social app where LGBTQ+ users discover people nearby on the map and connect through real-time messaging and meetups. Built and operated solo — 6 languages + AI translation, map-based Shouting, B2B store registration, and Admin WebApp.",
+    "ponge_desc": "A location-based social app where LGBTQ+ users discover people nearby on the map and connect through real-time messaging and meetups. As project owner and leader, I drive product direction and technical execution in a two-person team with a design/UI/UX member. 6 languages + AI translation, map-based Shouting, B2B store registration, and Admin WebApp.",
     "hafh_title": "HafH",
     "hafh_subtitle": "Subscription Travel Platform — Backend",
     "hafh_desc": "Designed, maintained, and implemented user plan, Admin, and On-call systems. Rails API backend development, Stripe subscription integration, and real-time OTA API sync."
@@ -64,34 +64,44 @@
     "empty": "No posts yet."
   },
   "career": {
-    "title": "Here's what I've been working on",
-    "totalYears": "",
+    "title": "{years} years of experience",
     "summary_title": "Core Competencies",
     "summary_solo": "Product Builder",
     "summary_solo_desc": "End-to-end ownership across the full service lifecycle",
     "summary_ai": "AI-Powered Engineering",
-    "summary_ai_desc": "Role-based AI agents · MCP design tool integration · Claude Cowork pipeline",
+    "summary_ai_desc": "AI-automated code review, design validation & collaboration for quality at speed",
     "summary_stack": "Full-Stack Engineer",
     "summary_stack_desc": "Rails · Flutter · React · GCP — architecture designed for the goal",
     "now": "Now",
     "freelance": "Freelance",
     "fulltime": "Full-time",
-    "approx_years": "~{years}yr"
+    "approx_years": "~{years}yr",
+    "achievements": "Achievements",
+    "learnings": "Key Learnings",
+    "key_projects": "Key Projects"
   },
   "languages": {
     "title": "Languages"
   },
   "background": {
     "title": "Background",
-    "education": "Namseoul University — Dept. of Multimedia, Computer Programming (2006.03 ~ 2013.02, incl. leave)",
+    "section_title": "Education & Service",
+    "sub_education": "Education",
+    "sub_military": "Military Service",
+    "education_name": "Namseoul University — Dept. of Multimedia, Computer Programming",
+    "education_period": "2006.03 ~ 2013.02",
+    "education_note": "Incl. leave for military service and LG Electronics R&D Lab tester role",
     "educationUrl": "https://www.nsu.ac.kr/",
-    "military": "Military Service (2008.01 ~ 2010.01)",
-    "language_school": "Japan International University Japanese Language School · Tokyo (2018.06 ~ 2019.06)",
-    "languageSchoolUrl": "https://www.jpschool.ac.jp/"
+    "language_school_name": "Japan International University Japanese Language School · Tokyo",
+    "language_school_period": "2018.06 ~ 2019.06",
+    "languageSchoolUrl": "https://www.jpschool.ac.jp/",
+    "military_name": "Military Service",
+    "military_period": "2008.01 ~ 2009.12",
+    "military_detail": "ROK Army 2nd Infantry Division, Infantry, Sergeant, Honorable Discharge · MOS: 90mm Recoilless Rifle"
   },
   "philosophy": {
     "title": "Development Philosophy",
-    "subtitle": "I shaped my own development principles through real startup work, then built and shipped production services solo — from zero to architecture, implementation, infra, and deployment. In team settings, I value close and open communication with teammates, approaching project goals together. Since 2025, building on clean architecture methodology, I've actively used the AI agent Claude Code in personal projects — not just for development, but also for code management, reviews, architecture, and infrastructure — achieving growth and experience that wouldn't have been possible alone. This know-how now enables me to build high-quality services in the shortest time possible."
+    "subtitle": "Development principles refined through real startup work enable consistent ownership from architecture to deployment. In team settings, I prioritize open communication and approaching project goals together. Combining clean architecture with AI agents, I deliver both quality and speed at a high level."
   },
   "skills": {
     "title": "Tech Stack"
