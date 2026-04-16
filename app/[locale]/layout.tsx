@@ -17,11 +17,6 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
 
-  const languages: Record<string, string> = {};
-  for (const l of routing.locales) {
-    languages[l] = `/${l}`;
-  }
-
   return {
     title: t("title"),
     description: t("description"),
@@ -31,10 +26,6 @@ export async function generateMetadata({
       locale: locale,
       type: "website",
       siteName: "Gwangsoo Choi",
-    },
-    alternates: {
-      canonical: `/${locale}`,
-      languages,
     },
   };
 }

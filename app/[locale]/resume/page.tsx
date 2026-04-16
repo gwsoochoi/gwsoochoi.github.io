@@ -1,13 +1,33 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getCareerStages } from "@/lib/content/career";
 import { getLocaleStaticParams } from "@/lib/i18n";
+import { routing } from "@/i18n/routing";
 import { getCareerYears } from "@/lib/constants";
 import { parseServiceOverview, parseTimelineDescription } from "@/lib/content/parseOverview";
+import type { Metadata } from "next";
 import TechTag from "../TechTag";
 import BulletList from "../BulletList";
 import ChevronIcon from "../ChevronIcon";
 
 export const generateStaticParams = getLocaleStaticParams;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const languages: Record<string, string> = {};
+  for (const l of routing.locales) {
+    languages[l] = `/${l}/resume`;
+  }
+  return {
+    alternates: {
+      canonical: `/${locale}/resume`,
+      languages,
+    },
+  };
+}
 
 export default async function ResumePage({
   params,
