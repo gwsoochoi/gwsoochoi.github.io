@@ -16,9 +16,26 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
+
+  const languages: Record<string, string> = {};
+  for (const l of routing.locales) {
+    languages[l] = `/${l}`;
+  }
+
   return {
     title: t("title"),
     description: t("description"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      locale: locale,
+      type: "website",
+      siteName: "Gwangsoo Choi",
+    },
+    alternates: {
+      canonical: `/${locale}`,
+      languages,
+    },
   };
 }
 
@@ -37,8 +54,14 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <HtmlLang />
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:text-background focus:text-sm focus:font-medium"
+      >
+        Skip to main content
+      </a>
       <Header />
-      <main>{children}</main>
+      <main id="main-content">{children}</main>
       <footer className="mx-auto max-w-3xl border-t border-border px-6 py-8 text-center text-sm text-muted">
         <p>
           &copy; {new Date().getFullYear()}{" "}

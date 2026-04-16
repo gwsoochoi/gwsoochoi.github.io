@@ -112,14 +112,61 @@ Tailwind에서 `bg-background`, `text-foreground`, `text-accent`, `text-muted`, 
 
 ## 정적 콘텐츠 데이터 (`lib/content/`)
 
-About 페이지에 표시되는 경력/언어/기술 데이터는 TypeScript 파일로 관리:
+About/Resume 페이지에 표시되는 경력/언어/기술 데이터는 TypeScript 파일로 관리:
 
 | 파일 | 역할 |
 |------|------|
-| `career.ts` | 경력 항목 배열 |
+| `career.ts` | 경력 항목 배열 (shared + locale별 텍스트 병합) |
 | `languages.ts` | 언어 능력 (로케일별 레벨 텍스트 지원) |
 | `skills.ts` | 기술 스택 섹션 배열 |
-| `types.ts` | 공통 타입 정의 |
+| `types.ts` | 공통 타입 정의 (`Stage`, `Project`, `LanguageItem`, `SkillSection`) |
+
+### career.ts 구조
+
+`shared` 배열(공통 필드: number, employmentType, tags, appInfo, companyUrl)과 `texts` 객체(로케일별 텍스트)를 `buildStages()`로 병합하는 패턴:
+
+- **shared에 넣는 것:** 언어 무관 데이터 (번호, 고용형태, 태그, URL 등)
+- **texts에 넣는 것:** 로케일별 번역이 필요한 텍스트 (title, duration, items, insights 등)
+- 새 필드 추가 시: 번역 필요 → texts / 번역 불요 → shared
+
+### Stage 타입 계층 구조 (insights 3단 계층)
+
+```
+Stage                          # 최상위 (PONGE, LG Electronics 등)
+├── insights?                  # stage 레벨 성과/배운점
+├── locations[]?               # 회사별 상세 (스타트업, SI/SE 등)
+│   ├── insights?              # location 레벨 성과/배운점
+│   └── subProjects[]?         # 회사 내 개별 프로젝트
+│       └── insights?          # subProject 레벨 성과/배운점
+└── serviceOverview[]?         # "## " prefix로 섹션 분할되는 마크다운 텍스트
+```
+
+### Resume 페이지 렌더링 조건
+
+- **stage.insights**: `!("locations" in stage)` 일 때만 렌더링 → locations가 없는 stage(PONGE, LG)에서 표시
+- **location.insights**: locations 배열 내 각 location에서 개별 렌더링
+- **subProject.insights**: subProjects 배열 내 각 항목에서 개별 렌더링
+- **serviceOverview**: `"## "` prefix를 감지해 접이식(details) 섹션으로 분할, 버전 패턴(`v\d`, `개발 시작` 등)은 collapsed
+
+### messages JSON — career 관련 번역 키
+
+```
+career.title              # 섹션 제목 ("{years}년 동안 이런 일들을 해봤어요")
+career.summary_title      # 핵심 역량 요약
+career.summary_solo       # 제품 빌더
+career.summary_solo_desc  # 제품 빌더 설명
+career.summary_ai         # AI 고효율 엔지니어링
+career.summary_ai_desc    # AI 엔지니어링 설명
+career.summary_stack      # 풀스택 엔지니어
+career.summary_stack_desc # 풀스택 설명
+career.now                # "현재" 뱃지
+career.freelance          # "프리랜서" 뱃지
+career.fulltime           # "정규직" 뱃지
+career.approx_years       # "약 {years}년"
+career.achievements       # "성과" 라벨
+career.learnings          # "배운점" 라벨
+career.key_projects       # "주요 프로젝트" 라벨
+```
 
 ---
 

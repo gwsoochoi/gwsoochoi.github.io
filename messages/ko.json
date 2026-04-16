@@ -75,7 +75,9 @@
     "approx_years": "약 {years}년",
     "achievements": "성과",
     "learnings": "배운점",
-    "key_projects": "주요 프로젝트"
+    "key_projects": "주요 프로젝트",
+    "key_projects_section": "주요 프로젝트",
+    "other_experience": "소속 경력"
   },
   "languages": {
     "title": "언어"

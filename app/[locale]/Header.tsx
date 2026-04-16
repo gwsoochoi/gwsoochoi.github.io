@@ -19,7 +19,7 @@ export default function Header() {
     <header className="border-b border-border bg-background">
       <div className="mx-auto flex max-w-3xl items-center justify-end px-6 py-4">
         <div className="flex items-center gap-6">
-          <nav className="flex items-center gap-1">
+          <nav aria-label="Main navigation" className="flex items-center gap-1">
             {navItems.map(({ key, href }) => {
               const fullHref = `/${locale}${href}`;
               const isActive =

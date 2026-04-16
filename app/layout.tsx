@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "최광수 | 이력서",
-  description: "최광수의 이력서 - 프로덕트 빌더 ・ 소프트웨어 엔지니어",
+  metadataBase: new URL("https://gwsoochoi.github.io"),
+  title: {
+    default: "Gwangsoo Choi",
+    template: "%s | Gwangsoo Choi",
+  },
+  description: "Product Builder & Software Engineer",
 };
 
 export default function RootLayout({
@@ -15,8 +19,13 @@ export default function RootLayout({
     <html>
       <head>
         <link
-          rel="stylesheet"
+          rel="preload"
           as="style"
+          crossOrigin="anonymous"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-jp-dynamic-subset.min.css"
+        />
+        <link
+          rel="stylesheet"
           crossOrigin="anonymous"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-jp-dynamic-subset.min.css"
         />
