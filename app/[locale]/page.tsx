@@ -2,10 +2,31 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getLanguageItems } from "@/lib/content/languages";
 import { getSkillsSections } from "@/lib/content/skills";
 import { getLocaleStaticParams } from "@/lib/i18n";
+import { routing } from "@/i18n/routing";
+import { getCareerYears, getTokyoYears } from "@/lib/constants";
+import type { Metadata } from "next";
 import ContactButton from "./ContactButton";
 import TechTag from "./TechTag";
 
 export const generateStaticParams = getLocaleStaticParams;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const languages: Record<string, string> = {};
+  for (const l of routing.locales) {
+    languages[l] = `/${l}`;
+  }
+  return {
+    alternates: {
+      canonical: `/${locale}`,
+      languages,
+    },
+  };
+}
 
 export default async function AboutPage({
   params,
@@ -16,8 +37,8 @@ export default async function AboutPage({
   setRequestLocale(locale);
   const t = await getTranslations();
 
-  const careerYears = new Date().getFullYear() - 2013 - 1;
-  const tokyoYears = new Date().getFullYear() - 2018;
+  const careerYears = getCareerYears();
+  const tokyoYears = getTokyoYears();
   const languageItems = getLanguageItems(locale);
   const skillsSections = getSkillsSections();
 
@@ -112,7 +133,7 @@ export default async function AboutPage({
             className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
           >
             {t("hero.cta_resume")}
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </a>
           <ContactButton />
         </div>

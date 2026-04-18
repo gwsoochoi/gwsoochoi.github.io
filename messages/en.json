@@ -75,7 +75,9 @@
     "approx_years": "~{years}yr",
     "achievements": "Achievements",
     "learnings": "Key Learnings",
-    "key_projects": "Key Projects"
+    "key_projects": "Key Projects",
+    "key_projects_section": "Key Projects",
+    "other_experience": "Company Experience"
   },
   "languages": {
     "title": "Languages"

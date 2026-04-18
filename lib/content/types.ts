@@ -29,6 +29,25 @@ export interface Stage {
   insights?: { achievements: string[]; learnings: string[] };
 }
 
+export interface ServiceOverviewSection {
+  label?: string;
+  content: string[];
+  collapsible: boolean;
+}
+
+export interface TimelineDescriptionSection {
+  label?: string;
+  items: string[];
+}
+
+export interface KeyProject {
+  name: string;
+  description: string;
+  role: string;
+  url?: string;
+  tags: string[];
+}
+
 export interface LanguageItem {
   name: string;
   level: string;

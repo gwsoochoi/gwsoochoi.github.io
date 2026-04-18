@@ -1,6 +1,19 @@
 @import "tailwindcss";
 @import "highlight.js/styles/github.css";
 
+/* CDN 폰트가 font-display를 포함하지 않을 경우의 fallback */
+@font-face {
+  font-family: "Pretendard JP Variable";
+  font-display: swap;
+  src: local("Pretendard JP Variable");
+}
+
+@font-face {
+  font-family: "Pretendard Variable";
+  font-display: swap;
+  src: local("Pretendard Variable");
+}
+
 :root {
   --background: #13171D;
   --foreground: #E2EAF0;

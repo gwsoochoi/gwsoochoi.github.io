@@ -4,6 +4,7 @@ export default function ChevronIcon({ className }: { className?: string }) {
       className={className}
       viewBox="0 0 20 20"
       fill="currentColor"
+      aria-hidden="true"
     >
       <path
         fillRule="evenodd"

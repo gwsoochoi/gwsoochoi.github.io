@@ -75,7 +75,9 @@
     "approx_years": "約{years}年",
     "achievements": "実績",
     "learnings": "学んだこと",
-    "key_projects": "主要プロジェクト"
+    "key_projects": "主要プロジェクト",
+    "key_projects_section": "主要プロジェクト",
+    "other_experience": "所属経歴"
   },
   "languages": {
     "title": "言語"

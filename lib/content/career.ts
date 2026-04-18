@@ -22,7 +22,7 @@ type LocaleText = Omit<Stage, "number" | "tags" | "appInfo" | "companyUrl">;
 const texts: Record<string, LocaleText[]> = {
   ko: [
     {
-      title: "LGBTQ 라이프스타일 플랫폼 개발",
+      title: "개인 프로젝트 — 2인 체제, 수익화까지",
       duration: "",
       company: "株式会社GREATEARTH",
       appDescription: "위치 기반 커뮤니티 · 이벤트 · 비즈니스 연결 플랫폼",
@@ -176,7 +176,7 @@ const texts: Record<string, LocaleText[]> = {
   ],
   ja: [
     {
-      title: "LGBTQライフスタイルプラットフォーム開発",
+      title: "個人プロジェクト — 2人体制、収益化まで",
       duration: "",
       company: "株式会社GREATEARTH",
       appDescription: "位置情報ベースのコミュニティ・イベント・ビジネス接続プラットフォーム",
@@ -330,7 +330,7 @@ const texts: Record<string, LocaleText[]> = {
   ],
   en: [
     {
-      title: "LGBTQ Lifestyle Platform Development",
+      title: "Personal Project — 2-Person Team to Monetization",
       duration: "",
       company: "株式会社GREATEARTH",
       appDescription: "Location-Based Community · Events · Business Connection Platform",
