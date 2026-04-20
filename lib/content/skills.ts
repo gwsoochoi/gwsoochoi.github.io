@@ -9,7 +9,7 @@ const sections: SkillSection[] = [
   { label: "BaaS", tags: ["Supabase Auth/DB/Realtime", "Cloudflare R2/Turnstile", "Firebase FCM/Firestore/Analytics"] },
   { label: "Auth & Payment", tags: ["Google/Apple/Kakao/Line OAuth", "Stripe", "In-App Purchase"] },
   { label: "Monitoring", tags: ["Sentry"] },
-  { label: "AI", tags: ["Claude", "Gemini"] },
+  { label: "AI", tags: ["Claude", "Claude Code", "Claude Design"] },
 ];
 
 export function getSkillsSections(): SkillSection[] {
