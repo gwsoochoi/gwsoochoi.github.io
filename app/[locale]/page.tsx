@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import { getCareerYears, getTokyoYears } from "@/lib/constants";
 import type { Metadata } from "next";
 import ContactButton from "./ContactButton";
+import ProfileAvatar from "./ProfileAvatar";
 import TechTag from "./TechTag";
 
 export const generateStaticParams = getLocaleStaticParams;
@@ -57,11 +58,7 @@ export default async function AboutPage({
       <section className="pb-12">
         <div className="flex items-stretch gap-6">
           <div className="flex shrink-0 items-center py-2">
-            <img
-              src="/profile.jpg"
-              alt={t("profile.imageAlt")}
-              className="h-32 w-32 rounded-lg object-cover ring-2 ring-accent/30 ring-offset-2 ring-offset-background"
-            />
+            <ProfileAvatar alt={t("profile.imageAlt")} />
           </div>
           <div>
             <h1 className="text-2xl font-bold tracking-tight text-foreground">

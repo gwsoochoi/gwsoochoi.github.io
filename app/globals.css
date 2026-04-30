@@ -47,6 +47,189 @@ body {
     BlinkMacSystemFont, system-ui, sans-serif;
 }
 
+.profile-photo-stack {
+  --profile-main-size: clamp(6.75rem, 24vw, 8rem);
+  --profile-sub-size: clamp(5.75rem, 20vw, 6.75rem);
+  --profile-overlap: calc(var(--profile-sub-size) * 0.3);
+
+  position: relative;
+  isolation: isolate;
+  width: calc(var(--profile-main-size) + var(--profile-sub-size) - var(--profile-overlap));
+  height: calc(var(--profile-main-size) + 0.65rem);
+}
+
+.profile-photo-button {
+  position: absolute;
+  display: block;
+  padding: 0;
+  cursor: zoom-in;
+  border: 0;
+  border-radius: 9999px;
+  background: transparent;
+  outline: none;
+  transition:
+    filter 200ms ease,
+    z-index 0ms linear 0ms;
+  will-change: transform;
+}
+
+.profile-photo-button:focus-visible {
+  z-index: 5;
+  box-shadow:
+    0 0 0 2px var(--background),
+    0 0 0 4px var(--accent);
+}
+
+.profile-photo-button:hover {
+  z-index: 5;
+  filter: saturate(1.12) brightness(1.04);
+}
+
+.profile-photo-button::after {
+  content: "";
+  position: absolute;
+  inset: -0.45rem;
+  border-radius: inherit;
+  border: 1px solid rgba(77, 196, 175, 0.42);
+  opacity: 0;
+  pointer-events: none;
+  animation: profile-photo-ripple 2.8s ease-out infinite;
+}
+
+.profile-photo-main {
+  left: 0;
+  bottom: 0.25rem;
+  z-index: 2;
+  width: var(--profile-main-size);
+  height: var(--profile-main-size);
+  box-shadow:
+    0 0 0 2px rgba(77, 196, 175, 0.3),
+    0 0 0 4px var(--background),
+    0 18px 40px rgba(0, 0, 0, 0.3);
+  animation: profile-photo-main-drift 6.6s ease-in-out infinite;
+}
+
+.profile-photo-main:hover {
+  animation-duration: 5.2s;
+}
+
+.profile-photo-sub {
+  left: calc(var(--profile-main-size) - var(--profile-overlap));
+  top: 0.15rem;
+  z-index: 1;
+  width: var(--profile-sub-size);
+  height: var(--profile-sub-size);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.12),
+    0 0 0 4px var(--background),
+    0 14px 34px rgba(0, 0, 0, 0.24);
+  animation: profile-photo-sub-drift 7.4s ease-in-out 0.45s infinite;
+}
+
+.profile-photo-sub::after {
+  animation-delay: 0.75s;
+}
+
+.profile-photo-sub:hover {
+  animation-duration: 5.8s;
+}
+
+.profile-photo-spark {
+  position: absolute;
+  z-index: 3;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: var(--accent);
+  box-shadow: 0 0 18px rgba(77, 196, 175, 0.8);
+  pointer-events: none;
+  animation: profile-photo-spark 2.4s ease-in-out infinite;
+}
+
+.profile-photo-spark-one {
+  right: 0.25rem;
+  top: 0.4rem;
+}
+
+.profile-photo-spark-two {
+  left: 0.3rem;
+  bottom: 0.95rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  animation-delay: 0.8s;
+}
+
+.profile-photo-dialog {
+  animation: profile-photo-dialog-in 180ms ease-out both;
+}
+
+@keyframes profile-photo-main-drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-0.18rem) rotate(1deg);
+  }
+}
+
+@keyframes profile-photo-sub-drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(3deg);
+  }
+  50% {
+    transform: translateY(0.16rem) rotate(0.5deg);
+  }
+}
+
+@keyframes profile-photo-ripple {
+  0% {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  18% {
+    opacity: 0.72;
+  }
+  72%,
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes profile-photo-spark {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
+
+@keyframes profile-photo-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-photo-button,
+  .profile-photo-button::after,
+  .profile-photo-spark,
+  .profile-photo-dialog {
+    animation: none;
+  }
+}
+
 @media print {
   body {
     font-size: 12px;
