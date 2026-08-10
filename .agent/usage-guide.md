@@ -1,7 +1,7 @@
 # gwsoochoi.github.io Agent 사용 가이드
 
 > 이 저장소에서는 긴 설명보다 `모드 + 범위 + 완료 조건` 형식이 가장 효율적이다.
-> 채팅 입력은 `/feat` 대신 `feat`처럼 바로 시작하면 된다.
+> 채팅 입력은 `feat`처럼 모드와 범위를 바로 적으면 된다.
 
 ---
 
@@ -153,4 +153,3 @@ fix header - Done: 현재 locale 유지한 채 언어 전환 동작 안정화, b
 ```text
 Designer ui-review about - Done: 위계/spacing/모바일 줄바꿈 문제만 정리
 ```
-
