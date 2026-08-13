@@ -4,13 +4,26 @@
     "description": "チェ・グァンスのポートフォリオ - Railsを軸に、SwiftUI・Jetpack Composeまで横断するプロダクトエンジニア。中長期の業務委託に対応。"
   },
   "hero": {
-    "subtitle": "東京在住・日本語ビジネス。要件整理、API、iOS・Android、管理画面、クラウド運用まで一貫して担当し、中長期の業務委託に対応します。",
     "cta_contact": "相談する",
     "cta_resume": "経歴を見る"
   },
   "profile": {
     "name": "チェ・グァンス",
     "imageAlt": "チェ・グァンス プロフィール写真"
+  },
+  "basic": {
+    "title": "基本情報",
+    "name_label": "氏名",
+    "birth_label": "生年",
+    "birth_value": "1988年生まれ",
+    "residence_label": "居住地",
+    "residence_value": "東京都渋谷区（2018.06〜）",
+    "language_label": "言語",
+    "education_label": "学歴",
+    "military_label": "兵役",
+    "hobby_label": "趣味",
+    "hobby_weight": "ウエイトトレーニング（2009.01〜）",
+    "hobby_crossfit": "クロスフィット（2026.05〜）"
   },
   "availability": {
     "title": "稼働条件",
@@ -22,8 +35,7 @@
     "location_label": "勤務形態",
     "location_value": "リモート中心",
     "contract_label": "契約",
-    "contract_value": "中長期の業務委託を希望",
-    "language_label": "言語"
+    "contract_value": "中長期の業務委託を希望"
   },
   "capabilities": {
     "title": "すぐにお任せいただける業務",
@@ -51,20 +63,10 @@
     "key_projects": "主要プロジェクト"
   },
   "background": {
-    "title": "バックグラウンド",
-    "section_title": "学歴 & 兵役",
-    "sub_education": "学歴",
-    "sub_military": "兵役",
     "education_name": "南ソウル大学校 マルチメディア学科 コンピュータプログラミング",
     "education_period": "2006.03 ~ 2013.02",
-    "education_note": "兵役義務およびLG電子R&D研究所テスターによる休学含む",
-    "educationUrl": "https://www.nsu.ac.kr/",
-    "language_school_name": "日本国際大学付属日本語学校・東京",
-    "language_school_period": "2018.06 ~ 2019.06",
-    "languageSchoolUrl": "https://www.jpschool.ac.jp/",
-    "military_name": "兵役",
     "military_period": "2008.01 ~ 2009.12",
-    "military_detail": "陸軍 第2歩兵師団 一般歩兵 兵長 満期除隊 · 主特技：90mm無反動砲"
+    "military_summary": "陸軍 第2歩兵師団 一般歩兵 兵長 満期除隊"
   },
   "skills": {
     "title": "技術スタック"

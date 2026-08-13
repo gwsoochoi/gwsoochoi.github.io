@@ -4,13 +4,26 @@
     "description": "최광수 포트폴리오 - Rails를 축으로 SwiftUI · Jetpack Compose까지 아우르는 프로덕트 엔지니어. 중장기 업무위탁 대응."
   },
   "hero": {
-    "subtitle": "도쿄 거주 · 일본어 비즈니스 레벨. 요구사항 정리, API, iOS · Android, 관리자 화면, 클라우드 운영까지 일관되게 담당하며 중장기 업무위탁에 대응합니다.",
     "cta_contact": "상담 요청",
     "cta_resume": "경력 보기"
   },
   "profile": {
     "name": "최광수",
     "imageAlt": "최광수 프로필 사진"
+  },
+  "basic": {
+    "title": "기본 정보",
+    "name_label": "이름",
+    "birth_label": "생년",
+    "birth_value": "1988년생",
+    "residence_label": "거주지",
+    "residence_value": "도쿄도 시부야구 (2018.06~)",
+    "language_label": "언어",
+    "education_label": "학력",
+    "military_label": "병역",
+    "hobby_label": "취미",
+    "hobby_weight": "웨이트 트레이닝 (2009.01~)",
+    "hobby_crossfit": "크로스핏 (2026.05~)"
   },
   "availability": {
     "title": "가동 조건",
@@ -22,8 +35,7 @@
     "location_label": "근무 형태",
     "location_value": "리모트 중심",
     "contract_label": "계약",
-    "contract_value": "중장기 업무위탁 희망",
-    "language_label": "언어"
+    "contract_value": "중장기 업무위탁 희망"
   },
   "capabilities": {
     "title": "바로 맡길 수 있는 업무",
@@ -51,20 +63,10 @@
     "key_projects": "주요 프로젝트"
   },
   "background": {
-    "title": "배경",
-    "section_title": "학력 & 병역",
-    "sub_education": "학력",
-    "sub_military": "병역",
     "education_name": "남서울대학교 멀티미디어학과 컴퓨터프로그래밍",
     "education_period": "2006.03 ~ 2013.02",
-    "education_note": "병역의무 및 LG전자 R&D 연구소 테스터로 인한 휴학 포함",
-    "educationUrl": "https://www.nsu.ac.kr/",
-    "language_school_name": "일본국제대학부속일본어학교 · 도쿄",
-    "language_school_period": "2018.06 ~ 2019.06",
-    "languageSchoolUrl": "https://www.jpschool.ac.jp/",
-    "military_name": "병역",
     "military_period": "2008.01 ~ 2009.12",
-    "military_detail": "육군 제2보병사단 일반보병 병장 만기전역 · 주특기: 90미리 무반동총"
+    "military_summary": "육군 제2보병사단 일반보병 병장 만기전역"
   },
   "skills": {
     "title": "기술 스택"

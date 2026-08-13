@@ -28,8 +28,8 @@ app/
   sitemap.ts                  # 정적 sitemap
   [locale]/
     layout.tsx                # locale 레이아웃, metadata, Header/Footer
-    page.tsx                  # 단일 페이지 (프로필 · 가동 조건 · 프로젝트 · 스킬 · 경력 · 학력 · 연락)
-    CareerSections.tsx        # 경력 / 학력·병역 섹션
+    page.tsx                  # 단일 페이지 (기본 정보 · 가동 조건 · 프로젝트 · 스킬 · 경력 · 연락)
+    CareerSections.tsx        # 경력 섹션
     Header.tsx                # 언어 전환 바
     LangSwitcher.tsx          # 언어 전환
     HtmlLang.tsx              # <html lang> 동기화
@@ -60,7 +60,6 @@ messages/
   en.json
 
 public/
-  profile.jpg
   robots.txt
   *.svg
 ```

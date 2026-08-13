@@ -59,9 +59,7 @@ export default async function CareerSections({ locale }: { locale: string }) {
   const learningsLabel = t("career.learnings");
 
   return (
-    <>
-      {/* ── 경력 ── */}
-      <section id="career" className="border-t border-border py-10">
+    <section id="career" className="border-t-2 border-muted/30 py-10">
         <h2 className="mb-6 text-2xl font-bold text-foreground">
           {t("career.title", { years: careerYears })}
         </h2>
@@ -228,70 +226,7 @@ export default async function CareerSections({ locale }: { locale: string }) {
               </details>
             );
           })}
-        </div>
-      </section>
-
-      {/* ── 학력 & 병역 ── */}
-      <section className="border-t border-border py-10">
-        <h2 className="mb-8 text-2xl font-bold text-foreground">
-          {t("background.section_title")}
-        </h2>
-
-        {/* 학력 */}
-        <div className="mb-8">
-          <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted">
-            {t("background.sub_education")}
-          </h3>
-          <div className="space-y-4">
-            {/* 남서울대학교 */}
-            <div className="rounded-lg border border-border p-4">
-              <div className="flex items-start justify-between gap-4">
-                <h4 className="font-medium text-foreground">
-                  <a href={t("background.educationUrl")} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                    {t("background.education_name")}
-                  </a>
-                </h4>
-                <span className="shrink-0 rounded-md border border-tag-text bg-tag-bg px-2.5 py-1 text-xs text-tag-text">
-                  {t("background.education_period")}
-                </span>
-              </div>
-              <p className="mt-2 text-sm text-muted">{t("background.education_note")}</p>
-            </div>
-
-            {/* 일본어학교 */}
-            <div className="rounded-lg border border-border p-4">
-              <div className="flex items-start justify-between gap-4">
-                <h4 className="font-medium text-foreground">
-                  <a href={t("background.languageSchoolUrl")} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                    {t("background.language_school_name")}
-                  </a>
-                </h4>
-                <span className="shrink-0 rounded-md border border-tag-text bg-tag-bg px-2.5 py-1 text-xs text-tag-text">
-                  {t("background.language_school_period")}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 병역 */}
-        <div>
-          <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted">
-            {t("background.sub_military")}
-          </h3>
-          <div className="rounded-lg border border-border p-4">
-            <div className="flex items-start justify-between gap-4">
-              <h4 className="font-medium text-foreground">
-                {t("background.military_name")}
-              </h4>
-              <span className="shrink-0 rounded-md border border-tag-text bg-tag-bg px-2.5 py-1 text-xs text-tag-text">
-                {t("background.military_period")}
-              </span>
-            </div>
-            <p className="mt-2 text-sm text-muted">{t("background.military_detail")}</p>
-          </div>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

@@ -7,11 +7,11 @@ import { getLocaleStaticParams } from "@/lib/i18n";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import CareerSections from "./CareerSections";
-import ProfileAvatar from "./ProfileAvatar";
+import ProfilePhotos from "./ProfilePhotos";
 import ProjectCard from "./ProjectCard";
-import TechTag from "./TechTag";
 
 const EMAIL = "gwsoochoi@gmail.com";
+const PROFILE_PHOTOS = ["/profile-main.jpg", "/profile-sub.jpg"];
 
 export const generateStaticParams = getLocaleStaticParams;
 
@@ -31,6 +31,37 @@ export async function generateMetadata({
       languages,
     },
   };
+}
+
+/** label · value 정보 그리드 (기본 정보 · 가동 조건 공용) */
+function InfoGrid({
+  rows,
+}: {
+  rows: { label: string; value: string | string[]; wide?: boolean }[];
+}) {
+  return (
+    <dl className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8">
+      {rows.map((row) => (
+        <div
+          key={row.label}
+          className={`border-t border-border py-3 ${row.wide ? "sm:col-span-2" : ""}`}
+        >
+          <dt className="mb-1 text-xs font-semibold uppercase tracking-wider text-muted">
+            {row.label}
+          </dt>
+          <dd className="text-sm leading-relaxed text-foreground">
+            {Array.isArray(row.value)
+              ? row.value.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))
+              : row.value}
+          </dd>
+        </div>
+      ))}
+    </dl>
+  );
 }
 
 /** 하단 연락 섹션의 CTA 묶음 */
@@ -79,16 +110,38 @@ export default async function AboutPage({
       .map((stage) => [stage.appInfo!.name, stage.serviceOverview!])
   );
 
+  // 한 줄에 안 들어가는 값은 wide로 깔아 행 높이를 고르게 유지한다.
+  const basicRows = [
+    { label: t("basic.name_label"), value: t("profile.name") },
+    { label: t("basic.birth_label"), value: t("basic.birth_value") },
+    { label: t("basic.residence_label"), value: t("basic.residence_value") },
+    { label: t("basic.language_label"), value: languageItems.join(", ") },
+    {
+      label: t("basic.hobby_label"),
+      value: [t("basic.hobby_weight"), t("basic.hobby_crossfit")],
+      wide: true,
+    },
+    {
+      label: `${t("basic.education_label")} · ${t("basic.military_label")}`,
+      value: [
+        `${t("background.education_name")} (${t("background.education_period")})`,
+        `${t("background.military_summary")} (${t("background.military_period")})`,
+      ],
+      wide: true,
+    },
+  ];
+
+  const skillRows = skillsSections.map((section) => ({
+    label: section.label,
+    value: section.tags.join(", "),
+    wide: true,
+  }));
+
   const availabilityRows = [
     { label: t("availability.workstyle_label"), value: t("availability.workstyle_value") },
     { label: t("availability.start_label"), value: t("availability.start_value") },
     { label: t("availability.location_label"), value: t("availability.location_value") },
     { label: t("availability.contract_label"), value: t("availability.contract_value") },
-    {
-      label: t("availability.language_label"),
-      value: languageItems.map((item) => `${item.name} ${item.level}`).join(" / "),
-      wide: true,
-    },
   ];
 
   const capabilities = [1, 2, 3, 4].map((n) => ({
@@ -98,24 +151,27 @@ export default async function AboutPage({
 
   return (
     <div className="mx-auto max-w-3xl px-6 pt-6 pb-16">
-      {/* ── Hero ── */}
+      {/* ── 기본 정보 ── */}
       <section className="pb-10">
-        <div className="flex items-center gap-6">
-          <div className="flex shrink-0 items-center py-2">
-            <ProfileAvatar alt={t("profile.imageAlt")} />
-          </div>
-          <h1 className="text-2xl font-bold tracking-tight text-foreground">
-            {t("profile.name")}
-          </h1>
+        <h1 className="mb-4 text-2xl font-bold tracking-tight text-foreground">
+          {t("basic.title")}
+        </h1>
+        <div className="grid gap-6 sm:grid-cols-[280px_1fr] sm:gap-8">
+          <ProfilePhotos photos={PROFILE_PHOTOS} alt={t("profile.imageAlt")} />
+          <InfoGrid rows={basicRows} />
         </div>
+      </section>
 
-        <p className="mt-5 text-sm leading-relaxed text-muted">
-          {t("hero.subtitle")}
-        </p>
+      {/* ── 기술 스택 ── */}
+      <section className="border-t-2 border-muted/30 py-10">
+        <h2 className="mb-4 text-2xl font-bold text-foreground">
+          {t("skills.title")}
+        </h2>
+        <InfoGrid rows={skillRows} />
       </section>
 
       {/* ── 가동 조건 ── */}
-      <section className="border-t border-border py-10">
+      <section className="border-t-2 border-muted/30 py-10">
         <div className="mb-4 flex flex-wrap items-center gap-2">
           <h2 className="text-2xl font-bold text-foreground">
             {t("availability.title")}
@@ -124,23 +180,11 @@ export default async function AboutPage({
             {t("availability.badge")}
           </span>
         </div>
-        <dl className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8">
-          {availabilityRows.map((row) => (
-            <div
-              key={row.label}
-              className={`border-t border-border py-3 ${row.wide ? "sm:col-span-2" : ""}`}
-            >
-              <dt className="mb-1 text-xs font-semibold uppercase tracking-wider text-muted">
-                {row.label}
-              </dt>
-              <dd className="text-sm leading-relaxed text-foreground">{row.value}</dd>
-            </div>
-          ))}
-        </dl>
+        <InfoGrid rows={availabilityRows} />
       </section>
 
       {/* ── 맡길 수 있는 업무 ── */}
-      <section className="border-t border-border py-10">
+      <section className="border-t-2 border-muted/30 py-10">
         <h2 className="mb-4 text-2xl font-bold text-foreground">
           {t("capabilities.title")}
         </h2>
@@ -157,7 +201,7 @@ export default async function AboutPage({
       </section>
 
       {/* ── 대표 프로젝트 ── */}
-      <section id="work" className="border-t border-border py-10">
+      <section id="work" className="border-t-2 border-muted/30 py-10">
         <h2 className="mb-6 text-2xl font-bold text-foreground">
           {t("work.title")}
         </h2>
@@ -172,32 +216,11 @@ export default async function AboutPage({
         </div>
       </section>
 
-      {/* ── 기술 스택 ── */}
-      <section className="border-t border-border py-10">
-        <h2 className="mb-6 text-2xl font-bold text-foreground">
-          {t("skills.title")}
-        </h2>
-        <div className="space-y-5">
-          {skillsSections.map((section) => (
-            <div key={section.label}>
-              <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted">
-                {section.label}
-              </h3>
-              <div className="flex flex-wrap gap-1.5">
-                {section.tags.map((tag) => (
-                  <TechTag key={tag}>{tag}</TechTag>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── 경력 · 학력 ── */}
+      {/* ── 경력 ── */}
       <CareerSections locale={locale} />
 
       {/* ── 연락 ── */}
-      <section className="border-t border-border pt-10">
+      <section className="border-t-2 border-muted/30 pt-10">
         <h2 className="mb-3 text-2xl font-bold text-foreground">
           {t("contact.title")}
         </h2>

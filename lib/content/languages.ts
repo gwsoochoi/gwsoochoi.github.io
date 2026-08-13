@@ -1,23 +1,9 @@
-import type { LanguageItem } from "./types";
-
-const languages: Record<string, LanguageItem[]> = {
-  ko: [
-    { name: "한국어", level: "모국어" },
-    { name: "일본어", level: "비즈니스 · 일상 (2018.06~ 재류 중, JLPT N1레벨)" },
-    { name: "영어", level: "일상" },
-  ],
-  ja: [
-    { name: "韓国語", level: "母国語" },
-    { name: "日本語", level: "ビジネス・日常（2018.06〜 在留中、JLPT N1レベル）" },
-    { name: "英語", level: "日常" },
-  ],
-  en: [
-    { name: "Korean", level: "Native" },
-    { name: "Japanese", level: "Business · Daily (residing since 2018.06, JLPT N1 level)" },
-    { name: "English", level: "Daily" },
-  ],
+const languages: Record<string, string[]> = {
+  ko: ["한국어", "일본어", "영어"],
+  ja: ["韓国語", "日本語", "英語"],
+  en: ["Korean", "Japanese", "English"],
 };
 
-export function getLanguageItems(locale: string): LanguageItem[] {
+export function getLanguageItems(locale: string): string[] {
   return languages[locale] ?? languages.ja;
 }

@@ -4,13 +4,26 @@
     "description": "Portfolio of Gwangsoo Choi - product engineer anchored in Rails, working across SwiftUI and Jetpack Compose. Available for mid-to-long-term contract work."
   },
   "hero": {
-    "subtitle": "Based in Tokyo, business-level Japanese. I cover requirements, APIs, iOS and Android, admin tooling and cloud operations end to end, and take on mid-to-long-term contract work.",
     "cta_contact": "Get in touch",
     "cta_resume": "View experience"
   },
   "profile": {
     "name": "Gwangsoo Choi",
     "imageAlt": "Gwangsoo Choi profile photo"
+  },
+  "basic": {
+    "title": "Basic Info",
+    "name_label": "Name",
+    "birth_label": "Year of birth",
+    "birth_value": "Born 1988",
+    "residence_label": "Location",
+    "residence_value": "Shibuya, Tokyo, Japan (2018.06~)",
+    "language_label": "Languages",
+    "education_label": "Education",
+    "military_label": "Military service",
+    "hobby_label": "Hobbies",
+    "hobby_weight": "Weight training (2009.01~)",
+    "hobby_crossfit": "CrossFit (2026.05~)"
   },
   "availability": {
     "title": "Availability",
@@ -22,8 +35,7 @@
     "location_label": "Location",
     "location_value": "Mostly remote",
     "contract_label": "Contract",
-    "contract_value": "Prefers mid-to-long-term contract work",
-    "language_label": "Languages"
+    "contract_value": "Prefers mid-to-long-term contract work"
   },
   "capabilities": {
     "title": "What I can own",
@@ -51,20 +63,10 @@
     "key_projects": "Key Projects"
   },
   "background": {
-    "title": "Background",
-    "section_title": "Education & Service",
-    "sub_education": "Education",
-    "sub_military": "Military Service",
     "education_name": "Namseoul University — Dept. of Multimedia, Computer Programming",
     "education_period": "2006.03 ~ 2013.02",
-    "education_note": "Incl. leave for military service and LG Electronics R&D Lab tester role",
-    "educationUrl": "https://www.nsu.ac.kr/",
-    "language_school_name": "Japan International University Japanese Language School · Tokyo",
-    "language_school_period": "2018.06 ~ 2019.06",
-    "languageSchoolUrl": "https://www.jpschool.ac.jp/",
-    "military_name": "Military Service",
     "military_period": "2008.01 ~ 2009.12",
-    "military_detail": "ROK Army 2nd Infantry Division, Infantry, Sergeant, Honorable Discharge · MOS: 90mm Recoilless Rifle"
+    "military_summary": "ROK Army 2nd Infantry Division, Infantry, Sergeant, Honorable Discharge"
   },
   "skills": {
     "title": "Tech Stack"

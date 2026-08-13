@@ -3,10 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://gwsoochoi.github.io"),
-  title: {
-    default: "Gwangsoo Choi",
-    template: "%s | Gwangsoo Choi",
-  },
+  title: "Gwangsoo Choi",
   description: "Product Builder & Software Engineer",
 };
 

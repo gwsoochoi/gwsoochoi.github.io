@@ -35,11 +35,6 @@ export interface ProjectCase {
   status: string;
 }
 
-export interface LanguageItem {
-  name: string;
-  level: string;
-}
-
 export interface SkillSection {
   label: string;
   tags: string[];
