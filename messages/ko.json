@@ -1,86 +1,59 @@
 {
   "meta": {
     "title": "Gwangsoo Choi",
-    "description": "최광수의 포트폴리오 - 프로덕트 빌더 ・ 소프트웨어 엔지니어"
+    "description": "최광수 포트폴리오 - Rails를 축으로 SwiftUI · Jetpack Compose까지 아우르는 프로덕트 엔지니어. 중장기 업무위탁 대응."
   },
   "nav": {
     "about": "홈",
     "resume": "이력서"
   },
   "hero": {
-    "tagline": "기획부터 배포까지 오너십을 갖고, 팀과의 소통을 바탕으로 함께 추진력을 만들어갑니다",
-    "tag_career": "개발{careerYears}년차",
-    "tag_tokyo": "도쿄{tokyoYears}년차",
-    "tag_fullstack": "풀스택",
-    "tag_languages": "3개국어",
-    "tag_ai": "AI드리븐",
-    "tag_solo": "자기주도",
-    "cta_resume": "이력서 보기",
-    "cta_contact": "연락하기"
+    "subtitle": "도쿄 거주 · 일본어 비즈니스 레벨. 요구사항 정리, API, iOS · Android, 관리자 화면, 클라우드 운영까지 일관되게 담당하며 중장기 업무위탁에 대응합니다.",
+    "cta_contact": "상담 요청",
+    "cta_resume": "경력 보기"
   },
   "profile": {
     "name": "최광수",
-    "role": "프로덕트 빌더 ・ 소프트웨어 엔지니어",
-    "imageAlt": "최광수 프로필 사진",
-    "bio0": "도쿄 재류중({tokyoYears}년차)인 개발 {careerYears}년차 한국인 프로덕트 빌더 ・ 소프트웨어 엔지니어입니다.",
-    "bio1": "대규모 SI팀(SMBC, NTT DATA)부터 구독형 여행 플랫폼 스타트업(HafH, 4년)까지 경험한 뒤, 현재는 LGBTQ+ 소셜 플랫폼 PONGE의 프로젝트 오너로서 디자이너와 2인 체제로 기획~운영 전 영역을 리드하고 있습니다.",
-    "bio2": "Claude Code를 요구사항 정리·코드 리뷰·TDD에 통합해, 1인 엔지니어 체제에서 주당 2~3건의 기능 개발을 유지하며 8개월간 6회 메이저 버전을 스토어 리젝 없이 릴리즈. 가입·이탈 지표와 에러 모니터링 기반의 데이터 드리븐 의사결정으로 출시 6개월 만에 유저 1,000명을 달성했습니다.",
-    "bio3": "HafH에서는 소규모 애자일 팀의 일원으로 기획~배포 전 공정에 참여하며, 유저 플랜 마이그레이션을 무중단으로 완수하고 Admin CS 지원 도구를 구축해 엔지니어 의뢰량을 대폭 절감했습니다. 팀 내에서 폭넓은 영역을 커버하며 역할 간 간극을 메우고, 긴밀한 소통을 통해 목표를 함께 달성하는 것을 중요하게 생각합니다.",
-    "bio4": "SI/SE부터 스타트업까지 다년간의 경험을 바탕으로 0→1 구축과 기능 단위 릴리즈를 일관되게 수행해왔습니다. 백엔드가 메인이지만 모바일·웹 개발 경험을 보유하고 있으며, AI 에이전트를 활용해 DevOps 영역까지 확장 중. 다년간의 On-call 경험을 살려 AI 기반 고객응대 시스템을 구축 중이며, 아키텍처·인프라 관점에서 비용 절감과 퍼포먼스 향상에도 주력하고 있습니다.",
-    "bioSub": "프리랜서 풀스택 엔지니어로 중/장기 업무위탁도 가능합니다.",
-    "location": "도쿄 / 시부야",
-    "hobby_label": "취미",
-    "hobby_value": "웨이트트레이닝 (2009.01 ~ 현재)"
+    "imageAlt": "최광수 프로필 사진"
   },
-  "about": {
-    "greeting": "안녕하세요",
-    "subtitle": "남서울대학교 · 일본어학교 · 병역  |  한국어 · 日本語 · English"
+  "availability": {
+    "title": "가동 조건",
+    "badge": "업무위탁",
+    "workstyle_label": "가동 형태",
+    "workstyle_value": "주 20~30시간",
+    "start_label": "시작 시기",
+    "start_value": "협의 가능",
+    "location_label": "근무 형태",
+    "location_value": "리모트 중심",
+    "contract_label": "계약",
+    "contract_value": "중장기 업무위탁 희망",
+    "language_label": "언어"
   },
-  "highlights": {
-    "title": "핵심 강점",
-    "solo_title": "End-to-End 오너십",
-    "solo_desc": "기획부터 배포, 운영까지 서비스의 전 생애 주기를 직접 경험하며 비즈니스 구조를 깊이 이해하고 있습니다. 넓은 담당 범위로 팀 내 역할 간 간극을 메우고, 빠른 의사결정과 효율적인 워크플로우에 기여합니다.",
-    "solo_metric1": "End-to-End 완결성",
-    "solo_metric2": "팀 내 역할 간 간극 해소",
-    "ai_title": "AI 기반 고효율 엔지니어링",
-    "ai_desc": "기획·디자인·개발 각 영역에서 AI 에이전트를 활용해 코드 리뷰·설계 검증·디자인 연동을 자동화. 소수 인원으로도 다수의 아웃풋을 실현하며, 팀에 합류하면 더 큰 레버리지를 만들어냅니다.",
-    "ai_metric1": "AI로 품질·속도 양립",
-    "ai_metric2": "코드 리뷰·설계 검증 자동화",
-    "tech_title": "12년차 풀스택 엔지니어",
-    "tech_desc": "SI 시스템 개발과 스타트업에서의 제품 개발, 양쪽을 모두 경험했습니다. 백엔드, 프론트엔드, 모바일을 아우르는 폭넓은 기술 스택으로 프로젝트 목적에 가장 적합한 아키텍처를 제안하고 구현합니다.",
-    "tech_metric1": "Rails · Flutter · React · Next.js",
-    "tech_metric2": "GCP · Supabase · Docker · Cloudflare"
+  "capabilities": {
+    "title": "바로 맡길 수 있는 업무",
+    "item1_title": "Rails API 개선 · 안정화",
+    "item1_desc": "기존 사양과 코드 파악, 기능 추가, 장애 원인 수정, 비동기 처리와 운영 경로 정리.",
+    "item2_title": "네이티브 모바일 연동",
+    "item2_desc": "SwiftUI · Jetpack Compose의 API 연결, 화면 상태 관리, 푸시, 양 OS 기능 차이 해소.",
+    "item3_title": "AI · 결제 안전성",
+    "item3_desc": "입력 · 출력 안전 판정, fail-closed 설계, 크레딧 예약 · 확정 · 환불, 중복 실행 방지.",
+    "item4_title": "출시 후 제품 운영",
+    "item4_desc": "다국어, Admin, 모니터링, 스토어 출시와 릴리즈 이후의 지속 개선."
   },
-  "projects": {
-    "title": "주요 프로젝트",
-    "ponge_title": "PONGE",
-    "ponge_subtitle": "LGBTQ 위치 기반 라이프스타일 플랫폼",
-    "ponge_desc": "LGBTQ+ 유저가 지도에서 주변 사람을 발견하고 실시간 메시지·번개 모임으로 이어지는 위치 기반 소셜 앱. 프로젝트 오너이자 리더로서 디자인·UI/UX 담당 멤버와 2인 체제로 프로덕트 방향성과 기술 전반을 리드. 6개 언어 + AI 자동 번역, 지도 기반 샤우팅, B2B 가게 등록, Admin WebApp.",
-    "hafh_title": "HafH",
-    "hafh_subtitle": "구독형 여행 플랫폼 백엔드",
-    "hafh_desc": "유저 플랜·Admin·On-call 시스템 설계·보수·구현. Rails API 백엔드 개발, Stripe 구독 연동, OTA API 실시간 동기화."
+  "work": {
+    "title": "대표 프로젝트",
+    "link_service": "서비스 보기"
   },
   "career": {
     "title": "{years}년 동안 이런 일들을 해봤어요",
-    "summary_title": "핵심 역량 요약",
-    "summary_solo": "제품 빌더",
-    "summary_solo_desc": "서비스 전 생애 주기를 직접 경험한 End-to-End 오너십",
-    "summary_ai": "AI 고효율 엔지니어링",
-    "summary_ai_desc": "AI로 코드 리뷰·설계 검증·디자인 연동을 자동화하여 품질과 속도를 양립",
-    "summary_stack": "풀스택 엔지니어",
-    "summary_stack_desc": "Rails · Flutter · React · GCP — 목적에 맞는 아키텍처 설계 · 구현",
     "now": "현재",
     "freelance": "프리랜서",
     "fulltime": "정규직",
-    "approx_years": "약 {years}년",
     "achievements": "성과",
     "learnings": "배운점",
     "key_projects": "주요 프로젝트",
     "key_projects_section": "주요 프로젝트",
     "other_experience": "소속 경력"
-  },
-  "languages": {
-    "title": "언어"
   },
   "background": {
     "title": "배경",
@@ -98,16 +71,12 @@
     "military_period": "2008.01 ~ 2009.12",
     "military_detail": "육군 제2보병사단 일반보병 병장 만기전역 · 주특기: 90미리 무반동총"
   },
-  "philosophy": {
-    "title": "개발 성향",
-    "subtitle": "스타트업에서 쌓은 실전 경험을 바탕으로 다듬어 온 개발 원칙으로, 설계부터 배포까지 일관되게 담당할 수 있습니다. 팀 개발에서는 원활한 커뮤니케이션을 중시하며, 프로젝트 목표를 팀과 함께 향해 가는 것을 지향합니다. 클린 아키텍처와 AI 에이전트를 결합한 개발 스타일로 품질과 속도를 높은 수준에서 양립하고 있습니다."
-  },
   "skills": {
     "title": "기술 스택"
   },
   "contact": {
     "title": "연락처",
-    "desc": "프리랜서 풀스택 엔지니어로 중/장기 업무위탁 가능합니다. 프로젝트에 대해 이야기해보고 싶으시다면 편하게 연락주세요.",
+    "desc": "중장기 업무위탁이 가능합니다. 프로젝트에 대해 이야기해보고 싶으시다면 편하게 연락주세요.",
     "email_label": "이메일",
     "github_label": "GitHub"
   },

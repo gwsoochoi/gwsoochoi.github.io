@@ -40,12 +40,18 @@ export interface TimelineDescriptionSection {
   items: string[];
 }
 
-export interface KeyProject {
+/** 홈 대표 프로젝트 카드의 단일 정본 */
+export interface ProjectCase {
+  slug: string;
   name: string;
-  description: string;
-  role: string;
+  platforms: string;
+  version?: string;
+  featured?: boolean;
   url?: string;
-  tags: string[];
+  appStoreUrl?: string;
+  playStoreUrl?: string;
+  summary: string;
+  status: string;
 }
 
 export interface LanguageItem {

@@ -1,86 +1,59 @@
 {
   "meta": {
     "title": "Gwangsoo Choi",
-    "description": "Portfolio of Gwangsoo Choi - Product Builder ・ Software Engineer"
+    "description": "Portfolio of Gwangsoo Choi - product engineer anchored in Rails, working across SwiftUI and Jetpack Compose. Available for mid-to-long-term contract work."
   },
   "nav": {
     "about": "Home",
     "resume": "Resume"
   },
   "hero": {
-    "tagline": "End-to-end ownership from planning to deployment — building momentum together through open team communication",
-    "tag_career": "{careerYears}yrs_dev",
-    "tag_tokyo": "Tokyo_{tokyoYears}yrs",
-    "tag_fullstack": "FullStack",
-    "tag_languages": "Trilingual",
-    "tag_ai": "AI_Driven",
-    "tag_solo": "Self_Starter",
-    "cta_resume": "View Resume",
-    "cta_contact": "Get in Touch"
+    "subtitle": "Based in Tokyo, business-level Japanese. I cover requirements, APIs, iOS and Android, admin tooling and cloud operations end to end, and take on mid-to-long-term contract work.",
+    "cta_contact": "Get in touch",
+    "cta_resume": "View experience"
   },
   "profile": {
     "name": "Gwangsoo Choi",
-    "role": "Product Builder ・ Software Engineer",
-    "imageAlt": "Gwangsoo Choi profile photo",
-    "bio0": "Tokyo resident ({tokyoYears} years) — Korean product builder & software engineer with {careerYears} years of development experience.",
-    "bio1": "From large-scale SI teams (SMBC, NTT DATA) to a subscription travel platform startup (HafH, 4 years) — now serving as project owner of PONGE, an LGBTQ+ social platform, leading all areas from planning to operations in a two-person team with a designer.",
-    "bio2": "Integrated Claude Code into requirements, code review, and TDD — sustaining 2–3 feature releases per week as a solo engineer, shipping 6 major versions over 8 months with zero store rejections. Achieved 1,000 users within 6 months of launch through data-driven decisions based on signup/churn metrics and real-time error monitoring.",
-    "bio3": "At HafH, participated in the full cycle from planning to deployment as part of a small agile team — completed a zero-downtime user plan migration and built Admin CS tooling that significantly reduced engineer request volume. I bridge cross-functional gaps by covering broad areas, and value close communication to achieve goals together as a team.",
-    "bio4": "With years of experience spanning SI/SE and startups, I have consistently delivered 0→1 builds and feature-level releases. Backend is my core, but I also have mobile and web development experience, and am expanding into DevOps with AI agents. Leveraging years of On-call experience, I'm building an AI-powered customer support system, and focusing on cost optimization and performance improvement from an architecture and infrastructure perspective.",
-    "bioSub": "Also available for mid-to-long term freelance full-stack engineering contracts.",
-    "location": "Tokyo / Shibuya",
-    "hobby_label": "Hobby",
-    "hobby_value": "Weight Training (2009.01 – Present)"
+    "imageAlt": "Gwangsoo Choi profile photo"
   },
-  "about": {
-    "greeting": "Hello",
-    "subtitle": "Namseoul Univ. · Japanese Language School · Military  |  한국어 · 日本語 · English"
+  "availability": {
+    "title": "Availability",
+    "badge": "Contract",
+    "workstyle_label": "Working style",
+    "workstyle_value": "20–30 hours per week",
+    "start_label": "Start date",
+    "start_value": "Negotiable",
+    "location_label": "Location",
+    "location_value": "Mostly remote",
+    "contract_label": "Contract",
+    "contract_value": "Prefers mid-to-long-term contract work",
+    "language_label": "Languages"
   },
-  "highlights": {
-    "title": "Core Strengths",
-    "solo_title": "End-to-End Ownership",
-    "solo_desc": "Hands-on experience across the entire service lifecycle — from planning to deployment and operations — with a deep understanding of business structure. Broad coverage bridges gaps between team roles, contributing to fast decision-making and efficient workflows.",
-    "solo_metric1": "End-to-end ownership",
-    "solo_metric2": "Bridges cross-functional gaps",
-    "ai_title": "AI-Powered High-Efficiency Engineering",
-    "ai_desc": "I leverage AI agents across planning, design, and engineering to automate code reviews, architecture validation, and dev-design collaboration. This enables output at scale even in small teams — and creates even greater leverage within a larger team.",
-    "ai_metric1": "Quality and speed through AI",
-    "ai_metric2": "Automated code review & design validation",
-    "tech_title": "12-Year Full-Stack Engineer",
-    "tech_desc": "Experienced in both SI system development and startup product building. With a broad tech stack spanning backend, frontend, and mobile, I propose and implement the architecture best suited to each project's goals.",
-    "tech_metric1": "Rails · Flutter · React · Next.js",
-    "tech_metric2": "GCP · Supabase · Docker · Cloudflare"
+  "capabilities": {
+    "title": "What I can own",
+    "item1_title": "Rails API improvement & stabilization",
+    "item1_desc": "Reading existing specs and code, adding features, fixing root causes of incidents, cleaning up async processing and operational paths.",
+    "item2_title": "Native mobile integration",
+    "item2_desc": "Wiring SwiftUI and Jetpack Compose to APIs, screen state, push notifications, and closing feature gaps between the two platforms.",
+    "item3_title": "AI & payment safety",
+    "item3_desc": "Input/output safety decisions, fail-closed design, credit reserve/commit/refund, and duplicate-execution prevention.",
+    "item4_title": "Post-launch product operations",
+    "item4_desc": "Localization, admin tooling, monitoring, store releases and continuous improvement after launch."
   },
-  "projects": {
-    "title": "Featured Projects",
-    "ponge_title": "PONGE",
-    "ponge_subtitle": "LGBTQ Location-Based Lifestyle Platform",
-    "ponge_desc": "A location-based social app where LGBTQ+ users discover people nearby on the map and connect through real-time messaging and meetups. As project owner and leader, I drive product direction and technical execution in a two-person team with a design/UI/UX member. 6 languages + AI translation, map-based Shouting, B2B store registration, and Admin WebApp.",
-    "hafh_title": "HafH",
-    "hafh_subtitle": "Subscription Travel Platform — Backend",
-    "hafh_desc": "Designed, maintained, and implemented user plan, Admin, and On-call systems. Rails API backend development, Stripe subscription integration, and real-time OTA API sync."
+  "work": {
+    "title": "Selected Work",
+    "link_service": "Visit site"
   },
   "career": {
     "title": "{years} years of experience",
-    "summary_title": "Core Competencies",
-    "summary_solo": "Product Builder",
-    "summary_solo_desc": "End-to-end ownership across the full service lifecycle",
-    "summary_ai": "AI-Powered Engineering",
-    "summary_ai_desc": "AI-automated code review, design validation & collaboration for quality at speed",
-    "summary_stack": "Full-Stack Engineer",
-    "summary_stack_desc": "Rails · Flutter · React · GCP — architecture designed for the goal",
     "now": "Now",
     "freelance": "Freelance",
     "fulltime": "Full-time",
-    "approx_years": "~{years}yr",
     "achievements": "Achievements",
     "learnings": "Key Learnings",
     "key_projects": "Key Projects",
     "key_projects_section": "Key Projects",
     "other_experience": "Company Experience"
-  },
-  "languages": {
-    "title": "Languages"
   },
   "background": {
     "title": "Background",
@@ -98,16 +71,12 @@
     "military_period": "2008.01 ~ 2009.12",
     "military_detail": "ROK Army 2nd Infantry Division, Infantry, Sergeant, Honorable Discharge · MOS: 90mm Recoilless Rifle"
   },
-  "philosophy": {
-    "title": "Development Philosophy",
-    "subtitle": "Development principles refined through real startup work enable consistent ownership from architecture to deployment. In team settings, I prioritize open communication and approaching project goals together. Combining clean architecture with AI agents, I deliver both quality and speed at a high level."
-  },
   "skills": {
     "title": "Tech Stack"
   },
   "contact": {
     "title": "Contact",
-    "desc": "Available for mid-to-long term freelance full-stack engineering contracts. If you'd like to discuss a project, feel free to reach out.",
+    "desc": "Available for mid-to-long-term contract work. If you'd like to discuss a project, feel free to reach out.",
     "email_label": "Email",
     "github_label": "GitHub"
   },

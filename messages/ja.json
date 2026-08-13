@@ -1,86 +1,59 @@
 {
   "meta": {
     "title": "Gwangsoo Choi",
-    "description": "チェ・グァンスのポートフォリオ - プロダクトビルダー ・ ソフトウェアエンジニア"
+    "description": "チェ・グァンスのポートフォリオ - Railsを軸に、SwiftUI・Jetpack Composeまで横断するプロダクトエンジニア。中長期の業務委託に対応。"
   },
   "nav": {
     "about": "ホーム",
     "resume": "履歴書"
   },
   "hero": {
-    "tagline": "企画からデプロイまでオーナーシップを持ち、チームとのコミュニケーションを大切にしながら共に推進力を生み出します",
-    "tag_career": "開発{careerYears}年目",
-    "tag_tokyo": "東京{tokyoYears}年目",
-    "tag_fullstack": "フルスタック",
-    "tag_languages": "3ヶ国語",
-    "tag_ai": "AIドリブン",
-    "tag_solo": "自走力",
-    "cta_resume": "履歴書を見る",
-    "cta_contact": "連絡先"
+    "subtitle": "東京在住・日本語ビジネス。要件整理、API、iOS・Android、管理画面、クラウド運用まで一貫して担当し、中長期の業務委託に対応します。",
+    "cta_contact": "相談する",
+    "cta_resume": "経歴を見る"
   },
   "profile": {
     "name": "チェ・グァンス",
-    "role": "プロダクトビルダー ・ ソフトウェアエンジニア",
-    "imageAlt": "チェ・グァンス プロフィール写真",
-    "bio0": "東京在住({tokyoYears}年目)、開発経験{careerYears}年の韓国人プロダクトビルダー ・ ソフトウェアエンジニアです。",
-    "bio1": "大規模SIチーム（SMBC、NTT DATA）からサブスク型旅行プラットフォームのスタートアップ（HafH、4年）まで経験した後、現在はLGBTQ+ソーシャルプラットフォームPONGEのプロジェクトオーナーとして、デザイナーと2人体制で企画〜運営の全領域をリードしています。",
-    "bio2": "Claude Codeを要件整理・コードレビュー・TDDに統合し、1人エンジニア体制で週2〜3件の機能開発を維持しながら8ヶ月間で6回のメジャーバージョンをストアリジェクトなしでリリース。登録・離脱指標とエラーモニタリングに基づくデータドリブンな意思決定で、リリース6ヶ月でユーザー1,000人を達成しました。",
-    "bio3": "HafHでは少人数アジャイルチームの一員として企画〜デプロイの全工程に参加し、ユーザープランマイグレーションを無停止で完遂、Admin CS支援ツールを構築してエンジニアへの依頼量を大幅に削減しました。チーム内で幅広い領域をカバーして役割間ギャップを埋め、密なコミュニケーションで目標を共に達成することを大切にしています。",
-    "bio4": "SI/SEからスタートアップまで長年の経験をもとに、0→1の構築から機能単位のリリースまで一貫して担ってきました。メインはバックエンドですがモバイル・Web開発の経験も持ち、AIエージェントを活用してDevOps領域にも拡張中。長年のOn-call経験を活かしAIベースのカスタマーサポートシステムを構築中であり、アーキテクチャ・インフラ面でのコスト削減とパフォーマンス向上にも注力しています。",
-    "bioSub": "フリーランスのフルスタックエンジニアとして中・長期の業務委託も可能です。",
-    "location": "東京 / 渋谷",
-    "hobby_label": "趣味",
-    "hobby_value": "ウェイトトレーニング（2009.01〜現在）"
+    "imageAlt": "チェ・グァンス プロフィール写真"
   },
-  "about": {
-    "greeting": "こんにちは",
-    "subtitle": "南ソウル大学校 · 日本語学校 · 兵役  |  한국어 · 日本語 · English"
+  "availability": {
+    "title": "稼働条件",
+    "badge": "業務委託",
+    "workstyle_label": "稼働形態",
+    "workstyle_value": "週20〜30時間",
+    "start_label": "開始時期",
+    "start_value": "相談可",
+    "location_label": "勤務形態",
+    "location_value": "リモート中心",
+    "contract_label": "契約",
+    "contract_value": "中長期の業務委託を希望",
+    "language_label": "言語"
   },
-  "highlights": {
-    "title": "コア・コンピテンシー",
-    "solo_title": "End-to-Endオーナーシップ",
-    "solo_desc": "企画からデプロイ、運営までサービスの全ライフサイクルを直接経験し、ビジネス構造を深く理解しています。担当範囲を広く持てるため、チーム内の役割間ギャップを埋め、迅速な意思決定と効率的なワークフローに貢献します。",
-    "solo_metric1": "End-to-End完結性",
-    "solo_metric2": "チーム内の役割間ギャップを解消",
-    "ai_title": "AI活用の高効率エンジニアリング",
-    "ai_desc": "企画・デザイン・開発の各領域でAIエージェントを活用し、コードレビュー・設計検証・デザイン連携を自動化。少人数でも複数人分のアウトプットを実現し、チームに加わればさらに大きなレバレッジを生み出します。",
-    "ai_metric1": "AIによる品質・スピードの両立",
-    "ai_metric2": "コードレビュー・設計検証の自動化",
-    "tech_title": "12年目フルスタックエンジニア",
-    "tech_desc": "SIシステム開発とスタートアップでのプロダクト開発、両方を経験しています。バックエンド、フロントエンド、モバイルを横断する幅広い技術スタックで、プロジェクトの目的に最適なアーキテクチャを提案・実装します。",
-    "tech_metric1": "Rails・Flutter・React・Next.js",
-    "tech_metric2": "GCP・Supabase・Docker・Cloudflare"
+  "capabilities": {
+    "title": "すぐにお任せいただける業務",
+    "item1_title": "Rails APIの改善・安定化",
+    "item1_desc": "既存仕様とコードの把握、機能追加、障害の原因修正、非同期処理と運用経路の整理。",
+    "item2_title": "ネイティブモバイル連携",
+    "item2_desc": "SwiftUI・Jetpack ComposeのAPI接続、画面状態の管理、プッシュ、両OSの機能差の解消。",
+    "item3_title": "AI・課金の安全性",
+    "item3_desc": "入力・出力の安全判定、fail-closed設計、クレジットの予約・確定・返却、重複実行の防止。",
+    "item4_title": "リリース後のプロダクト運用",
+    "item4_desc": "多言語、Admin、モニタリング、ストアリリースとその後の継続的な改善。"
   },
-  "projects": {
-    "title": "主要プロジェクト",
-    "ponge_title": "PONGE",
-    "ponge_subtitle": "LGBTQ位置情報ベースのライフスタイルプラットフォーム",
-    "ponge_desc": "LGBTQ+ユーザーがマップで周りの人を見つけてリアルタイムメッセージ・集まりにつながる位置情報ソーシャルアプリ。プロジェクトオーナー兼リーダーとして、デザイン・UI/UX担当メンバーと2人体制でプロダクトの方向性と技術全般をリード。6言語＋AI自動翻訳、マップ基盤シャウティング、B2B店舗登録、Admin WebApp。",
-    "hafh_title": "HafH",
-    "hafh_subtitle": "サブスク型旅行プラットフォーム バックエンド",
-    "hafh_desc": "ユーザープラン・Admin・On-callシステムの設計・保守・実装。Rails APIバックエンド開発、Stripeサブスク連携、OTA APIリアルタイム同期。"
+  "work": {
+    "title": "主なプロジェクト",
+    "link_service": "サービスを見る"
   },
   "career": {
     "title": "{years}年間こんな仕事をしてきました",
-    "summary_title": "コア・コンピテンシー",
-    "summary_solo": "プロダクトビルダー",
-    "summary_solo_desc": "サービスの全ライフサイクルを経験したEnd-to-Endオーナーシップ",
-    "summary_ai": "AI高効率エンジニアリング",
-    "summary_ai_desc": "AIでコードレビュー・設計検証・デザイン連携を自動化し、品質とスピードを両立",
-    "summary_stack": "フルスタックエンジニア",
-    "summary_stack_desc": "Rails・Flutter・React・GCP — 目的に最適なアーキテクチャ設計・実装",
     "now": "現在",
     "freelance": "フリーランス",
     "fulltime": "正社員",
-    "approx_years": "約{years}年",
     "achievements": "実績",
     "learnings": "学んだこと",
     "key_projects": "主要プロジェクト",
     "key_projects_section": "主要プロジェクト",
     "other_experience": "所属経歴"
-  },
-  "languages": {
-    "title": "言語"
   },
   "background": {
     "title": "バックグラウンド",
@@ -98,16 +71,12 @@
     "military_period": "2008.01 ~ 2009.12",
     "military_detail": "陸軍 第2歩兵師団 一般歩兵 兵長 満期除隊 · 主特技：90mm無反動砲"
   },
-  "philosophy": {
-    "title": "開発スタイル",
-    "subtitle": "スタートアップでの実務経験をもとに磨いた開発原則で、設計からデプロイまで一貫して担当できます。チーム開発では円滑なコミュニケーションを重視し、プロジェクト目標にチームで向かうことを大切にしています。クリーンアーキテクチャとAIエージェントを組み合わせた開発スタイルで、品質とスピードを高次元で両立しています。"
-  },
   "skills": {
     "title": "技術スタック"
   },
   "contact": {
     "title": "連絡先",
-    "desc": "フリーランスのフルスタックエンジニアとして中・長期の業務委託が可能です。プロジェクトについてお話しできればと思います。お気軽にご連絡ください。",
+    "desc": "中長期の業務委託が可能です。プロジェクトについてお話しできればと思います。お気軽にご連絡ください。",
     "email_label": "メール",
     "github_label": "GitHub"
   },

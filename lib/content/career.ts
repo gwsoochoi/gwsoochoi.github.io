@@ -10,7 +10,7 @@ interface SharedStage {
 }
 
 const shared: SharedStage[] = [
-  { number: 1, employmentType: "freelance", tags: ["Ruby on Rails", "Flutter", "React", "Supabase Auth/DB/Realtime", "GCP Cloud Run/Build/Tasks", "Cloudflare R2/Turnstile", "Firebase FCM/Analytics", "Stripe", "Sentry", "Git", "GitHub", "RSpec"], appInfo: { name: "PONGE", url: "https://pon-ge.com/", period: "2025.01~" }, companyUrl: "https://greatearth.studio.site/" },
+  { number: 1, employmentType: "freelance", tags: ["Ruby on Rails 8", "SwiftUI", "Kotlin/Jetpack Compose", "React", "Vite", "Supabase Auth/DB", "PostgreSQL/PostGIS", "GCP Cloud Run/Build/Tasks", "Cloudflare R2/Turnstile", "APNs/FCM", "Stripe", "Sentry", "RSpec"], appInfo: { name: "PONGE", url: "https://ponge.app/", period: "2025.01~" }, companyUrl: "https://greatearth.studio.site/" },
   { number: 2 },
   { number: 3 },
   { number: 4, companyUrl: "https://www.lgsciencepark.com/KR/" },
@@ -52,12 +52,12 @@ const texts: Record<string, LocaleText[]> = {
       insights: {
         achievements: [
           "2인 팀 체제에서 Claude Code를 요구사항 정리·코드 리뷰·TDD에 통합한 AI 워크플로우를 구축해, 1인 엔지니어가 주당 2~3건의 신규 기능 개발·리팩토링을 유지하며 출시 6개월 만에 등록 유저 1,000명·동시접속 100명 달성",
-          "기존 LGBT 앱의 그리드 UI와 차별화하여, 일반 유저의 24h 자동 만료 위치 공개(Shouting)와 비즈니스 유저(업소)를 지도 위에 동시 표시하는 Map-First 홈 화면을 Flutter + Supabase Realtime + PostGIS로 설계·구현. Shouting 런칭 이후 하루 평균 10명의 신규 유저가 꾸준히 유입",
+          "기존 LGBT 앱의 그리드 UI와 차별화하여, 일반 유저의 24h 자동 만료 위치 공개(Shouting)와 비즈니스 유저(업소)를 지도 위에 동시 표시하는 Map-First 홈 화면을 Rails API + PostGIS 근접 검색 기반으로 설계·구현(초기 Flutter → 현재 SwiftUI·Jetpack Compose 네이티브 전환). Shouting 런칭 이후 하루 평균 10명의 신규 유저가 꾸준히 유입",
           "GitHub Actions CI/CD + TDD 기반 자동화 파이프라인을 구축하고, 첫 출시(v1.0.0)부터 8개월간 6회의 메이저 버전을 스토어 리젝 없이 릴리즈하며 안정적인 iteration 사이클 확립",
         ],
         learnings: [
           "기획·개발·인프라·운영 전 영역의 기술을 리드하며 프로덕트 전 사이클 체득",
-          "Flutter + Supabase Realtime 기반 위치 실시간 기능 설계·구현 역량 습득",
+          "위치 기반 실시간 기능 설계·구현 역량 습득과 함께, Flutter에서 SwiftUI·Jetpack Compose 네이티브 구조로의 전환 경험",
           "짧은 릴리즈 사이클로 사용자 피드백을 빠르게 반영하는 iteration 방식 체화",
           "AI 에이전트를 코드 관리·리뷰·설계에 통합해 소수 정예 체제에서도 높은 품질을 유지하는 워크플로우 구축",
         ],
@@ -206,12 +206,12 @@ const texts: Record<string, LocaleText[]> = {
       insights: {
         achievements: [
           "2人体制でClaude Codeを要件整理・コードレビュー・TDDに統合したAIワークフローを構築し、1人エンジニアが週2〜3件の新機能開発・リファクタリングを維持しながらリリース6ヶ月で登録ユーザー1,000人・同時接続100人を達成",
-          "既存LGBTアプリのグリッドUIと差別化し、一般ユーザーの24h自動消滅位置公開（Shouting）とビジネスユーザー（店舗）をマップ上に同時表示するMap-Firstホーム画面をFlutter + Supabase Realtime + PostGISで設計・実装。Shoutingローンチ後、1日平均10人の新規ユーザーが安定的に流入",
+          "既存LGBTアプリのグリッドUIと差別化し、一般ユーザーの24h自動消滅位置公開（Shouting）とビジネスユーザー（店舗）をマップ上に同時表示するMap-Firstホーム画面をRails API + PostGISの近傍検索ベースで設計・実装（当初のFlutterから現在はSwiftUI・Jetpack Composeのネイティブへ移行）。Shoutingローンチ後、1日平均10人の新規ユーザーが安定的に流入",
           "GitHub Actions CI/CD + TDDベースの自動化パイプラインを構築し、初回リリース（v1.0.0）から8ヶ月間で6回のメジャーバージョンをストアリジェクトなしでリリースし安定的なイテレーションサイクルを確立",
         ],
         learnings: [
           "企画・開発・インフラ・運営の全領域で技術をリードし、プロダクトの全サイクルを体得",
-          "Flutter＋Supabase Realtimeによる位置情報リアルタイム機能の設計・実装ノウハウを習得",
+          "位置情報リアルタイム機能の設計・実装ノウハウの習得に加え、FlutterからSwiftUI・Jetpack Composeのネイティブ構成へ移行した経験",
           "短いリリースサイクルでユーザーフィードバックを迅速に反映するイテレーション手法を体得",
           "AIエージェントをコード管理・レビュー・設計に統合し、少人数体制でも高品質を維持するワークフローを構築",
         ],
@@ -360,12 +360,12 @@ const texts: Record<string, LocaleText[]> = {
       insights: {
         achievements: [
           "Built an AI-powered workflow integrating Claude Code into requirements, code review, and TDD in a 2-person team — enabling a solo engineer to ship 2–3 features/refactors per week and reaching 1,000 users and 100 concurrent users within 6 months of launch",
-          "Differentiated from grid-based LGBT apps by designing a Map-First home screen that displays both users' 24h auto-expiring location broadcasts (Shouting) and business listings on the map, built with Flutter + Supabase Realtime + PostGIS. Averaging 10 new daily users since Shouting launch",
+          "Differentiated from grid-based LGBT apps by designing a Map-First home screen that displays both users' 24h auto-expiring location broadcasts (Shouting) and business listings on the map, built on a Rails API with PostGIS proximity search (originally Flutter, now migrated to native SwiftUI and Jetpack Compose). Averaging 10 new daily users since Shouting launch",
           "Built a GitHub Actions CI/CD + TDD automation pipeline, releasing 6 major versions over 8 months from v1.0.0 with zero store rejections, establishing a stable iteration cycle",
         ],
         learnings: [
           "Led the technical side across planning, dev, infra, and ops — gaining end-to-end product ownership",
-          "Developed hands-on expertise in location-based real-time features with Flutter + Supabase Realtime",
+          "Developed hands-on expertise in location-based real-time features, plus experience migrating from Flutter to native SwiftUI and Jetpack Compose",
           "Refined rapid iteration skills by running short release cycles with quick user feedback loops",
           "Built a lean-team workflow that maintains high quality through deep AI agent integration",
         ],
