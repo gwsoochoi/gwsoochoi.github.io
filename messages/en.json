@@ -14,7 +14,7 @@
   "basic": {
     "title": "Basic Info",
     "name_label": "Name",
-    "birth_label": "Year of birth",
+    "birth_label": "Age",
     "birth_value": "Born 1988",
     "residence_label": "Location",
     "residence_value": "Shibuya, Tokyo, Japan (2018.06~)",

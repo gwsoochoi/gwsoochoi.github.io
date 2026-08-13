@@ -14,7 +14,7 @@
   "basic": {
     "title": "基本情報",
     "name_label": "氏名",
-    "birth_label": "生年",
+    "birth_label": "年齢",
     "birth_value": "1988年生まれ",
     "residence_label": "居住地",
     "residence_value": "東京都渋谷区（2018.06〜）",

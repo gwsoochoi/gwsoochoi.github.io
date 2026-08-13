@@ -14,7 +14,7 @@
   "basic": {
     "title": "기본 정보",
     "name_label": "이름",
-    "birth_label": "생년",
+    "birth_label": "나이",
     "birth_value": "1988년생",
     "residence_label": "거주지",
     "residence_value": "도쿄도 시부야구 (2018.06~)",
