@@ -1,10 +1,12 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getCareerStages } from "@/lib/content/career";
 import { getLanguageItems } from "@/lib/content/languages";
 import { getProjectCases } from "@/lib/content/projects";
 import { getSkillsSections } from "@/lib/content/skills";
 import { getLocaleStaticParams } from "@/lib/i18n";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
+import CareerSections from "./CareerSections";
 import ProfileAvatar from "./ProfileAvatar";
 import ProjectCard from "./ProjectCard";
 import TechTag from "./TechTag";
@@ -33,11 +35,9 @@ export async function generateMetadata({
 
 /** 하단 연락 섹션의 CTA 묶음 */
 function CtaRow({
-  locale,
   contactLabel,
   resumeLabel,
 }: {
-  locale: string;
   contactLabel: string;
   resumeLabel: string;
 }) {
@@ -50,7 +50,7 @@ function CtaRow({
         {contactLabel}
       </a>
       <a
-        href={`/${locale}/resume`}
+        href="#career"
         className="inline-flex items-center rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-muted"
       >
         {resumeLabel}
@@ -71,6 +71,13 @@ export default async function AboutPage({
   const languageItems = getLanguageItems(locale);
   const skillsSections = getSkillsSections();
   const projects = getProjectCases(locale);
+
+  // 서비스 상세는 career.ts의 appInfo 항목이 정본. 경력 섹션과 중복 노출하지 않고 카드에서만 편다.
+  const overviews = new Map(
+    getCareerStages(locale)
+      .filter((stage) => stage.appInfo && stage.serviceOverview)
+      .map((stage) => [stage.appInfo!.name, stage.serviceOverview!])
+  );
 
   const availabilityRows = [
     { label: t("availability.workstyle_label"), value: t("availability.workstyle_value") },
@@ -156,7 +163,11 @@ export default async function AboutPage({
         </h2>
         <div className="space-y-4">
           {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              overview={overviews.get(project.name)}
+            />
           ))}
         </div>
       </section>
@@ -182,6 +193,9 @@ export default async function AboutPage({
         </div>
       </section>
 
+      {/* ── 경력 · 학력 ── */}
+      <CareerSections locale={locale} />
+
       {/* ── 연락 ── */}
       <section className="border-t border-border pt-10">
         <h2 className="mb-3 text-2xl font-bold text-foreground">
@@ -189,7 +203,6 @@ export default async function AboutPage({
         </h2>
         <p className="mb-6 text-sm leading-relaxed text-muted">{t("contact.desc")}</p>
         <CtaRow
-          locale={locale}
           contactLabel={t("hero.cta_contact")}
           resumeLabel={t("hero.cta_resume")}
         />

@@ -1,4 +1,4 @@
-import type { ServiceOverviewSection, TimelineDescriptionSection } from "./types";
+import type { ServiceOverviewSection } from "./types";
 
 const VERSION_PATTERN = /^v\d|^개발 시작|^開発開始|^Development Started/i;
 
@@ -28,31 +28,6 @@ export function parseServiceOverview(lines: string[]): ServiceOverviewSection[] 
   }
 
   if (current.content.length || current.label) {
-    sections.push(current);
-  }
-
-  return sections;
-}
-
-/**
- * timeline description 문자열 배열을 구조화된 섹션 배열로 변환한다.
- */
-export function parseTimelineDescription(lines: string[]): TimelineDescriptionSection[] {
-  const sections: TimelineDescriptionSection[] = [];
-  let current: TimelineDescriptionSection = { items: [] };
-
-  for (const line of lines) {
-    if (line.startsWith("## ")) {
-      if (current.items.length) {
-        sections.push(current);
-      }
-      current = { label: line.slice(3), items: [] };
-    } else {
-      current.items.push(line);
-    }
-  }
-
-  if (current.items.length || current.label) {
     sections.push(current);
   }
 

@@ -63,7 +63,7 @@ mx-auto max-w-3xl px-6 pt-6 pb-16
 
 ### 섹션
 
-- resume는 `details` 기반 disclosure를 적극 사용
+- 경력 섹션은 `details` 기반 disclosure를 적극 사용
 - 카드류는 `rounded-lg + border`
 - 간격은 크지 않지만 섹션 구분은 명확해야 한다
 

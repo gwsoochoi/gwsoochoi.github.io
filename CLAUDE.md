@@ -28,9 +28,9 @@ app/
   sitemap.ts                  # 정적 sitemap
   [locale]/
     layout.tsx                # locale 레이아웃, metadata, Header/Footer
-    page.tsx                  # About 페이지
-    resume/page.tsx           # Resume 페이지
-    Header.tsx                # 네비게이션
+    page.tsx                  # 단일 페이지 (프로필 · 가동 조건 · 프로젝트 · 스킬 · 경력 · 학력 · 연락)
+    CareerSections.tsx        # 경력 / 학력·병역 섹션
+    Header.tsx                # 언어 전환 바
     LangSwitcher.tsx          # 언어 전환
     HtmlLang.tsx              # <html lang> 동기화
     ContactButton.tsx         # 연락 CTA
@@ -46,7 +46,7 @@ lib/
     languages.ts              # 언어 능력 데이터
     skills.ts                 # 기술 스택 데이터
     keyProjects.ts            # 주요 프로젝트 보조 데이터
-    parseOverview.ts          # Resume overview 파서
+    parseOverview.ts          # 경력 overview 파서
     types.ts                  # 공통 타입
 
 i18n/
@@ -120,19 +120,19 @@ public/
 | `lib/content/languages.ts` | 언어 능력 |
 | `lib/content/skills.ts` | 기술 태그 |
 | `lib/content/types.ts` | 공통 타입 |
-| `lib/content/parseOverview.ts` | 긴 설명을 Resume UI용 섹션으로 파싱 |
+| `lib/content/parseOverview.ts` | 긴 설명을 경력 UI용 섹션으로 파싱 |
 
 ### `career.ts` 패턴
 
 - 공통 메타데이터와 locale별 텍스트를 합치는 구조
 - 새 필드 추가 시 "번역 필요 여부"를 먼저 판단해야 한다
-- Resume 변경은 보통 아래 파일을 함께 본다
+- 경력 섹션 변경은 보통 아래 파일을 함께 본다
 
 ```text
 lib/content/career.ts
 lib/content/types.ts
 lib/content/parseOverview.ts
-app/[locale]/resume/page.tsx
+app/[locale]/CareerSections.tsx
 messages/*.json
 ```
 

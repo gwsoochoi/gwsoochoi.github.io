@@ -1,7 +1,15 @@
 import { getTranslations } from "next-intl/server";
 import type { ProjectCase } from "@/lib/content/types";
+import ChevronIcon from "./ChevronIcon";
+import ServiceOverview from "./ServiceOverview";
 
-export default async function ProjectCard({ project }: { project: ProjectCase }) {
+export default async function ProjectCard({
+  project,
+  overview,
+}: {
+  project: ProjectCase;
+  overview?: string[];
+}) {
   const t = await getTranslations("work");
 
   // 스토어 이름은 고유명이라 locale 공통
@@ -29,6 +37,18 @@ export default async function ProjectCard({ project }: { project: ProjectCase })
       </p>
 
       <p className="mt-3 text-sm leading-relaxed text-muted">{project.summary}</p>
+
+      {overview && (
+        <details className="group mt-3 border-t border-border pt-3">
+          <summary className="flex cursor-pointer list-none items-center gap-1 text-sm font-medium text-accent [&::-webkit-details-marker]:hidden">
+            <ChevronIcon className="h-3.5 w-3.5 shrink-0 transition-transform group-open:rotate-90" />
+            {t("detail")}
+          </summary>
+          <div className="mt-3">
+            <ServiceOverview lines={overview} />
+          </div>
+        </details>
+      )}
 
       {links.length > 0 && (
         <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 border-t border-border pt-3">

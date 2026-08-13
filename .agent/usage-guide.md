@@ -49,7 +49,7 @@
 
 ```text
 check resume
-Source: app/[locale]/resume/page.tsx
+Source: app/[locale]/CareerSections.tsx
 Done: 관련 데이터 파일, 현재 UI 구조, locale 영향 범위, 검증 명령 정리
 ```
 
@@ -109,7 +109,7 @@ Done:
 | Scope | 의미 |
 |------|------|
 | `about` | 메인 소개 페이지 |
-| `resume` | 경력/이력서 페이지 전체 |
+| `resume` | 홈 페이지의 경력/학력 섹션 |
 | `career` | `lib/content/career.ts` 중심의 경력 데이터 |
 | `skills` | 기술 스택 태그/콘텐츠 |
 | `header` | 상단 네비게이션, 언어 전환 |
@@ -143,7 +143,7 @@ Done:
 ## 복붙용 한 줄 예시
 
 ```text
-check resume - Source: app/[locale]/resume/page.tsx - Done: 관련 데이터 구조, locale 영향 범위, 검증 명령 요약
+check resume - Source: app/[locale]/CareerSections.tsx - Done: 관련 데이터 구조, locale 영향 범위, 검증 명령 요약
 ```
 
 ```text

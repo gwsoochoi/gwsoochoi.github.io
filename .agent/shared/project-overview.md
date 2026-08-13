@@ -37,7 +37,7 @@ app/
   [locale]/
     layout.tsx                locale 메타데이터, Header/Footer, provider
     page.tsx                  About 페이지
-    resume/page.tsx           Resume 페이지
+    CareerSections.tsx        경력 / 학력·병역 섹션
     Header.tsx                네비게이션
     LangSwitcher.tsx          언어 전환
     ContactButton.tsx         연락 CTA
@@ -50,7 +50,7 @@ lib/content/
   career.ts                   이력서 핵심 데이터
   skills.ts                   기술 태그 데이터
   languages.ts                언어 능력 데이터
-  parseOverview.ts            resume용 overview 파서
+  parseOverview.ts            경력 overview 파서
   types.ts                    공통 타입
 
 i18n/
@@ -71,7 +71,7 @@ messages/
 | Scope | 핵심 파일 | 자주 깨지는 지점 |
 |------|-----------|------------------|
 | `about` | `app/[locale]/page.tsx` | 번역 누락, CTA 레이아웃, 소개 문장 길이 |
-| `resume` | `app/[locale]/resume/page.tsx` | 긴 텍스트 줄바꿈, disclosure 구조, 표 overflow |
+| `resume` | `app/[locale]/CareerSections.tsx` | 긴 텍스트 줄바꿈, disclosure 구조, 표 overflow |
 | `career` | `lib/content/career.ts` | locale 데이터 정합성, 타입 누락 |
 | `header` | `app/[locale]/Header.tsx`, `LangSwitcher.tsx` | 활성 상태, locale 유지 |
 | `theme` | `app/globals.css` | 대비비, CSS 토큰 누락, 기존 톤 이탈 |
@@ -85,14 +85,14 @@ messages/
 ### 경력 데이터
 
 - `career.ts`는 언어 공통 데이터와 locale별 텍스트를 조합하는 구조다.
-- resume 페이지의 많은 UI는 이 파일의 shape에 강하게 의존한다.
+- 경력 섹션의 많은 UI는 이 파일의 shape에 강하게 의존한다.
 - 경력 관련 변경은 보통 다음 파일을 같이 본다.
 
 ```text
 lib/content/career.ts
 lib/content/types.ts
 lib/content/parseOverview.ts
-app/[locale]/resume/page.tsx
+app/[locale]/CareerSections.tsx
 messages/*.json
 ```
 

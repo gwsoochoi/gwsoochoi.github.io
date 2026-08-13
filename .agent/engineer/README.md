@@ -44,7 +44,7 @@ ship               마감 검증, 커밋/PR 준비
 | Scope | 주요 파일 |
 |------|-----------|
 | `about` | `app/[locale]/page.tsx`, `lib/content/languages.ts`, `lib/content/skills.ts`, `messages/*.json` |
-| `resume` | `app/[locale]/resume/page.tsx`, `lib/content/career.ts`, `lib/content/parseOverview.ts`, `messages/*.json` |
+| `resume` | `app/[locale]/CareerSections.tsx`, `lib/content/career.ts`, `lib/content/parseOverview.ts`, `messages/*.json` |
 | `header` | `app/[locale]/Header.tsx`, `app/[locale]/LangSwitcher.tsx`, `app/[locale]/layout.tsx` |
 | `i18n` | `i18n/*`, `messages/*`, `app/page.tsx` |
 | `theme` | `app/globals.css`, 각 페이지의 Tailwind 클래스 |

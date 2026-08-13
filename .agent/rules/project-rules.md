@@ -77,7 +77,7 @@ public/             이미지, 아이콘, robots.txt
 
 - 현재 사이트는 과장된 그래픽보다 차분한 dark editorial 톤이 우선이다.
 - `max-w-3xl`, `px-6`, `border-border`, `text-muted`, `text-accent` 조합이 기본 패턴이다.
-- 정보량이 많은 resume 페이지는 섹션 분리와 줄바꿈 안전성이 중요하다.
+- 정보량이 많은 경력 섹션는 섹션 분리와 줄바꿈 안전성이 중요하다.
 
 ### 배포
 

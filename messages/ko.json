@@ -3,10 +3,6 @@
     "title": "Gwangsoo Choi",
     "description": "최광수 포트폴리오 - Rails를 축으로 SwiftUI · Jetpack Compose까지 아우르는 프로덕트 엔지니어. 중장기 업무위탁 대응."
   },
-  "nav": {
-    "about": "홈",
-    "resume": "이력서"
-  },
   "hero": {
     "subtitle": "도쿄 거주 · 일본어 비즈니스 레벨. 요구사항 정리, API, iOS · Android, 관리자 화면, 클라우드 운영까지 일관되게 담당하며 중장기 업무위탁에 대응합니다.",
     "cta_contact": "상담 요청",
@@ -42,7 +38,8 @@
   },
   "work": {
     "title": "대표 프로젝트",
-    "link_service": "서비스 보기"
+    "link_service": "서비스 보기",
+    "detail": "자세히 보기"
   },
   "career": {
     "title": "{years}년 동안 이런 일들을 해봤어요",
@@ -51,9 +48,7 @@
     "fulltime": "정규직",
     "achievements": "성과",
     "learnings": "배운점",
-    "key_projects": "주요 프로젝트",
-    "key_projects_section": "주요 프로젝트",
-    "other_experience": "소속 경력"
+    "key_projects": "주요 프로젝트"
   },
   "background": {
     "title": "배경",

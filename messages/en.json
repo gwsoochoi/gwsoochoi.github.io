@@ -3,10 +3,6 @@
     "title": "Gwangsoo Choi",
     "description": "Portfolio of Gwangsoo Choi - product engineer anchored in Rails, working across SwiftUI and Jetpack Compose. Available for mid-to-long-term contract work."
   },
-  "nav": {
-    "about": "Home",
-    "resume": "Resume"
-  },
   "hero": {
     "subtitle": "Based in Tokyo, business-level Japanese. I cover requirements, APIs, iOS and Android, admin tooling and cloud operations end to end, and take on mid-to-long-term contract work.",
     "cta_contact": "Get in touch",
@@ -42,7 +38,8 @@
   },
   "work": {
     "title": "Selected Work",
-    "link_service": "Visit site"
+    "link_service": "Visit site",
+    "detail": "View details"
   },
   "career": {
     "title": "{years} years of experience",
@@ -51,9 +48,7 @@
     "fulltime": "Full-time",
     "achievements": "Achievements",
     "learnings": "Key Learnings",
-    "key_projects": "Key Projects",
-    "key_projects_section": "Key Projects",
-    "other_experience": "Company Experience"
+    "key_projects": "Key Projects"
   },
   "background": {
     "title": "Background",

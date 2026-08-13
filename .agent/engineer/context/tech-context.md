@@ -28,7 +28,7 @@ app/
   [locale]/
     layout.tsx
     page.tsx
-    resume/page.tsx
+    CareerSections.tsx
     Header.tsx
     LangSwitcher.tsx
     HtmlLang.tsx
@@ -76,7 +76,7 @@ messages/
 
 ### locale 페이지
 
-- `app/[locale]/page.tsx`, `app/[locale]/resume/page.tsx`는 async server component 패턴이다.
+- `app/[locale]/page.tsx`, `app/[locale]/CareerSections.tsx`는 async server component 패턴이다.
 - `generateStaticParams`와 `generateMetadata`를 함께 유지한다.
 
 ---
@@ -108,11 +108,11 @@ messages/
 | Scope | 읽어야 할 핵심 파일 |
 |------|----------------------|
 | `about` | `app/[locale]/page.tsx`, `lib/content/languages.ts`, `lib/content/skills.ts`, `messages/*.json` |
-| `resume` | `app/[locale]/resume/page.tsx`, `lib/content/career.ts`, `lib/content/types.ts`, `lib/content/parseOverview.ts` |
-| `career` | `lib/content/career.ts`, `lib/content/types.ts`, `app/[locale]/resume/page.tsx` |
+| `resume` | `app/[locale]/CareerSections.tsx`, `lib/content/career.ts`, `lib/content/types.ts`, `lib/content/parseOverview.ts` |
+| `career` | `lib/content/career.ts`, `lib/content/types.ts`, `app/[locale]/CareerSections.tsx` |
 | `header` | `app/[locale]/Header.tsx`, `app/[locale]/LangSwitcher.tsx`, `app/[locale]/layout.tsx` |
 | `i18n` | `i18n/routing.ts`, `i18n/request.ts`, `i18n/navigation.ts`, `messages/*.json`, `app/page.tsx` |
-| `theme` | `app/globals.css`, `app/[locale]/page.tsx`, `app/[locale]/resume/page.tsx` |
+| `theme` | `app/globals.css`, `app/[locale]/page.tsx`, `app/[locale]/CareerSections.tsx` |
 | `seo` | `app/layout.tsx`, `app/[locale]/layout.tsx`, `app/sitemap.ts`, `public/robots.txt` |
 | `deploy` | `.github/workflows/deploy.yml`, `next.config.ts`, `package.json` |
 | `assets` | `public/*`, `app/icon.svg` |
@@ -126,7 +126,7 @@ messages/
 2. locale 페이지에서 `setRequestLocale` 또는 metadata alternates를 빼먹음
 3. server component 안에서 `window`, `navigator`, `localStorage`를 사용함
 4. raw 색상값을 직접 넣어 기존 토큰 체계를 흐림
-5. resume 페이지에서 긴 문장이나 표가 모바일에서 넘침
+5. 경력 섹션에서 긴 문장이나 표가 모바일에서 넘침
 6. static export 제약을 잊고 런타임 의존 로직을 넣음
 
 ---

@@ -3,10 +3,6 @@
     "title": "Gwangsoo Choi",
     "description": "チェ・グァンスのポートフォリオ - Railsを軸に、SwiftUI・Jetpack Composeまで横断するプロダクトエンジニア。中長期の業務委託に対応。"
   },
-  "nav": {
-    "about": "ホーム",
-    "resume": "履歴書"
-  },
   "hero": {
     "subtitle": "東京在住・日本語ビジネス。要件整理、API、iOS・Android、管理画面、クラウド運用まで一貫して担当し、中長期の業務委託に対応します。",
     "cta_contact": "相談する",
@@ -42,7 +38,8 @@
   },
   "work": {
     "title": "主なプロジェクト",
-    "link_service": "サービスを見る"
+    "link_service": "サービスを見る",
+    "detail": "詳細を見る"
   },
   "career": {
     "title": "{years}年間こんな仕事をしてきました",
@@ -51,9 +48,7 @@
     "fulltime": "正社員",
     "achievements": "実績",
     "learnings": "学んだこと",
-    "key_projects": "主要プロジェクト",
-    "key_projects_section": "主要プロジェクト",
-    "other_experience": "所属経歴"
+    "key_projects": "主要プロジェクト"
   },
   "background": {
     "title": "バックグラウンド",
