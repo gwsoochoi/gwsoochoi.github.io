@@ -56,7 +56,7 @@ const sections: TimelineGroup[] = [
       { name: "Google Cloud Platform", spans: [[2021]] },
       { name: "Supabase", spans: [[2025]] },
       { name: "Cloudflare R2", spans: [[2025]] },
-      { name: "Docker", spans: [[2025]] },
+      { name: "Docker", spans: [[2021]] },
     ],
   },
   {
