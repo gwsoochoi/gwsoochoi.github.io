@@ -56,19 +56,51 @@ const texts: Record<string, LocaleText[]> = {
         "기획·설계부터 시작하여 서비스 전체를 처음부터 구축",
       ],
       scope: { label: "담당 범위:", value: "기획 → UI/UX 디자인 → 개발 → 인프라 → 스토어 심사 → 운영 → 마케팅 (전 영역)" },
-      insights: {
-        achievements: [
-          "2인 팀 체제에서 Claude Code를 요구사항 정리·코드 리뷰·TDD에 통합한 AI 워크플로우를 구축해, 1인 엔지니어가 주당 2~3건의 신규 기능 개발·리팩토링을 유지하며 출시 6개월 만에 등록 유저 1,000명·동시접속 100명 달성",
-          "기존 LGBT 앱의 그리드 UI와 차별화하여, 일반 유저의 24h 자동 만료 위치 공개(Shouting)와 비즈니스 유저(업소)를 지도 위에 동시 표시하는 Map-First 홈 화면을 Rails API + PostGIS 근접 검색 기반으로 설계·구현(초기 Flutter → 현재 SwiftUI·Jetpack Compose 네이티브 전환). Shouting 런칭 이후 하루 평균 10명의 신규 유저가 꾸준히 유입",
-          "GitHub Actions CI/CD + TDD 기반 자동화 파이프라인을 구축하고, 첫 출시(v1.0.0)부터 8개월간 6회의 메이저 버전을 스토어 리젝 없이 릴리즈하며 안정적인 iteration 사이클 확립",
-        ],
-        learnings: [
-          "기획·개발·인프라·운영 전 영역의 기술을 리드하며 프로덕트 전 사이클 체득",
-          "위치 기반 실시간 기능 설계·구현 역량 습득과 함께, Flutter에서 SwiftUI·Jetpack Compose 네이티브 구조로의 전환 경험",
-          "짧은 릴리즈 사이클로 사용자 피드백을 빠르게 반영하는 iteration 방식 체화",
-          "AI 에이전트를 코드 관리·리뷰·설계에 통합해 소수 정예 체제에서도 높은 품질을 유지하는 워크플로우 구축",
-        ],
-      },
+      locations: [
+        {
+          name: "PONGE", url: "https://ponge.app/", duration: "2025.01 ~",
+          items: [
+            "LGBTQ+ 커뮤니티를 위한 위치 기반 소셜 앱. 지도에서 주변 유저를 발견해 샤우팅·모임·1:1 메시지로 이어진다",
+            "Rails 8 + PostGIS 공통 API 위에 SwiftUI iOS, Jetpack Compose Android, Admin WebApp을 함께 운영",
+            "6개 언어 + AI 자동 번역, 가게 등록·승인 흐름으로 B2B 수익 모델 구축",
+            "기획·디자인 담당 1명과 2인 체제. 프로덕트 방향성과 기술 전반을 리드",
+          ],
+          insights: {
+            achievements: [
+              "2인 팀 체제에서 Claude Code를 요구사항 정리·코드 리뷰·TDD에 통합한 AI 워크플로우를 구축해, 1인 엔지니어가 주당 2~3건의 신규 기능 개발·리팩토링을 유지하며 출시 6개월 만에 등록 유저 1,000명·동시접속 100명 달성",
+              "기존 LGBT 앱의 그리드 UI와 차별화하여, 일반 유저의 24h 자동 만료 위치 공개(Shouting)와 비즈니스 유저(업소)를 지도 위에 동시 표시하는 Map-First 홈 화면을 Rails API + PostGIS 근접 검색 기반으로 설계·구현(초기 Flutter → 현재 SwiftUI·Jetpack Compose 네이티브 전환). Shouting 런칭 이후 하루 평균 10명의 신규 유저가 꾸준히 유입",
+              "GitHub Actions CI/CD + TDD 기반 자동화 파이프라인을 구축하고, 첫 출시(v1.0.0)부터 8개월간 6회의 메이저 버전을 스토어 리젝 없이 릴리즈하며 안정적인 iteration 사이클 확립",
+            ],
+            learnings: [
+              "기획·개발·인프라·운영 전 영역의 기술을 리드하며 프로덕트 전 사이클 체득",
+              "위치 기반 실시간 기능 설계·구현 역량 습득과 함께, Flutter에서 SwiftUI·Jetpack Compose 네이티브 구조로의 전환 경험",
+              "짧은 릴리즈 사이클로 사용자 피드백을 빠르게 반영하는 iteration 방식 체화",
+              "AI 에이전트를 코드 관리·리뷰·설계에 통합해 소수 정예 체제에서도 높은 품질을 유지하는 워크플로우 구축",
+            ],
+          },
+        },
+        {
+          name: "SayDraw", url: "https://saydraw.com/", duration: "2026.06 ~",
+          items: [
+            "아이가 말한 상상을 색칠 도안으로 바꿔주는 iOS · iPadOS 키즈 앱. App Store 공개 중(v1.3.1)",
+            "SwiftUI · PencilKit 앱 + Rails 8 API. 음성 인식 → 안전성 검사 → 도안 생성 오케스트레이션은 전부 서버에 두고 앱은 캡처·렌더링만 담당",
+            "Kids Category 요건에 맞춰 아이 로그인 없음·광고 없음·데이터 최소 수집을 지키고, 계정·구매·삭제·동의는 보호자 잠금 뒤에 배치",
+            "크레딧 기반 IAP·프로모션 코드, GCP Cloud Run · Cloud Tasks, Cloudflare R2, APNs, Admin 운영 콘솔",
+            "한국어 · 일본어 · 영어 3개 언어 지원",
+          ],
+          insights: {
+            achievements: [
+              "개발 착수 약 한 달 만에 v1.0.0을 App Store에 출시하고, 이후 6주 동안 v1.3.1까지 연속 릴리즈",
+              "생성 파이프라인 전 단계에 서버 사이드 모더레이션을 두고 안전하지 않은 요청은 fail-closed로 차단해, Kids Category 심사를 리젝 없이 통과",
+              "API·Admin·iOS 전 계층에 자동 테스트를 깔아(API RSpec 426케이스 / iOS 248케이스) 1인 개발에서도 릴리즈마다 회귀 검증",
+            ],
+            learnings: [
+              "Kids Category의 안전·개인정보 요건을 기능이 아니라 제품 구조의 불변식으로 설계하는 경험",
+              "음성 인식과 AI 생성을 포함한 파이프라인을 서버 주도로 조립하는 설계 노하우 습득",
+            ],
+          },
+        },
+      ],
     },
     {
       title: "스타트업", duration: "— 약 4년 / 도쿄(2021.01 ~ 2024.12)",
@@ -209,19 +241,51 @@ const texts: Record<string, LocaleText[]> = {
         "企画・設計からスタートし、サービス全体をゼロから構築",
       ],
       scope: { label: "担当範囲：", value: "企画 → UI/UXデザイン → 開発 → インフラ → ストア審査 → 運営 → マーケティング（全領域）" },
-      insights: {
-        achievements: [
-          "2人体制でClaude Codeを要件整理・コードレビュー・TDDに統合したAIワークフローを構築し、1人エンジニアが週2〜3件の新機能開発・リファクタリングを維持しながらリリース6ヶ月で登録ユーザー1,000人・同時接続100人を達成",
-          "既存LGBTアプリのグリッドUIと差別化し、一般ユーザーの24h自動消滅位置公開（Shouting）とビジネスユーザー（店舗）をマップ上に同時表示するMap-Firstホーム画面をRails API + PostGISの近傍検索ベースで設計・実装（当初のFlutterから現在はSwiftUI・Jetpack Composeのネイティブへ移行）。Shoutingローンチ後、1日平均10人の新規ユーザーが安定的に流入",
-          "GitHub Actions CI/CD + TDDベースの自動化パイプラインを構築し、初回リリース（v1.0.0）から8ヶ月間で6回のメジャーバージョンをストアリジェクトなしでリリースし安定的なイテレーションサイクルを確立",
-        ],
-        learnings: [
-          "企画・開発・インフラ・運営の全領域で技術をリードし、プロダクトの全サイクルを体得",
-          "位置情報リアルタイム機能の設計・実装ノウハウの習得に加え、FlutterからSwiftUI・Jetpack Composeのネイティブ構成へ移行した経験",
-          "短いリリースサイクルでユーザーフィードバックを迅速に反映するイテレーション手法を体得",
-          "AIエージェントをコード管理・レビュー・設計に統合し、少人数体制でも高品質を維持するワークフローを構築",
-        ],
-      },
+      locations: [
+        {
+          name: "PONGE", url: "https://ponge.app/", duration: "2025.01 ~",
+          items: [
+            "LGBTQ+コミュニティ向けの位置情報ソーシャルアプリ。マップで周りのユーザーを見つけ、シャウティング・集まり・1:1メッセージへつながる",
+            "Rails 8 + PostGISの共通APIの上に、SwiftUI iOS・Jetpack Compose Android・Admin WebAppを合わせて運用",
+            "6言語＋AI自動翻訳、店舗登録→承認フローでB2B収益モデルを構築",
+            "企画・デザイン担当1名との2人体制。プロダクトの方向性と技術全般をリード",
+          ],
+          insights: {
+            achievements: [
+              "2人体制でClaude Codeを要件整理・コードレビュー・TDDに統合したAIワークフローを構築し、1人エンジニアが週2〜3件の新機能開発・リファクタリングを維持しながらリリース6ヶ月で登録ユーザー1,000人・同時接続100人を達成",
+              "既存LGBTアプリのグリッドUIと差別化し、一般ユーザーの24h自動消滅位置公開（Shouting）とビジネスユーザー（店舗）をマップ上に同時表示するMap-Firstホーム画面をRails API + PostGISの近傍検索ベースで設計・実装（当初のFlutterから現在はSwiftUI・Jetpack Composeのネイティブへ移行）。Shoutingローンチ後、1日平均10人の新規ユーザーが安定的に流入",
+              "GitHub Actions CI/CD + TDDベースの自動化パイプラインを構築し、初回リリース（v1.0.0）から8ヶ月間で6回のメジャーバージョンをストアリジェクトなしでリリースし安定的なイテレーションサイクルを確立",
+            ],
+            learnings: [
+              "企画・開発・インフラ・運営の全領域で技術をリードし、プロダクトの全サイクルを体得",
+              "位置情報リアルタイム機能の設計・実装ノウハウの習得に加え、FlutterからSwiftUI・Jetpack Composeのネイティブ構成へ移行した経験",
+              "短いリリースサイクルでユーザーフィードバックを迅速に反映するイテレーション手法を体得",
+              "AIエージェントをコード管理・レビュー・設計に統合し、少人数体制でも高品質を維持するワークフローを構築",
+            ],
+          },
+        },
+        {
+          name: "SayDraw", url: "https://saydraw.com/", duration: "2026.06 ~",
+          items: [
+            "子どもが話したそうぞうをぬり絵の線画に変えるiOS・iPadOSキッズアプリ。App Store公開中（v1.3.1）",
+            "SwiftUI・PencilKitアプリ＋Rails 8 API。音声認識→安全性チェック→生成のオーケストレーションはすべてサーバー側に置き、アプリはキャプチャとレンダリングのみを担当",
+            "Kids Categoryの要件に合わせ、子どものログインなし・広告なし・データ最小収集を守り、アカウント・購入・削除・同意は保護者ロックの内がわに配置",
+            "クレジット制のIAP・プロモーションコード、GCP Cloud Run・Cloud Tasks、Cloudflare R2、APNs、Admin運用コンソール",
+            "韓国語・日本語・英語の3言語に対応",
+          ],
+          insights: {
+            achievements: [
+              "開発着手から約1ヶ月でv1.0.0をApp Storeにリリースし、その後6週間でv1.3.1まで継続リリース",
+              "生成パイプラインの全段階にサーバーサイドのモデレーションを置き、安全でないリクエストはfail-closedで遮断して、Kids Categoryの審査をリジェクトなしで通過",
+              "API・Admin・iOSの全レイヤーに自動テストを敷き（API RSpec 426ケース／iOS 248ケース）、1人開発でもリリースごとに回帰検証",
+            ],
+            learnings: [
+              "Kids Categoryの安全・プライバシー要件を、機能ではなくプロダクト構造の不変式として設計する経験",
+              "音声認識とAI生成を含むパイプラインをサーバー主導で組み立てる設計ノウハウを習得",
+            ],
+          },
+        },
+      ],
     },
     {
       title: "スタートアップ", duration: "— 約4年 / 東京（2021.01 ~ 2024.12）",
@@ -362,19 +426,51 @@ const texts: Record<string, LocaleText[]> = {
         "Kicked off planning and design, building the entire service from scratch",
       ],
       scope: { label: "Scope:", value: "Planning → UI/UX Design → Development → Infrastructure → Store Review → Operations → Marketing (all areas)" },
-      insights: {
-        achievements: [
-          "Built an AI-powered workflow integrating Claude Code into requirements, code review, and TDD in a 2-person team — enabling a solo engineer to ship 2–3 features/refactors per week and reaching 1,000 users and 100 concurrent users within 6 months of launch",
-          "Differentiated from grid-based LGBT apps by designing a Map-First home screen that displays both users' 24h auto-expiring location broadcasts (Shouting) and business listings on the map, built on a Rails API with PostGIS proximity search (originally Flutter, now migrated to native SwiftUI and Jetpack Compose). Averaging 10 new daily users since Shouting launch",
-          "Built a GitHub Actions CI/CD + TDD automation pipeline, releasing 6 major versions over 8 months from v1.0.0 with zero store rejections, establishing a stable iteration cycle",
-        ],
-        learnings: [
-          "Led the technical side across planning, dev, infra, and ops — gaining end-to-end product ownership",
-          "Developed hands-on expertise in location-based real-time features, plus experience migrating from Flutter to native SwiftUI and Jetpack Compose",
-          "Refined rapid iteration skills by running short release cycles with quick user feedback loops",
-          "Built a lean-team workflow that maintains high quality through deep AI agent integration",
-        ],
-      },
+      locations: [
+        {
+          name: "PONGE", url: "https://ponge.app/", duration: "2025.01 ~",
+          items: [
+            "A location-based social app for the LGBTQ+ community — discover people nearby on the map and connect through Shouting, meetups, and 1:1 messaging",
+            "A shared Rails 8 + PostGIS API running alongside SwiftUI on iOS, Jetpack Compose on Android, and an Admin WebApp",
+            "6 languages with AI auto-translation, plus a store registration → approval flow as the base for a B2B revenue model",
+            "A 2-person team with one design/planning member — I lead product direction and all technical areas",
+          ],
+          insights: {
+            achievements: [
+              "Built an AI-powered workflow integrating Claude Code into requirements, code review, and TDD in a 2-person team — enabling a solo engineer to ship 2–3 features/refactors per week and reaching 1,000 users and 100 concurrent users within 6 months of launch",
+              "Differentiated from grid-based LGBT apps by designing a Map-First home screen that displays both users' 24h auto-expiring location broadcasts (Shouting) and business listings on the map, built on a Rails API with PostGIS proximity search (originally Flutter, now migrated to native SwiftUI and Jetpack Compose). Averaging 10 new daily users since Shouting launch",
+              "Built a GitHub Actions CI/CD + TDD automation pipeline, releasing 6 major versions over 8 months from v1.0.0 with zero store rejections, establishing a stable iteration cycle",
+            ],
+            learnings: [
+              "Led the technical side across planning, dev, infra, and ops — gaining end-to-end product ownership",
+              "Developed hands-on expertise in location-based real-time features, plus experience migrating from Flutter to native SwiftUI and Jetpack Compose",
+              "Refined rapid iteration skills by running short release cycles with quick user feedback loops",
+              "Built a lean-team workflow that maintains high quality through deep AI agent integration",
+            ],
+          },
+        },
+        {
+          name: "SayDraw", url: "https://saydraw.com/", duration: "2026.06 ~",
+          items: [
+            "An iOS · iPadOS kids app that turns what a child says into a coloring page. Live on the App Store (v1.3.1)",
+            "SwiftUI · PencilKit app on a Rails 8 API — speech recognition, safety checks, and generation are orchestrated entirely server-side; the app only captures and renders",
+            "Built for the Kids Category: no kid logins, no ads, minimal data, with accounts, purchases, deletion, and consent behind a guardian lock",
+            "Credit-based IAP and promo codes, GCP Cloud Run · Cloud Tasks, Cloudflare R2, APNs, and an Admin console",
+            "Available in Korean, Japanese, and English",
+          ],
+          insights: {
+            achievements: [
+              "Shipped v1.0.0 to the App Store about a month after starting development, then released continuously through v1.3.1 over the following 6 weeks",
+              "Put server-side moderation at every stage of the generation pipeline, failing closed on unsafe requests — passing Kids Category review with zero rejections",
+              "Covered API, Admin, and iOS with automated tests (426 API RSpec cases / 248 iOS cases) so every release is regression-checked even as a solo developer",
+            ],
+            learnings: [
+              "Learned to design Kids Category safety and privacy requirements as product-structure invariants rather than features",
+              "Gained design know-how for building a speech- and AI-generation pipeline driven from the server",
+            ],
+          },
+        },
+      ],
     },
     {
       title: "Startup", duration: "— ~4 years / Tokyo (2021.01 ~ 2024.12)",
