@@ -35,7 +35,16 @@ export interface ProjectCase {
   status: string;
 }
 
-export interface SkillSection {
-  label: string;
-  tags: string[];
+/** 연표 구간. [시작 연도, 종료 연도] — 종료를 비우면 현재까지 이어진다. */
+export type YearSpan = [number, number?];
+
+/** 연표 한 줄. 기술 하나, 또는 커리어 형태 하나. */
+export interface TimelineRow {
+  name: string;
+  spans: YearSpan[];
+}
+
+export interface TimelineGroup {
+  label?: string;
+  rows: TimelineRow[];
 }

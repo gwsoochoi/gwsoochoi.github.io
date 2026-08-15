@@ -1,5 +1,13 @@
 import type { Stage } from "./types";
 
+// 각 단계의 `title`은 기술 연표 Industry 그룹의 라벨과 같은 말이어야 한다.
+// 정본은 messages/{locale}.json의 `tracks.*` — 한쪽만 고치면 같은 이력이 화면에서
+// 두 이름으로 읽힌다.
+//
+//   tracks.personal  → 1인 프로덕트 개발 / 1人プロダクト開発 / Solo Product
+//   tracks.startup   → 스타트업 / スタートアップ / Startup
+//   tracks.si        → SI/SE
+
 // 언어에 관계없이 동일한 공통 필드
 interface SharedStage {
   number: number;
@@ -10,10 +18,9 @@ interface SharedStage {
 }
 
 const shared: SharedStage[] = [
-  { number: 1, employmentType: "freelance", tags: ["Ruby on Rails 8", "SwiftUI", "Kotlin/Jetpack Compose", "React", "Vite", "Supabase Auth/DB", "PostgreSQL/PostGIS", "GCP Cloud Run/Build/Tasks", "Cloudflare R2/Turnstile", "APNs/FCM", "Stripe", "Sentry", "RSpec"], appInfo: { name: "PONGE", url: "https://ponge.app/", period: "2025.01~" }, companyUrl: "https://greatearth.studio.site/" },
+  { number: 1, tags: ["Ruby on Rails 8", "SwiftUI", "Kotlin/Jetpack Compose", "React", "Vite", "Supabase Auth/DB", "PostgreSQL/PostGIS", "GCP Cloud Run/Build/Tasks", "Cloudflare R2/Turnstile", "APNs/FCM", "Stripe", "Sentry", "RSpec"], appInfo: { name: "PONGE", url: "https://ponge.app/", period: "2025.01~" }, companyUrl: "https://greatearth.studio.site/" },
   { number: 2 },
   { number: 3 },
-  { number: 4, companyUrl: "https://www.lgsciencepark.com/KR/" },
 ];
 
 // 로케일별 번역 텍스트 (공통 필드 제외)
@@ -22,7 +29,7 @@ type LocaleText = Omit<Stage, "number" | "tags" | "appInfo" | "companyUrl">;
 const texts: Record<string, LocaleText[]> = {
   ko: [
     {
-      title: "개인 프로젝트 — 2인 체제, 수익화까지",
+      title: "1인 프로덕트 개발",
       duration: "",
       company: "株式会社GREATEARTH",
       appDescription: "위치 기반 커뮤니티 · 이벤트 · 비즈니스 연결 플랫폼",
@@ -172,11 +179,10 @@ const texts: Record<string, LocaleText[]> = {
         },
       ],
     },
-    { title: "LG Electronics 서초R&D캠퍼스", duration: "— 약 1년(2009.02 ~ 2010.02)", company: "웹스토리지 NAS 개발팀 — 테스터" },
   ],
   ja: [
     {
-      title: "個人プロジェクト — 2人体制、収益化まで",
+      title: "1人プロダクト開発",
       duration: "",
       company: "株式会社GREATEARTH",
       appDescription: "位置情報ベースのコミュニティ・イベント・ビジネス接続プラットフォーム",
@@ -326,11 +332,10 @@ const texts: Record<string, LocaleText[]> = {
         },
       ],
     },
-    { title: "LG Electronics 瑞草R&Dキャンパス", duration: "— 約1年(2009.02 ~ 2010.02)", company: "WebストレージNAS開発チーム — テスター" },
   ],
   en: [
     {
-      title: "Personal Project — 2-Person Team to Monetization",
+      title: "Solo Product",
       duration: "",
       company: "株式会社GREATEARTH",
       appDescription: "Location-Based Community · Events · Business Connection Platform",
@@ -480,7 +485,6 @@ const texts: Record<string, LocaleText[]> = {
         },
       ],
     },
-    { title: "LG Electronics Seocho R&D Campus", duration: "— ~1 year(2009.02 ~ 2010.02)", company: "Web Storage NAS Dev Team — Tester" },
   ],
 };
 

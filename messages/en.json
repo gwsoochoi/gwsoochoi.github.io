@@ -54,7 +54,7 @@
     "detail": "View details"
   },
   "career": {
-    "title": "{years} years of experience",
+    "title": "Career",
     "now": "Now",
     "freelance": "Freelance",
     "fulltime": "Full-time",
@@ -79,5 +79,19 @@
   },
   "footer": {
     "copyright": "Gwangsoo Choi. All rights reserved."
+  },
+  "timeline": {
+    "years_suffix": "y",
+    "legend_none": "none",
+    "legend_used": "used",
+    "expand_all": "Expand all",
+    "collapse_all": "Collapse all"
+  },
+  "tracks": {
+    "si": "SI/SE",
+    "school": "Japanese Language School",
+    "startup": "Startup",
+    "freelance": "Freelance",
+    "personal": "Solo Product"
   }
 }

@@ -28,9 +28,12 @@ app/
   sitemap.ts                  # 정적 sitemap
   [locale]/
     layout.tsx                # locale 레이아웃, metadata, Header/Footer
-    page.tsx                  # 단일 페이지 (기본 정보 · 가동 조건 · 프로젝트 · 스킬 · 경력 · 연락)
+    page.tsx                  # 단일 페이지. 섹션 하나 = 화면 하나(.panel 스냅 패널)
     CareerSections.tsx        # 경력 섹션
-    Header.tsx                # 언어 전환 바
+    SkillTimeline.tsx         # 기술 연표 (연도 × 기술 그리드)
+    ProjectCard.tsx           # 대표 프로젝트 카드
+    ProfilePhotos.tsx         # 프로필 사진
+    Header.tsx                # 언어 전환 바 (sticky, 높이 --header-h)
     LangSwitcher.tsx          # 언어 전환
     HtmlLang.tsx              # <html lang> 동기화
     ContactButton.tsx         # 연락 CTA
@@ -44,7 +47,7 @@ lib/
   content/
     career.ts                 # 경력 데이터
     languages.ts              # 언어 능력 데이터
-    skills.ts                 # 기술 스택 데이터
+    skills.ts                 # 기술별 사용 구간(연도) — career.ts에서 뽑은 값
     keyProjects.ts            # 주요 프로젝트 보조 데이터
     parseOverview.ts          # 경력 overview 파서
     types.ts                  # 공통 타입
@@ -117,7 +120,7 @@ public/
 |------|------|
 | `lib/content/career.ts` | 경력/프로젝트/성과 데이터 |
 | `lib/content/languages.ts` | 언어 능력 |
-| `lib/content/skills.ts` | 기술 태그 |
+| `lib/content/skills.ts` | 기술별 사용 구간. `career.ts` 재직 기간이 정본이므로 둘이 어긋나면 `career.ts`를 따른다 |
 | `lib/content/types.ts` | 공통 타입 |
 | `lib/content/parseOverview.ts` | 긴 설명을 경력 UI용 섹션으로 파싱 |
 

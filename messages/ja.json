@@ -54,7 +54,7 @@
     "detail": "詳細を見る"
   },
   "career": {
-    "title": "{years}年間こんな仕事をしてきました",
+    "title": "経歴",
     "now": "現在",
     "freelance": "フリーランス",
     "fulltime": "正社員",
@@ -79,5 +79,19 @@
   },
   "footer": {
     "copyright": "Gwangsoo Choi. All rights reserved."
+  },
+  "timeline": {
+    "years_suffix": "年",
+    "legend_none": "未使用",
+    "legend_used": "使用",
+    "expand_all": "すべて展開",
+    "collapse_all": "すべて折りたたむ"
+  },
+  "tracks": {
+    "si": "SI/SE",
+    "school": "日本語学校",
+    "startup": "スタートアップ",
+    "freelance": "フリーランス",
+    "personal": "1人プロダクト開発"
   }
 }

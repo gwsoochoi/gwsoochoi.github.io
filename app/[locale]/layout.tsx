@@ -53,7 +53,7 @@ export default async function LocaleLayout({
       </a>
       <Header />
       <main id="main-content">{children}</main>
-      <footer className="mx-auto max-w-3xl border-t-2 border-muted/30 px-6 py-8 text-center text-sm text-muted">
+      <footer className="mx-auto max-w-3xl snap-start border-t-2 border-muted/30 px-6 py-8 text-center text-sm text-muted">
         <p>
           &copy; {new Date().getFullYear()}{" "}
           {(messages as Record<string, Record<string, string>>).footer.copyright}

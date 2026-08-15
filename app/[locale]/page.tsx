@@ -3,15 +3,28 @@ import { getCareerStages } from "@/lib/content/career";
 import { getLanguageItems } from "@/lib/content/languages";
 import { getProjectCases } from "@/lib/content/projects";
 import { getSkillsSections } from "@/lib/content/skills";
+import { getTimelineYears } from "@/lib/content/timeline";
+import { getCareerTrackGroup } from "@/lib/content/tracks";
 import { getLocaleStaticParams } from "@/lib/i18n";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import CareerSections from "./CareerSections";
 import ProfilePhotos from "./ProfilePhotos";
 import ProjectCard from "./ProjectCard";
+import YearTimeline from "./YearTimeline";
 
 const EMAIL = "gwsoochoi@gmail.com";
 const PROFILE_PHOTOS = ["/profile-main.jpg", "/profile-sub.jpg"];
+
+// 프로필 사진은 잠시 내려 둔다. 끄면 기본 정보 표가 폭을 전부 쓴다.
+const SHOW_PROFILE_PHOTOS = false;
+
+// 경력까지만 보고 있어서 그 아래 블록은 내려 둔다. 검토가 끝나면 true로 되돌린다.
+const SHOW_OTHER_SECTIONS = false;
+
+// 홈은 패널 하나다. 블록 사이는 선이 아니라 여백으로만 끊는다 — 드롭다운 목록이 이미
+// 밑줄을 잔뜩 쓰고 있어 섹션 선까지 더하면 가로줄만 남는다. CareerSections도 같은 값을 쓴다.
+const BLOCK = "mt-16";
 
 export const generateStaticParams = getLocaleStaticParams;
 
@@ -100,7 +113,7 @@ export default async function AboutPage({
   const t = await getTranslations();
 
   const languageItems = getLanguageItems(locale);
-  const skillsSections = getSkillsSections();
+  const timelineYears = getTimelineYears();
   const projects = getProjectCases(locale);
 
   // 서비스 상세는 career.ts의 appInfo 항목이 정본. 경력 섹션과 중복 노출하지 않고 카드에서만 편다.
@@ -131,12 +144,6 @@ export default async function AboutPage({
     },
   ];
 
-  const skillRows = skillsSections.map((section) => ({
-    label: section.label,
-    value: section.tags.join(", "),
-    wide: true,
-  }));
-
   const availabilityRows = [
     { label: t("availability.workstyle_label"), value: t("availability.workstyle_value") },
     { label: t("availability.start_label"), value: t("availability.start_value") },
@@ -150,85 +157,95 @@ export default async function AboutPage({
   }));
 
   return (
-    <div className="mx-auto max-w-3xl px-6 pt-6 pb-16">
-      {/* ── 기본 정보 ── */}
-      <section className="pb-10">
+    <div className="mx-auto max-w-3xl px-6">
+      {/* ── 기본 정보 + 기술 스택 (한 패널) ── */}
+      <section className="panel">
         <h1 className="mb-4 text-2xl font-bold tracking-tight text-foreground">
           {t("basic.title")}
         </h1>
-        <div className="grid gap-6 sm:grid-cols-[280px_1fr] sm:gap-8">
-          <ProfilePhotos photos={PROFILE_PHOTOS} alt={t("profile.imageAlt")} />
+        <div
+          className={`grid gap-6 ${SHOW_PROFILE_PHOTOS ? "sm:grid-cols-[280px_1fr] sm:gap-8" : ""}`}
+        >
+          {SHOW_PROFILE_PHOTOS && (
+            <ProfilePhotos photos={PROFILE_PHOTOS} alt={t("profile.imageAlt")} />
+          )}
           <InfoGrid rows={basicRows} />
         </div>
-      </section>
 
-      {/* ── 기술 스택 ── */}
-      <section className="border-t-2 border-muted/30 py-10">
-        <h2 className="mb-4 text-2xl font-bold text-foreground">
-          {t("skills.title")}
-        </h2>
-        <InfoGrid rows={skillRows} />
-      </section>
+        <div className={BLOCK}>
+          <h2 className="text-2xl font-bold text-foreground">{t("skills.title")}</h2>
+          <p className="mb-6 text-xs tabular-nums text-muted">
+            {timelineYears[0]} — {timelineYears[timelineYears.length - 1]}
+          </p>
+          {/* 업계 이력이 맨 위. 어떤 판에서 쌓은 기술인지가 아래 스택의 맥락이 된다. */}
+          <YearTimeline
+            groups={[
+              getCareerTrackGroup((key) => t(`tracks.${key}`)),
+              ...getSkillsSections(),
+            ]}
+          />
+        </div>
 
-      {/* ── 가동 조건 ── */}
-      <section className="border-t-2 border-muted/30 py-10">
-        <div className="mb-4 flex flex-wrap items-center gap-2">
-          <h2 className="text-2xl font-bold text-foreground">
-            {t("availability.title")}
+        {/* ── 경력 ── */}
+        <CareerSections locale={locale} />
+
+        {SHOW_OTHER_SECTIONS && (
+          <>
+        {/* ── 대표 프로젝트 ── */}
+        <section id="work" className={BLOCK}>
+          <h2 className="mb-6 text-2xl font-bold text-foreground">{t("work.title")}</h2>
+          <div className="space-y-4">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.slug}
+                project={project}
+                overview={overviews.get(project.name)}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* ── 맡길 수 있는 업무 ── */}
+        <section className={BLOCK}>
+          <h2 className="mb-4 text-2xl font-bold text-foreground">
+            {t("capabilities.title")}
           </h2>
-          <span className="rounded-md bg-tag-bg px-2 py-0.5 text-xs text-tag-text">
-            {t("availability.badge")}
-          </span>
-        </div>
-        <InfoGrid rows={availabilityRows} />
-      </section>
+          <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8">
+            {capabilities.map((item) => (
+              <div key={item.title} className="border-t border-border py-4">
+                <h3 className="mb-1.5 text-base font-semibold text-foreground">
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-      {/* ── 맡길 수 있는 업무 ── */}
-      <section className="border-t-2 border-muted/30 py-10">
-        <h2 className="mb-4 text-2xl font-bold text-foreground">
-          {t("capabilities.title")}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8">
-          {capabilities.map((item) => (
-            <div key={item.title} className="border-t border-border py-4">
-              <h3 className="mb-1.5 text-base font-semibold text-foreground">
-                {item.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-muted">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        {/* ── 가동 조건 ── */}
+        <section className={BLOCK}>
+          <div className="mb-4 flex flex-wrap items-center gap-2">
+            <h2 className="text-2xl font-bold text-foreground">
+              {t("availability.title")}
+            </h2>
+            <span className="rounded-md bg-tag-bg px-2 py-0.5 text-xs text-tag-text">
+              {t("availability.badge")}
+            </span>
+          </div>
+          <InfoGrid rows={availabilityRows} />
+        </section>
 
-      {/* ── 대표 프로젝트 ── */}
-      <section id="work" className="border-t-2 border-muted/30 py-10">
-        <h2 className="mb-6 text-2xl font-bold text-foreground">
-          {t("work.title")}
-        </h2>
-        <div className="space-y-4">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.slug}
-              project={project}
-              overview={overviews.get(project.name)}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* ── 경력 ── */}
-      <CareerSections locale={locale} />
-
-      {/* ── 연락 ── */}
-      <section className="border-t-2 border-muted/30 pt-10">
-        <h2 className="mb-3 text-2xl font-bold text-foreground">
-          {t("contact.title")}
-        </h2>
-        <p className="mb-6 text-sm leading-relaxed text-muted">{t("contact.desc")}</p>
-        <CtaRow
-          contactLabel={t("hero.cta_contact")}
-          resumeLabel={t("hero.cta_resume")}
-        />
+        {/* ── 연락 ── */}
+        <section className={BLOCK}>
+          <h2 className="mb-3 text-2xl font-bold text-foreground">{t("contact.title")}</h2>
+          <p className="mb-6 text-sm leading-relaxed text-muted">{t("contact.desc")}</p>
+          <CtaRow
+            contactLabel={t("hero.cta_contact")}
+            resumeLabel={t("hero.cta_resume")}
+          />
+        </section>
+          </>
+        )}
       </section>
     </div>
   );
