@@ -8,8 +8,10 @@ import { getCareerTrackGroup } from "@/lib/content/tracks";
 import { getLocaleStaticParams } from "@/lib/i18n";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import CareerSections from "./CareerSections";
+import LangSwitcher from "./LangSwitcher";
+import Reveal from "./Reveal";
 import ProfilePhotos from "./ProfilePhotos";
 import ProjectCard from "./ProjectCard";
 import YearTimeline from "./YearTimeline";
@@ -55,10 +57,11 @@ function InfoGrid({
 }) {
   return (
     <dl className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8">
-      {rows.map((row) => (
+      {rows.map((row, index) => (
         <div
           key={row.label}
-          className={`border-t border-border py-3 ${row.wide ? "sm:col-span-2" : ""}`}
+          style={{ "--i": index } as CSSProperties}
+          className={`reveal-item border-t border-border py-3 ${row.wide ? "sm:col-span-2" : ""}`}
         >
           <dt className="mb-1 text-xs font-semibold uppercase tracking-wider text-muted">
             {row.label}
@@ -188,17 +191,21 @@ export default async function AboutPage({
     <div className="mx-auto max-w-3xl px-6">
       {/* ── 기본 정보 + 기술 스택 (한 패널) ── */}
       <section className="panel">
-        <h1 className="mb-4 text-2xl font-bold tracking-tight text-foreground">
-          {t("basic.title")}
-        </h1>
+        {/* 헤더를 없앴다. 언어 전환은 이 줄 오른쪽 끝의 원형 국기가 맡는다. */}
+        <div className="mb-4 flex items-center justify-between gap-4">
+          <h1 className="text-2xl font-bold tracking-tight text-foreground">
+            {t("basic.title")}
+          </h1>
+          <LangSwitcher />
+        </div>
         {/* 3열: 사진이 첫 열, 기본 정보 표가 나머지 두 열. */}
         <div className={`grid gap-6 ${SHOW_PROFILE_PHOTOS ? "sm:grid-cols-3 sm:gap-8" : ""}`}>
           {SHOW_PROFILE_PHOTOS && (
             <ProfilePhotos photos={PROFILE_PHOTOS} alt={t("profile.imageAlt")} />
           )}
-          <div className={SHOW_PROFILE_PHOTOS ? "sm:col-span-2" : ""}>
+          <Reveal className={SHOW_PROFILE_PHOTOS ? "sm:col-span-2" : ""}>
             <InfoGrid rows={basicRows} />
-          </div>
+          </Reveal>
         </div>
 
         <div className={BLOCK}>
@@ -223,13 +230,17 @@ export default async function AboutPage({
           <h2 className="mb-4 text-2xl font-bold text-foreground">
             {t("statement.title")}
           </h2>
-          <div className="space-y-3">
-            {[t("statement.p1"), t("statement.p2"), t("statement.p3")].map((p) => (
-              <p key={p} className="text-sm leading-relaxed text-muted">
+          <Reveal className="space-y-3">
+            {[t("statement.p1"), t("statement.p2"), t("statement.p3")].map((p, index) => (
+              <p
+                key={p}
+                style={{ "--i": index } as CSSProperties}
+                className="reveal-item text-sm leading-relaxed text-muted"
+              >
                 {p}
               </p>
             ))}
-          </div>
+          </Reveal>
         </section>
 
         {SHOW_OTHER_SECTIONS && (

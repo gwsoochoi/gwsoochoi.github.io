@@ -24,7 +24,6 @@
   --tag-bg: rgba(77, 196, 175, 0.12);
   --tag-text: #52A896;
   --code-bg: #17191F;
-  --header-h: 64px;
 }
 
 @theme inline {
@@ -53,12 +52,11 @@ body {
    패널 중간을 읽는 동안 스크롤이 계속 끌려가 읽을 수가 없다. */
 html {
   scroll-snap-type: y proximity;
-  scroll-padding-top: var(--header-h);
   scroll-behavior: smooth;
 }
 
 .panel {
-  min-height: calc(100svh - var(--header-h));
+  min-height: 100svh;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -76,17 +74,26 @@ html {
 }
 
 
-/* ---------- 연표 채우기 ----------
-   채워진 칸이 왼쪽부터 순서대로 자라 막대가 그려지듯 보인다. 지연은 연도 인덱스(--i)를
-   따르므로 모든 행이 같은 속도로 같은 방향으로 흐른다. 빈 칸은 움직이지 않는다. */
-.timeline-armed .tl-on {
+/* ---------- 화면에 들어오면 왼쪽부터 차례로 ----------
+   Reveal이 화면 진입 시 `reveal-in`을 건다. 지연은 순번(--i)을 따르므로 모든 줄이
+   같은 속도로 같은 방향으로 흐른다.
+
+   연표 칸(`tl-on`)은 막대가 그려지듯 scaleX로 자라고, 텍스트 블록(`reveal-item`)은
+   같은 타이밍으로 왼쪽에서 미끄러져 들어온다 — 글자를 가로로 늘리면 읽히지 않는다. */
+.reveal-armed .tl-on,
+.reveal-armed .reveal-item {
   opacity: 0;
 }
 
-.timeline-in .tl-on {
+.reveal-in .tl-on {
   transform-origin: left center;
   animation: tl-grow 0.45s ease-out both;
   animation-delay: calc(var(--i) * 45ms);
+}
+
+.reveal-in .reveal-item {
+  animation: reveal-slide 0.45s ease-out both;
+  animation-delay: calc(var(--i) * 60ms);
 }
 
 @keyframes tl-grow {
@@ -100,9 +107,22 @@ html {
   }
 }
 
+@keyframes reveal-slide {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .timeline-armed .tl-on,
-  .timeline-in .tl-on {
+  .reveal-armed .tl-on,
+  .reveal-armed .reveal-item,
+  .reveal-in .tl-on,
+  .reveal-in .reveal-item {
     opacity: 1;
     animation: none;
   }

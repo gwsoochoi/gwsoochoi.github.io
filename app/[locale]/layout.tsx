@@ -3,7 +3,6 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import HtmlLang from "./HtmlLang";
-import Header from "./Header";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -51,7 +50,6 @@ export default async function LocaleLayout({
       >
         Skip to main content
       </a>
-      <Header />
       <main id="main-content">{children}</main>
       <footer className="mx-auto max-w-3xl snap-start border-t-2 border-muted/30 px-6 py-8 text-center text-sm text-muted">
         <p>

@@ -1,8 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import { getCareerStages } from "@/lib/content/career";
+import type { CSSProperties } from "react";
 import BulletList from "./BulletList";
 import ChevronIcon from "./ChevronIcon";
 import CollapseControls from "./CollapseControls";
+import Reveal from "./Reveal";
 
 /**
  * 성과 박스.
@@ -60,12 +62,17 @@ export default async function CareerSections({ locale }: { locale: string }) {
           collapseAll={t("timeline.collapse_all")}
         >
         {/* 카드가 아니라 밑줄 목록이다. 경계선은 각 항목의 아래쪽 하나뿐. */}
-        <div className="border-t border-border">
+        <Reveal className="border-t border-border">
           {stages.map((stage, idx) => {
             const isCurrent = idx === 0;
 
             return (
-              <details key={stage.number} open={isCurrent} className="group border-b border-border">
+              <details
+                key={stage.number}
+                open={isCurrent}
+                style={{ "--i": idx } as CSSProperties}
+                className="reveal-item group block border-b border-border"
+              >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 [&::-webkit-details-marker]:hidden">
                   <h3 className="text-lg font-semibold text-foreground">{stage.title}</h3>
                   <ChevronIcon className="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-90" />
@@ -172,7 +179,7 @@ export default async function CareerSections({ locale }: { locale: string }) {
               </details>
             );
           })}
-        </div>
+        </Reveal>
         </CollapseControls>
     </section>
   );

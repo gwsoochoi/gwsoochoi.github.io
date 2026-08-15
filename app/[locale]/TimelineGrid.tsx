@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import ChevronIcon from "./ChevronIcon";
 import CollapseControls from "./CollapseControls";
+import Reveal from "./Reveal";
 
 /** 서버에서 계산해 넘겨받는 한 줄. `on`은 연도축과 길이가 같다. */
 export interface GridRow {
@@ -48,32 +49,12 @@ export default function TimelineGrid({
   expandAll: string;
   collapseAll: string;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
   // 커서가 얹힌 연도의 순번. 그 해에 걸치지 않는 줄은 흐려진다.
   const [hovered, setHovered] = useState<number | null>(null);
 
-  // 화면에 들어온 뒤에 칸이 차오른다. 클래스는 state가 아니라 DOM에 직접 건다 —
-  // 리렌더가 필요 없는 표시일 뿐이고, JS가 없으면 아예 붙지 않아 칸이 그냥 보인다.
-  useEffect(() => {
-    const element = ref.current;
-    if (!element) return;
-
-    element.classList.add("timeline-armed");
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-        element.classList.add("timeline-in");
-        observer.disconnect();
-      },
-      { rootMargin: "-10% 0px" }
-    );
-    observer.observe(element);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div
-      ref={ref}
+    // 화면에 들어온 뒤에 칸이 차오른다.
+    <Reveal
       // 칸마다 핸들러를 달면 200개가 넘는다. 사용 칸만 data 속성을 갖고, 위임으로 읽는다.
       onMouseOver={(event) => {
         const cell = (event.target as HTMLElement).closest<HTMLElement>("[data-on-year]");
@@ -166,6 +147,6 @@ export default function TimelineGrid({
         <span aria-hidden className="h-2.5 w-2.5 rounded-[2px] bg-accent" />
         <span>{legendUsed}</span>
       </div>
-    </div>
+    </Reveal>
   );
 }

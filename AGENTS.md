@@ -27,16 +27,18 @@ app/
   globals.css                 # CSS 변수 기반 디자인 토큰
   sitemap.ts                  # 정적 sitemap
   [locale]/
-    layout.tsx                # locale 레이아웃, metadata, Header/Footer
+    layout.tsx                # locale 레이아웃, metadata, Footer
     page.tsx                  # 단일 페이지. 섹션 하나 = 화면 하나(.panel 스냅 패널)
     CareerSections.tsx        # 경력 섹션
-    SkillTimeline.tsx         # 기술 연표 (연도 × 기술 그리드)
+    YearTimeline.tsx          # 연표 서버 계산 (연도별 on/off 산출)
+    TimelineGrid.tsx          # 연표 그리드 UI (연도 × 항목)
     ProjectCard.tsx           # 대표 프로젝트 카드
+    ServiceOverview.tsx       # 프로젝트 카드 안 서비스 설명
     ProfilePhotos.tsx         # 프로필 사진
-    Header.tsx                # 언어 전환 바 (sticky, 높이 --header-h)
-    LangSwitcher.tsx          # 언어 전환
+    LangSwitcher.tsx          # 언어 전환 (기본 정보 제목 줄의 원형 국기)
+    Reveal.tsx                # 화면 진입 시 순차 등장 (reveal-item / tl-on)
+    CollapseControls.tsx      # details 일괄 열기·닫기
     HtmlLang.tsx              # <html lang> 동기화
-    ContactButton.tsx         # 연락 CTA
     TechTag.tsx               # 태그 UI
     BulletList.tsx            # 리스트 UI
     ChevronIcon.tsx           # details 아이콘
