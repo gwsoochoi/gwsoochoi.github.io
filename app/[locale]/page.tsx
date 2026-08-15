@@ -189,6 +189,20 @@ export default async function AboutPage({
         {/* ── 경력 ── */}
         <CareerSections locale={locale} />
 
+        {/* ── 하고 싶은 말 ── */}
+        <section className={BLOCK}>
+          <h2 className="mb-4 text-2xl font-bold text-foreground">
+            {t("statement.title")}
+          </h2>
+          <div className="space-y-3">
+            {[t("statement.p1"), t("statement.p2"), t("statement.p3")].map((p) => (
+              <p key={p} className="text-sm leading-relaxed text-muted">
+                {p}
+              </p>
+            ))}
+          </div>
+        </section>
+
         {SHOW_OTHER_SECTIONS && (
           <>
         {/* ── 대표 프로젝트 ── */}

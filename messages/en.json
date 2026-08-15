@@ -93,5 +93,11 @@
     "startup": "Startup",
     "freelance": "Freelance",
     "personal": "Solo Product"
+  },
+  "statement": {
+    "title": "A Few Words",
+    "p1": "After SI/SE work, startups, and freelancing, I now run everything from planning through development and operations as a solo full-stack developer. My focus is building mobile apps that earn: I hand implementation to AI agents and own the overall system design and review myself. I also cover marketing and UI/UX design.",
+    "p2": "I care about shipping new ideas fast and reliably so the value actually reaches users, and about responding quickly to whatever friction they hit after a release. Fast delivery looping back through user feedback is what makes a product strong.",
+    "p3": "Reaching the goals of my own products comes first, so I'm not looking for full-time roles — only freelance contracts of 20–30 hours a week. If you'd like to build something fun together, get in touch."
   }
 }
