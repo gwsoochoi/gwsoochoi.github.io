@@ -23,7 +23,8 @@
     "military_label": "兵役",
     "hobby_label": "趣味",
     "hobby_weight": "ウエイトトレーニング（2009.01〜）",
-    "hobby_crossfit": "クロスフィット（2026.05〜）"
+    "hobby_crossfit": "クロスフィット（2026.05〜）",
+    "contact_label": "連絡先"
   },
   "availability": {
     "title": "稼働条件",
@@ -63,10 +64,8 @@
     "key_projects": "主要プロジェクト"
   },
   "background": {
-    "education_name": "南ソウル大学校 マルチメディア学科 コンピュータプログラミング",
-    "education_period": "2006.03 ~ 2013.02",
-    "military_period": "2008.01 ~ 2009.12",
-    "military_summary": "陸軍 第2歩兵師団 一般歩兵 兵長 満期除隊"
+    "education_name": "南ソウル大学校 マルチメディア学科",
+    "military_summary": "陸軍 第2歩兵師団 兵長 満期除隊"
   },
   "skills": {
     "title": "技術スタック"

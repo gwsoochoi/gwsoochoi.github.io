@@ -8,16 +8,17 @@ import { getCareerTrackGroup } from "@/lib/content/tracks";
 import { getLocaleStaticParams } from "@/lib/i18n";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import CareerSections from "./CareerSections";
 import ProfilePhotos from "./ProfilePhotos";
 import ProjectCard from "./ProjectCard";
 import YearTimeline from "./YearTimeline";
 
 const EMAIL = "gwsoochoi@gmail.com";
-const PROFILE_PHOTOS = ["/profile-main.jpg", "/profile-sub.jpg"];
+const PROFILE_PHOTOS = ["/profile-main.jpg"];
 
-// 프로필 사진은 잠시 내려 둔다. 끄면 기본 정보 표가 폭을 전부 쓴다.
-const SHOW_PROFILE_PHOTOS = false;
+// 끄면 기본 정보 표가 폭을 전부 쓴다.
+const SHOW_PROFILE_PHOTOS = true;
 
 // 경력까지만 보고 있어서 그 아래 블록은 내려 둔다. 검토가 끝나면 true로 되돌린다.
 const SHOW_OTHER_SECTIONS = false;
@@ -50,7 +51,7 @@ export async function generateMetadata({
 function InfoGrid({
   rows,
 }: {
-  rows: { label: string; value: string | string[]; wide?: boolean }[];
+  rows: { label: string; value: ReactNode | string[]; wide?: boolean }[];
 }) {
   return (
     <dl className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8">
@@ -74,6 +75,25 @@ function InfoGrid({
         </div>
       ))}
     </dl>
+  );
+}
+
+/** lucide.dev의 `mail` 아이콘. 하나 쓰자고 패키지를 넣지 않고 패스만 옮겼다. */
+function MailIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="h-4 w-4 shrink-0"
+    >
+      <rect width="20" height="16" x="2" y="4" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
   );
 }
 
@@ -123,23 +143,31 @@ export default async function AboutPage({
       .map((stage) => [stage.appInfo!.name, stage.serviceOverview!])
   );
 
-  // 한 줄에 안 들어가는 값은 wide로 깔아 행 높이를 고르게 유지한다.
+  // 두 줄짜리 값끼리 마지막 행에 나란히 둔다 — 학력·병역이 왼쪽, 취미가 오른쪽.
   const basicRows = [
     { label: t("basic.name_label"), value: t("profile.name") },
     { label: t("basic.birth_label"), value: t("basic.birth_value") },
     { label: t("basic.residence_label"), value: t("basic.residence_value") },
     { label: t("basic.language_label"), value: languageItems.join(", ") },
     {
-      label: t("basic.hobby_label"),
-      value: [t("basic.hobby_weight"), t("basic.hobby_crossfit")],
-      wide: true,
+      label: `${t("basic.education_label")} · ${t("basic.military_label")}`,
+      value: [t("background.education_name"), t("background.military_summary")],
     },
     {
-      label: `${t("basic.education_label")} · ${t("basic.military_label")}`,
-      value: [
-        `${t("background.education_name")} (${t("background.education_period")})`,
-        `${t("background.military_summary")} (${t("background.military_period")})`,
-      ],
+      label: t("basic.hobby_label"),
+      value: [t("basic.hobby_weight"), t("basic.hobby_crossfit")],
+    },
+    {
+      label: t("basic.contact_label"),
+      value: (
+        <a
+          href={`mailto:${EMAIL}`}
+          className="inline-flex items-center gap-2 text-accent hover:underline"
+        >
+          <MailIcon />
+          {EMAIL}
+        </a>
+      ),
       wide: true,
     },
   ];
@@ -163,13 +191,14 @@ export default async function AboutPage({
         <h1 className="mb-4 text-2xl font-bold tracking-tight text-foreground">
           {t("basic.title")}
         </h1>
-        <div
-          className={`grid gap-6 ${SHOW_PROFILE_PHOTOS ? "sm:grid-cols-[280px_1fr] sm:gap-8" : ""}`}
-        >
+        {/* 3열: 사진이 첫 열, 기본 정보 표가 나머지 두 열. */}
+        <div className={`grid gap-6 ${SHOW_PROFILE_PHOTOS ? "sm:grid-cols-3 sm:gap-8" : ""}`}>
           {SHOW_PROFILE_PHOTOS && (
             <ProfilePhotos photos={PROFILE_PHOTOS} alt={t("profile.imageAlt")} />
           )}
-          <InfoGrid rows={basicRows} />
+          <div className={SHOW_PROFILE_PHOTOS ? "sm:col-span-2" : ""}>
+            <InfoGrid rows={basicRows} />
+          </div>
         </div>
 
         <div className={BLOCK}>

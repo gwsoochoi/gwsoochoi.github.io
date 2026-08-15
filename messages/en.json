@@ -23,7 +23,8 @@
     "military_label": "Military service",
     "hobby_label": "Hobbies",
     "hobby_weight": "Weight training (2009.01~)",
-    "hobby_crossfit": "CrossFit (2026.05~)"
+    "hobby_crossfit": "CrossFit (2026.05~)",
+    "contact_label": "Contact"
   },
   "availability": {
     "title": "Availability",
@@ -63,10 +64,8 @@
     "key_projects": "Key Projects"
   },
   "background": {
-    "education_name": "Namseoul University — Dept. of Multimedia, Computer Programming",
-    "education_period": "2006.03 ~ 2013.02",
-    "military_period": "2008.01 ~ 2009.12",
-    "military_summary": "ROK Army 2nd Infantry Division, Infantry, Sergeant, Honorable Discharge"
+    "education_name": "Namseoul University — Dept. of Multimedia",
+    "military_summary": "ROK Army 2nd Infantry Division, Sergeant, Honorable Discharge"
   },
   "skills": {
     "title": "Tech Stack"

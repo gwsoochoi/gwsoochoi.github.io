@@ -25,7 +25,7 @@ export default function ProfilePhotos({
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-3">
+      <div className={`grid gap-3 ${photos.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
         {photos.map((src, index) => (
           <button
             key={src}
@@ -38,7 +38,7 @@ export default function ProfilePhotos({
               src={src}
               alt={altOf(index)}
               fill
-              sizes="(max-width: 640px) 45vw, 140px"
+              sizes="(max-width: 640px) 92vw, 240px"
               priority={index === 0}
               className="object-cover"
             />
